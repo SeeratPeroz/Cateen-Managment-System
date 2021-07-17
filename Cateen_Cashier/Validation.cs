@@ -31,7 +31,7 @@ namespace Cateen_Cashier
 
         public static bool validateQuantity(String Input_text)
         {
-            String pattern = @"^[0-9]+$";
+            String pattern = @"^[1-9][0-9]+$";
             return Regex.IsMatch(Input_text, pattern);
         }
 
