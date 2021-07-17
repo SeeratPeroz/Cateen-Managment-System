@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -63,6 +64,7 @@ namespace Cateen_Cashier
                 DBContext.createConnection(txt_Username.Text, txt_Password.Text);
                 DBContext.openConnection();
                 Program.isUserValid = true;
+                createUser();
                 DBContext.closeConnection();
                 this.Close();
             }
@@ -71,15 +73,51 @@ namespace Cateen_Cashier
                 MessageBox.Show(ex.Message);
             }
         }
-
-        private void frmLogin_Load(object sender, EventArgs e)
-        {
-
-        }
-
+        
         private void frmLogin_Load_1(object sender, EventArgs e)
         {
             btn_login_2.PerformClick();
+        }
+
+        // Creating user
+
+        private void createUser()
+        {
+            if (Program.isUserValid)
+            {
+                try
+                {
+                    SqlDataAdapter AD = new SqlDataAdapter();
+                    DBContext.createConnection(Program.userName, Program.userPass);
+                    String Qur = "SELECT COUNT([empID]) FROM [Canteen_Database].[dbo].[Employee] WHERE [empid] = '"+Program.userName+"'";
+                    AD.SelectCommand = new SqlCommand(Qur, DBContext.con);
+                    DataTable dt = new DataTable();
+                    AD.Fill(dt);
+                    DBContext.closeConnection();
+                    String userCount = dt.Rows[0][0].ToString();
+                    //MessageBox.Show(userCount);
+
+                    if (userCount == "0")
+                    {
+                        DBContext.createConnection(Program.userName, Program.userPass);
+                        DBContext.openConnection();
+                        AD.InsertCommand = new SqlCommand("INSERT INTO [Canteen_Database].[dbo].[Employee] VALUES ('"+Program.userName+ "','" + Program.userName + "','','','','','')", DBContext.con);
+                        AD.InsertCommand.ExecuteNonQuery();
+                        DBContext.closeConnection();
+                        MessageBox.Show("Welcome "+Program.userName, "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    }
+                    else
+                    {
+                        MessageBox.Show("Welcome", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    }
+                }
+                catch(Exception ex)
+                {
+                    MessageBox.Show("Login Page error: " + ex.Message);
+                }
+            }
+            
+
         }
     }
 }
