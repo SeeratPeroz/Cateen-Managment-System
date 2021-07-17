@@ -27,6 +27,7 @@ namespace Cateen_Cashier
  );
         public frm_Test_Main()
         {
+            // test page
             InitializeComponent();
             Region = System.Drawing.Region.FromHrgn(CreateRoundRectRgn(0, 0, Width, Height, 25, 25));
             pnlNav.Height = btnDashbord.Height;

@@ -25,6 +25,7 @@ namespace Cateen_Cashier
         public frmCart()
         {
             InitializeComponent();
+            // DBContext
             DBContext.createConnection(Program.userName,Program.userPass);
             AD = new SqlDataAdapter();
         }

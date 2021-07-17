@@ -20,6 +20,7 @@ namespace Cateen_Cashier
             {
                 con = new SqlConnection(" data source =.; initial catalog= Canteen_Database; user=" + uname + ";password=" + upass);
             Program.userName = uname;
+            // User Pass
             Program.userPass = upass;
         }
 
