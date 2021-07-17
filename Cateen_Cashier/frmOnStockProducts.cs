@@ -47,6 +47,8 @@ namespace Cateen_Cashier
 
         private void btn_Print_Click(object sender, EventArgs e)
         {
+            Stock_Print stP = new Stock_Print();
+            stP.Show();
         }
 
         private void cmbSearchBy_SelectedIndexChanged(object sender, EventArgs e)

@@ -186,7 +186,7 @@
             // 
             this.pic_pnlProduct_prdPrice_Validate.BackColor = System.Drawing.Color.Transparent;
             this.pic_pnlProduct_prdPrice_Validate.Image = global::Cateen_Cashier.Properties.Resources.No;
-            this.pic_pnlProduct_prdPrice_Validate.Location = new System.Drawing.Point(463, 149);
+            this.pic_pnlProduct_prdPrice_Validate.Location = new System.Drawing.Point(463, 140);
             this.pic_pnlProduct_prdPrice_Validate.Name = "pic_pnlProduct_prdPrice_Validate";
             this.pic_pnlProduct_prdPrice_Validate.Size = new System.Drawing.Size(30, 27);
             this.pic_pnlProduct_prdPrice_Validate.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -226,7 +226,7 @@
             // label19
             // 
             this.label19.AutoSize = true;
-            this.label19.Location = new System.Drawing.Point(19, 153);
+            this.label19.Location = new System.Drawing.Point(19, 144);
             this.label19.Name = "label19";
             this.label19.Size = new System.Drawing.Size(90, 24);
             this.label19.TabIndex = 77;
@@ -243,7 +243,7 @@
             // 
             // btnAdd_ProductPanel
             // 
-            this.btnAdd_ProductPanel.Location = new System.Drawing.Point(67, 256);
+            this.btnAdd_ProductPanel.Location = new System.Drawing.Point(75, 231);
             this.btnAdd_ProductPanel.Name = "btnAdd_ProductPanel";
             this.btnAdd_ProductPanel.Size = new System.Drawing.Size(385, 34);
             this.btnAdd_ProductPanel.TabIndex = 88;
@@ -254,14 +254,14 @@
             // cmbPrdCategory_ProductPanel
             // 
             this.cmbPrdCategory_ProductPanel.FormattingEnabled = true;
-            this.cmbPrdCategory_ProductPanel.Location = new System.Drawing.Point(173, 195);
+            this.cmbPrdCategory_ProductPanel.Location = new System.Drawing.Point(175, 181);
             this.cmbPrdCategory_ProductPanel.Name = "cmbPrdCategory_ProductPanel";
             this.cmbPrdCategory_ProductPanel.Size = new System.Drawing.Size(285, 32);
             this.cmbPrdCategory_ProductPanel.TabIndex = 87;
             // 
             // txtPrdPrice_ProductPanel
             // 
-            this.txtPrdPrice_ProductPanel.Location = new System.Drawing.Point(175, 149);
+            this.txtPrdPrice_ProductPanel.Location = new System.Drawing.Point(175, 140);
             this.txtPrdPrice_ProductPanel.Name = "txtPrdPrice_ProductPanel";
             this.txtPrdPrice_ProductPanel.Size = new System.Drawing.Size(283, 29);
             this.txtPrdPrice_ProductPanel.TabIndex = 86;
@@ -280,7 +280,7 @@
             // label17
             // 
             this.label17.AutoSize = true;
-            this.label17.Location = new System.Drawing.Point(23, 196);
+            this.label17.Location = new System.Drawing.Point(25, 182);
             this.label17.Name = "label17";
             this.label17.Size = new System.Drawing.Size(90, 24);
             this.label17.TabIndex = 78;

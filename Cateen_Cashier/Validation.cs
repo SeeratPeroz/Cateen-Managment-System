@@ -31,7 +31,7 @@ namespace Cateen_Cashier
 
         public static bool validateQuantity(String Input_text)
         {
-            String pattern = @"^[1-9][0-9]+$";
+            String pattern = @"^[1-9][0-9]*$";
             return Regex.IsMatch(Input_text, pattern);
         }
 
@@ -45,7 +45,7 @@ namespace Cateen_Cashier
         // Customer ID Validation
         public static bool validateCustID(String Input_text)
         {
-            String pattern = @"^[\d-]+$";
+            String pattern = @"^[\d]{3}-[\d]{7}+$";
             return Regex.IsMatch(Input_text, pattern);
         }
         // Customer Name Validation
@@ -63,14 +63,20 @@ namespace Cateen_Cashier
         // Customer Phone Validation
         public static bool validateCustPhone(String Input_text)
         {
-            String pattern = @"^(\+|0)\d{9,12}$";
+            //String pattern = @"^(\+|0)\d{9,12}$";
+            String pattern = @"(^07[0-9]{8}$)|(^00937[0-9]{8}$)|(^\+937[0-9]{8}$)|(^\+932[0-9]{8}$)|(^00932[0-9]{8}$)|(^020[1-9]{7}$)";
             return Regex.IsMatch(Input_text, pattern);
         }
         // Search Validation
         public static bool validateSeach(String Input_text)
         {
             String pattern = @"^[\w\d @\.-]+$";
-            return Regex.IsMatch(Input_text, pattern);
+            if (Input_text == "")
+            {
+                return true;
+            }
+            else {
+                return Regex.IsMatch(Input_text, pattern); }
         }
 
     }

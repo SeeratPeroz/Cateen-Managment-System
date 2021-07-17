@@ -114,7 +114,7 @@ namespace Cateen_Cashier
                 if (dgvProduct.RowCount.ToString() != "0")
                 {
                     long price = Convert.ToInt32(txtPrdRate.Text);
-                    AD.InsertCommand = new SqlCommand("INSERT INTO [Canteen_Database].[dbo].[tbl_Temp_Purch]([prdID] ,[purch_Rate] ,[prdQty] ,[amount]) VALUES (" + txtPrdID.Text + "," + price + "," + txtPrdQuantity.Text + ",'" + price * Convert.ToInt64(txtPrdQuantity.Text) + "')", DBContext.con);
+                    AD.InsertCommand = new SqlCommand("INSERT INTO [Canteen_Database].[dbo].[tbl_Temp_Purch]([prdID] ,[purch_Rate] ,[prdQty], [sale_Rate] ,[amount]) VALUES (" + txtPrdID.Text + "," + price + "," + txtPrdQuantity.Text + ","+txtSaleRate.Text+",'" + price * Convert.ToInt64(txtPrdQuantity.Text) + "')", DBContext.con);
                     DBContext.openConnection();
                     AD.InsertCommand.ExecuteNonQuery();
                     DBContext.closeConnection();
@@ -180,6 +180,7 @@ namespace Cateen_Cashier
             txtPrdQuantity.Text = "";
             txtPrdRate.Clear();
             showCartG();
+            txtSaleRate.Clear();
             show_Suppliers();
         }
 
@@ -223,7 +224,7 @@ namespace Cateen_Cashier
                 AD.DeleteCommand.ExecuteNonQuery();
                 DBContext.closeConnection();
 
-                AD.InsertCommand = new SqlCommand("INSERT INTO [Canteen_Database].[dbo].[tbl_Temp_Purch]([prdID] ,[purch_Rate] ,[prdQty] ,[amount]) VALUES (" + txtPrdID.Text + "," + txtPrdRate.Text + "," + txtPrdQuantity.Text + "," + totalPriceUpdated + ")", DBContext.con);
+                AD.InsertCommand = new SqlCommand("INSERT INTO [Canteen_Database].[dbo].[tbl_Temp_Purch]([prdID] ,[purch_Rate] ,[prdQty], [sale_Rate] ,[amount]) VALUES (" + txtPrdID.Text + "," + txtPrdRate.Text + "," + txtPrdQuantity.Text + ","+txtSaleRate.Text+"," + totalPriceUpdated + ")", DBContext.con);
                 DBContext.openConnection();
                 AD.InsertCommand.ExecuteNonQuery();
                 DBContext.closeConnection();
@@ -429,11 +430,27 @@ namespace Cateen_Cashier
                     }
 
                     // INSERT INTO [Canteen_Database].[dbo].[Purchase_Details] ([PurchNO] ,[prdID],[prdQty] ,[purch_Rate] ,[amount]) VALUES (1,1,2,2,4)
-                    String QE = "INSERT INTO [Canteen_Database].[dbo].[Purchase_Details] ([PurchNO] ,[prdID],[prdQty] ,[purch_Rate] ,[amount]) VALUES (" + purchID + "," + records[0] + "," + records[3] + "," + records[2] + "," + records[4] + ")";
+                    String QE = "INSERT INTO [Canteen_Database].[dbo].[Purchase_Details] ([PurchNO] ,[prdID],[prdQty] ,[purch_Rate],[sale_Rate] ,[amount]) VALUES (" + purchID + "," + records[0] + "," + records[3] + "," + records[2] + ","+records[4]+" ," + records[5] + ")";
                     //MessageBox.Show(QE);
                     AD.InsertCommand = new SqlCommand(QE, DBContext.con);
                     DBContext.openConnection();
                     AD.InsertCommand.ExecuteNonQuery();
+                    DBContext.closeConnection();
+
+
+                    // Getting the sale rate to save in product unit price table
+                    String newUnitPrice = "SELECT max([sale_Rate])FROM [Canteen_Database].[dbo].[tbl_Temp_Purch] WHERE [prdID] = "+ records[0];
+                    AD.SelectCommand = new SqlCommand(newUnitPrice, DBContext.con);
+                    DataTable unitP = new DataTable();
+                    AD.Fill(unitP);
+                    String UpdatePrice = unitP.Rows[0][0].ToString(); ;
+
+
+                    //// Updating The uni price
+                    String QUR = "UPDATE [Canteen_Database].[dbo].[Products] SET [prdUnitPrice] = '" + UpdatePrice + "' WHERE [prdID] = " + records[0];
+                    AD.UpdateCommand = new SqlCommand(QUR, DBContext.con);
+                    DBContext.openConnection();
+                    AD.UpdateCommand.ExecuteNonQuery();
                     DBContext.closeConnection();
                 }
 
@@ -501,6 +518,7 @@ namespace Cateen_Cashier
                 txtPrdRate.Text = dgvProduct.CurrentRow.Cells[2].FormattedValue.ToString();
                 name = dgvProduct.CurrentRow.Cells[1].FormattedValue.ToString();
                 ID = dgvProduct.CurrentRow.Cells[0].FormattedValue.ToString();
+                txtSaleRate.Text = dgvProduct.CurrentRow.Cells[4].FormattedValue.ToString();
             }
             catch (Exception EX)
             {
@@ -537,6 +555,19 @@ namespace Cateen_Cashier
         {
             frmSupplier sup = new frmSupplier();
             sup.ShowDialog();
+        }
+
+        private void txtSaleRate_TextChanged(object sender, EventArgs e)
+        {
+            isCardValid_Quantity_pnlCart = Validation.validateQuantity(txtSaleRate.Text);
+            if (isCardValid_Quantity_pnlCart)
+            {
+                pic_SaleRate_validate.Image = Cateen_Cashier.Properties.Resources.Yes;
+            }
+            else
+            {
+                pic_SaleRate_validate.Image = Cateen_Cashier.Properties.Resources.No;
+            }
         }
 
         private void btn_Show_Click(object sender, EventArgs e)

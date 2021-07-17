@@ -53,18 +53,23 @@
             this.pnlCart = new System.Windows.Forms.Panel();
             this.lblTotal_Cart = new System.Windows.Forms.Label();
             this.btn_Submit = new System.Windows.Forms.Button();
+            this.txtSaleRate = new System.Windows.Forms.TextBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.pic_SaleRate_validate = new System.Windows.Forms.PictureBox();
             this.grbCartProduct.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pic_prdNameValidate_pnlProduct)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pic_prdRate_validation)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pic_prdIDValidate_pnlProduct)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvProduct)).BeginInit();
             this.pnlCart.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pic_SaleRate_validate)).BeginInit();
             this.SuspendLayout();
             // 
             // grbCartProduct
             // 
             this.grbCartProduct.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.grbCartProduct.Controls.Add(this.pic_SaleRate_validate);
             this.grbCartProduct.Controls.Add(this.pic_prdNameValidate_pnlProduct);
             this.grbCartProduct.Controls.Add(this.pic_prdRate_validation);
             this.grbCartProduct.Controls.Add(this.pic_prdIDValidate_pnlProduct);
@@ -75,15 +80,17 @@
             this.grbCartProduct.Controls.Add(this.btnAdd);
             this.grbCartProduct.Controls.Add(this.btnDeleteCart);
             this.grbCartProduct.Controls.Add(this.chkPrdSearch);
+            this.grbCartProduct.Controls.Add(this.label4);
             this.grbCartProduct.Controls.Add(this.label1);
             this.grbCartProduct.Controls.Add(this.label15);
             this.grbCartProduct.Controls.Add(this.btn_Clear);
+            this.grbCartProduct.Controls.Add(this.txtSaleRate);
             this.grbCartProduct.Controls.Add(this.btnUpdateCart);
             this.grbCartProduct.Controls.Add(this.txtPrdQuantity);
             this.grbCartProduct.Controls.Add(this.txtPrdRate);
             this.grbCartProduct.Location = new System.Drawing.Point(47, 98);
             this.grbCartProduct.Name = "grbCartProduct";
-            this.grbCartProduct.Size = new System.Drawing.Size(972, 308);
+            this.grbCartProduct.Size = new System.Drawing.Size(972, 306);
             this.grbCartProduct.TabIndex = 95;
             this.grbCartProduct.TabStop = false;
             this.grbCartProduct.Text = "Add to Cart";
@@ -91,7 +98,7 @@
             // pic_prdNameValidate_pnlProduct
             // 
             this.pic_prdNameValidate_pnlProduct.Image = global::Cateen_Cashier.Properties.Resources.No;
-            this.pic_prdNameValidate_pnlProduct.Location = new System.Drawing.Point(424, 197);
+            this.pic_prdNameValidate_pnlProduct.Location = new System.Drawing.Point(424, 170);
             this.pic_prdNameValidate_pnlProduct.Name = "pic_prdNameValidate_pnlProduct";
             this.pic_prdNameValidate_pnlProduct.Size = new System.Drawing.Size(30, 24);
             this.pic_prdNameValidate_pnlProduct.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -101,7 +108,7 @@
             // pic_prdRate_validation
             // 
             this.pic_prdRate_validation.Image = global::Cateen_Cashier.Properties.Resources.No;
-            this.pic_prdRate_validation.Location = new System.Drawing.Point(424, 143);
+            this.pic_prdRate_validation.Location = new System.Drawing.Point(424, 128);
             this.pic_prdRate_validation.Name = "pic_prdRate_validation";
             this.pic_prdRate_validation.Size = new System.Drawing.Size(30, 24);
             this.pic_prdRate_validation.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -158,7 +165,7 @@
             // 
             // btnAdd
             // 
-            this.btnAdd.Location = new System.Drawing.Point(26, 242);
+            this.btnAdd.Location = new System.Drawing.Point(27, 247);
             this.btnAdd.Name = "btnAdd";
             this.btnAdd.Size = new System.Drawing.Size(427, 32);
             this.btnAdd.TabIndex = 5;
@@ -192,7 +199,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(22, 195);
+            this.label1.Location = new System.Drawing.Point(22, 168);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(83, 24);
             this.label1.TabIndex = 78;
@@ -201,11 +208,11 @@
             // label15
             // 
             this.label15.AutoSize = true;
-            this.label15.Location = new System.Drawing.Point(22, 141);
+            this.label15.Location = new System.Drawing.Point(22, 126);
             this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(53, 24);
+            this.label15.Size = new System.Drawing.Size(95, 24);
             this.label15.TabIndex = 78;
-            this.label15.Text = "Rate:";
+            this.label15.Text = "Unit Price:";
             // 
             // btn_Clear
             // 
@@ -234,7 +241,7 @@
             // txtPrdQuantity
             // 
             this.txtPrdQuantity.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.25F);
-            this.txtPrdQuantity.Location = new System.Drawing.Point(130, 191);
+            this.txtPrdQuantity.Location = new System.Drawing.Point(130, 164);
             this.txtPrdQuantity.Name = "txtPrdQuantity";
             this.txtPrdQuantity.Size = new System.Drawing.Size(288, 31);
             this.txtPrdQuantity.TabIndex = 4;
@@ -243,7 +250,7 @@
             // txtPrdRate
             // 
             this.txtPrdRate.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.25F);
-            this.txtPrdRate.Location = new System.Drawing.Point(130, 137);
+            this.txtPrdRate.Location = new System.Drawing.Point(130, 122);
             this.txtPrdRate.Name = "txtPrdRate";
             this.txtPrdRate.Size = new System.Drawing.Size(288, 31);
             this.txtPrdRate.TabIndex = 3;
@@ -252,7 +259,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(841, 431);
+            this.label3.Location = new System.Drawing.Point(846, 420);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(56, 24);
             this.label3.TabIndex = 96;
@@ -260,7 +267,7 @@
             // 
             // btn_Add_Supplier
             // 
-            this.btn_Add_Supplier.Location = new System.Drawing.Point(531, 428);
+            this.btn_Add_Supplier.Location = new System.Drawing.Point(536, 417);
             this.btn_Add_Supplier.Name = "btn_Add_Supplier";
             this.btn_Add_Supplier.Size = new System.Drawing.Size(56, 32);
             this.btn_Add_Supplier.TabIndex = 96;
@@ -272,7 +279,7 @@
             // 
             this.cmb_Supplier.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmb_Supplier.FormattingEnabled = true;
-            this.cmb_Supplier.Location = new System.Drawing.Point(237, 428);
+            this.cmb_Supplier.Location = new System.Drawing.Point(242, 417);
             this.cmb_Supplier.Name = "cmb_Supplier";
             this.cmb_Supplier.Size = new System.Drawing.Size(288, 32);
             this.cmb_Supplier.TabIndex = 6;
@@ -280,7 +287,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(129, 431);
+            this.label2.Location = new System.Drawing.Point(134, 420);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(85, 24);
             this.label2.TabIndex = 78;
@@ -296,10 +303,10 @@
             this.dgvProduct.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvProduct.BackgroundColor = System.Drawing.SystemColors.Control;
             this.dgvProduct.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvProduct.Location = new System.Drawing.Point(57, 497);
+            this.dgvProduct.Location = new System.Drawing.Point(57, 478);
             this.dgvProduct.Name = "dgvProduct";
             this.dgvProduct.ReadOnly = true;
-            this.dgvProduct.Size = new System.Drawing.Size(962, 179);
+            this.dgvProduct.Size = new System.Drawing.Size(962, 198);
             this.dgvProduct.TabIndex = 89;
             this.dgvProduct.Click += new System.EventHandler(this.dgvProduct_Click_1);
             // 
@@ -323,20 +330,48 @@
             // lblTotal_Cart
             // 
             this.lblTotal_Cart.AutoSize = true;
-            this.lblTotal_Cart.Location = new System.Drawing.Point(903, 432);
+            this.lblTotal_Cart.Location = new System.Drawing.Point(908, 416);
             this.lblTotal_Cart.Name = "lblTotal_Cart";
             this.lblTotal_Cart.Size = new System.Drawing.Size(0, 24);
             this.lblTotal_Cart.TabIndex = 96;
             // 
             // btn_Submit
             // 
-            this.btn_Submit.Location = new System.Drawing.Point(642, 427);
+            this.btn_Submit.Location = new System.Drawing.Point(647, 416);
             this.btn_Submit.Name = "btn_Submit";
             this.btn_Submit.Size = new System.Drawing.Size(182, 34);
             this.btn_Submit.TabIndex = 7;
             this.btn_Submit.Text = "Submit";
             this.btn_Submit.UseVisualStyleBackColor = true;
             this.btn_Submit.Click += new System.EventHandler(this.btn_Submit_Click);
+            // 
+            // txtSaleRate
+            // 
+            this.txtSaleRate.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.25F);
+            this.txtSaleRate.Location = new System.Drawing.Point(130, 201);
+            this.txtSaleRate.Name = "txtSaleRate";
+            this.txtSaleRate.Size = new System.Drawing.Size(288, 31);
+            this.txtSaleRate.TabIndex = 4;
+            this.txtSaleRate.TextChanged += new System.EventHandler(this.txtSaleRate_TextChanged);
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(22, 205);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(95, 24);
+            this.label4.TabIndex = 78;
+            this.label4.Text = "Sale Rate:";
+            // 
+            // pic_SaleRate_validate
+            // 
+            this.pic_SaleRate_validate.Image = global::Cateen_Cashier.Properties.Resources.No;
+            this.pic_SaleRate_validate.Location = new System.Drawing.Point(424, 207);
+            this.pic_SaleRate_validate.Name = "pic_SaleRate_validate";
+            this.pic_SaleRate_validate.Size = new System.Drawing.Size(30, 24);
+            this.pic_SaleRate_validate.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pic_SaleRate_validate.TabIndex = 95;
+            this.pic_SaleRate_validate.TabStop = false;
             // 
             // frmPurchase
             // 
@@ -358,6 +393,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.dgvProduct)).EndInit();
             this.pnlCart.ResumeLayout(false);
             this.pnlCart.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pic_SaleRate_validate)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -388,5 +424,8 @@
         private System.Windows.Forms.Button btn_Submit;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label lblTotal_Cart;
+        private System.Windows.Forms.PictureBox pic_SaleRate_validate;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.TextBox txtSaleRate;
     }
 }

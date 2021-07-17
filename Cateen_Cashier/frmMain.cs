@@ -141,9 +141,15 @@ namespace Cateen_Cashier
 
         private void btn_Stock_Click_1(object sender, EventArgs e)
         {
+            
+            // ..
+            // Code here
+            // ..
             point_btn(btn_Stock,1);
             changeColor(btn_Stock, 1);
             showSubMenus(pnl_Sub_Stock);
+
+
         }
 
         private void btn_Categories_Click_1(object sender, EventArgs e)
@@ -190,9 +196,6 @@ namespace Cateen_Cashier
 
         private void btn_Sales_Report_Click_1(object sender, EventArgs e)
         {
-            // ..
-            // Code here
-            // ..
             point_btn(btn_Sales_Report,0);
             hide_Sub_Menu_Panels();
         }
@@ -208,6 +211,9 @@ namespace Cateen_Cashier
 
         private void btn_stock_report_Click(object sender, EventArgs e)
         {
+            
+            openChildForm(new frmOnStockProducts());
+            label3.Text = "Stock Report";
             // ..
             // Code here
             // ..
@@ -344,6 +350,8 @@ namespace Cateen_Cashier
 
         private void btn_Sales_Report_Click(object sender, EventArgs e)
         {
+            openChildForm(new frmSalesReport());
+            label3.Text = "Sales Report";
             // ..
             // Code here
             // ..

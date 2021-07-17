@@ -233,6 +233,7 @@
             this.Margin = new System.Windows.Forms.Padding(6);
             this.Name = "frmSalesReport";
             this.Text = "frmSalesReport";
+            this.Load += new System.EventHandler(this.frmSalesReport_Load);
             this.pnl_Tools.ResumeLayout(false);
             this.groupBox3.ResumeLayout(false);
             this.groupBox2.ResumeLayout(false);
