@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Runtime.InteropServices;
@@ -248,6 +249,19 @@ namespace Cateen_Cashier
             openChildForm(new frmOnStockProducts());
             //changeColor(btn_Add_Customer, 1);
 
+            // Getting user Details
+
+            SqlDataAdapter AD = new SqlDataAdapter();
+            DBContext.createConnection(Program.userName, Program.userPass);
+            String Qur = "SELECT [empID] FROM [Canteen_Database].[dbo].[Employee] WHERE [empid] = '" + Program.userName + "'";
+            AD.SelectCommand = new SqlCommand(Qur, DBContext.con);
+            DataTable dt = new DataTable();
+            AD.Fill(dt);
+            DBContext.closeConnection();
+            String userCount = dt.Rows[0][0].ToString();
+            lbl_Title.Text = userCount;
+
+
         }
 
 
@@ -272,9 +286,7 @@ namespace Cateen_Cashier
                 btn.ForeColor = Color.Black;
         }
 
-        private void pnl_Tittle_Bar_Paint(object sender, PaintEventArgs e)
-        {
-        }
+       
 
         private void pnl_Tittle_Bar_DoubleClick(object sender, EventArgs e)
         {
@@ -356,6 +368,19 @@ namespace Cateen_Cashier
             // Code here
             // ..
             point_btn(btn_Sales_Report, 0);
+            hide_Sub_Menu_Panels();
+        }
+
+       
+
+        private void btn_Settings_Click_1(object sender, EventArgs e)
+        {
+            frmEmployee_Info empInfo = new frmEmployee_Info();
+            empInfo.ShowDialog();
+            // ..
+            // Code here
+            // ..
+            point_btn(btn_Purchase, 0);
             hide_Sub_Menu_Panels();
         }
     }

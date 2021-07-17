@@ -30,12 +30,14 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmMain));
             this.pnl_Menus = new System.Windows.Forms.Panel();
+            this.btn_Settings = new System.Windows.Forms.Button();
             this.pnl_sub_Report = new System.Windows.Forms.Panel();
             this.btn_Deposit_report = new System.Windows.Forms.Button();
             this.btn_stock_report = new System.Windows.Forms.Button();
             this.btn_Purchase_Report = new System.Windows.Forms.Button();
             this.btn_Sales_Report = new System.Windows.Forms.Button();
             this.btn_Report = new System.Windows.Forms.Button();
+            this.pnlNav = new System.Windows.Forms.Panel();
             this.pnlInventory = new System.Windows.Forms.Panel();
             this.btn_Purchase = new System.Windows.Forms.Button();
             this.btnCart = new System.Windows.Forms.Button();
@@ -50,12 +52,11 @@
             this.btn_Transaction = new System.Windows.Forms.Button();
             this.btn_Add_Customer = new System.Windows.Forms.Button();
             this.btn_Dashboard = new System.Windows.Forms.Button();
-            this.pnlNav = new System.Windows.Forms.Panel();
             this.pnlTitle = new System.Windows.Forms.Panel();
             this.lbl_Title = new System.Windows.Forms.Label();
             this.logo = new System.Windows.Forms.PictureBox();
             this.pnl_Taskbar = new System.Windows.Forms.Panel();
-            pnl_Child_Form = new System.Windows.Forms.Panel();
+           pnl_Child_Form = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.lbltitle = new System.Windows.Forms.Label();
@@ -72,7 +73,7 @@
             this.pnl_sub_Transaction.SuspendLayout();
             this.pnlTitle.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.logo)).BeginInit();
-            pnl_Child_Form.SuspendLayout();
+           pnl_Child_Form.SuspendLayout();
             this.pnl_Tittle_Bar.SuspendLayout();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -81,8 +82,10 @@
             // 
             resources.ApplyResources(this.pnl_Menus, "pnl_Menus");
             this.pnl_Menus.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(1)))), ((int)(((byte)(10)))));
+            this.pnl_Menus.Controls.Add(this.btn_Settings);
             this.pnl_Menus.Controls.Add(this.pnl_sub_Report);
             this.pnl_Menus.Controls.Add(this.btn_Report);
+            this.pnl_Menus.Controls.Add(this.pnlNav);
             this.pnl_Menus.Controls.Add(this.pnlInventory);
             this.pnl_Menus.Controls.Add(this.btnInvetory);
             this.pnl_Menus.Controls.Add(this.pnl_Sub_Stock);
@@ -91,9 +94,17 @@
             this.pnl_Menus.Controls.Add(this.btn_Transaction);
             this.pnl_Menus.Controls.Add(this.btn_Add_Customer);
             this.pnl_Menus.Controls.Add(this.btn_Dashboard);
-            this.pnl_Menus.Controls.Add(this.pnlNav);
             this.pnl_Menus.Controls.Add(this.pnlTitle);
             this.pnl_Menus.Name = "pnl_Menus";
+            // 
+            // btn_Settings
+            // 
+            resources.ApplyResources(this.btn_Settings, "btn_Settings");
+            this.btn_Settings.FlatAppearance.BorderSize = 0;
+            this.btn_Settings.ForeColor = System.Drawing.Color.White;
+            this.btn_Settings.Name = "btn_Settings";
+            this.btn_Settings.UseVisualStyleBackColor = true;
+            this.btn_Settings.Click += new System.EventHandler(this.btn_Settings_Click_1);
             // 
             // pnl_sub_Report
             // 
@@ -150,6 +161,12 @@
             this.btn_Report.Name = "btn_Report";
             this.btn_Report.UseVisualStyleBackColor = true;
             this.btn_Report.Click += new System.EventHandler(this.btn_Report_Click_1);
+            // 
+            // pnlNav
+            // 
+            this.pnlNav.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
+            resources.ApplyResources(this.pnlNav, "pnlNav");
+            this.pnlNav.Name = "pnlNav";
             // 
             // pnlInventory
             // 
@@ -277,12 +294,6 @@
             this.btn_Dashboard.UseVisualStyleBackColor = true;
             this.btn_Dashboard.Click += new System.EventHandler(this.btn_Dashboard_Click);
             // 
-            // pnlNav
-            // 
-            this.pnlNav.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
-            resources.ApplyResources(this.pnlNav, "pnlNav");
-            this.pnlNav.Name = "pnlNav";
-            // 
             // pnlTitle
             // 
             this.pnlTitle.Controls.Add(this.lbl_Title);
@@ -310,11 +321,11 @@
             // 
             // pnl_Child_Form
             // 
-            pnl_Child_Form.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
-            pnl_Child_Form.Controls.Add(this.label2);
-            pnl_Child_Form.Controls.Add(this.label1);
+           pnl_Child_Form.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
+           pnl_Child_Form.Controls.Add(this.label2);
+           pnl_Child_Form.Controls.Add(this.label1);
             resources.ApplyResources(pnl_Child_Form, "pnl_Child_Form");
-            pnl_Child_Form.Name = "pnl_Child_Form";
+           pnl_Child_Form.Name = "pnl_Child_Form";
             // 
             // label2
             // 
@@ -404,7 +415,7 @@
             this.pnlTitle.ResumeLayout(false);
             this.pnlTitle.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.logo)).EndInit();
-            pnl_Child_Form.ResumeLayout(false);
+           pnl_Child_Form.ResumeLayout(false);
             this.pnl_Tittle_Bar.ResumeLayout(false);
             this.pnl_Tittle_Bar.PerformLayout();
             this.panel1.ResumeLayout(false);
@@ -424,7 +435,6 @@
         private System.Windows.Forms.Panel pnlNav;
         private System.Windows.Forms.Label lbltitle;
         private System.Windows.Forms.Label label1;
-        public static System.Windows.Forms.Panel pnl_Child_Form;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Button btn_Minimize;
@@ -450,6 +460,8 @@
         private System.Windows.Forms.Button btn_Report;
         private System.Windows.Forms.Button btn_Deposit_report;
         private System.Windows.Forms.Button btn_stock_report;
+        private System.Windows.Forms.Button btn_Settings;
+        public static System.Windows.Forms.Panel pnl_Child_Form;
     }
 }
 
