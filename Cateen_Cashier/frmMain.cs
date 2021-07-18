@@ -101,7 +101,8 @@ namespace Cateen_Cashier
 
         private void btn_Add_Customer_Click_1(object sender, EventArgs e)
         {
-            setImage();
+            setImage(); pnl_Clock.Visible = false;
+
             label3.Text = "Customers";
             openChildForm(new frmCustomer());
             // ..
@@ -123,6 +124,7 @@ namespace Cateen_Cashier
 
         private void btn_CheckBalance_Click_1(object sender, EventArgs e)
         {
+            pnl_Clock.Visible = false;
             openChildForm(new frmCustomerSearch(null));
             label3.Text = "Check Balance";
             // ..
@@ -135,6 +137,8 @@ namespace Cateen_Cashier
 
         private void btn_Deposit_Click_1(object sender, EventArgs e)
         {
+            pnl_Clock.Visible = false;
+
             openChildForm(new frmCustomerSearch("DP"));
             label3.Text = "Deposit Money";
             // ..
@@ -146,6 +150,8 @@ namespace Cateen_Cashier
 
         private void btn_Stock_Click_1(object sender, EventArgs e)
         {
+            pnl_Clock.Visible = false;
+
             setImage();
             // ..
             // Code here
@@ -159,6 +165,8 @@ namespace Cateen_Cashier
 
         private void btn_Categories_Click_1(object sender, EventArgs e)
         {
+            pnl_Clock.Visible = false;
+
             openChildForm(new frmCategory());
             label3.Text = "Categories";
             // ..
@@ -170,6 +178,8 @@ namespace Cateen_Cashier
 
         private void btn_Products_Click_1(object sender, EventArgs e)
         {
+            pnl_Clock.Visible = false;
+
             openChildForm(new frmProduct());
             label3.Text = "Products";
             // ..
@@ -194,6 +204,7 @@ namespace Cateen_Cashier
 
         private void btn_Report_Click_1(object sender, EventArgs e)
         {
+            pnl_Clock.Visible = false;
             setImage();
             point_btn(btn_Report,1);
             changeColor(btn_Report, 1);
@@ -202,12 +213,14 @@ namespace Cateen_Cashier
 
         private void btn_Sales_Report_Click_1(object sender, EventArgs e)
         {
+            pnl_Clock.Visible = false;
             point_btn(btn_Sales_Report,0);
             hide_Sub_Menu_Panels();
         }
 
         private void btn_Deposit_report_Click(object sender, EventArgs e)
         {
+            pnl_Clock.Visible = false;
             // ..
             // Code here
             // ..
@@ -217,7 +230,8 @@ namespace Cateen_Cashier
 
         private void btn_stock_report_Click(object sender, EventArgs e)
         {
-            
+            pnl_Clock.Visible = false;
+
             openChildForm(new frmOnStockProducts());
             label3.Text = "Stock Report";
             // ..
@@ -240,8 +254,8 @@ namespace Cateen_Cashier
             childForm.BringToFront();
             childForm.Dock = DockStyle.Fill;
             childForm.FormBorderStyle = FormBorderStyle.None;
-            //pnl_Child_Form.Controls.Add(childForm);
-            //pnl_Child_Form.Tag = childForm;
+            pnl_Child_Form.Controls.Add(childForm);
+            pnl_Child_Form.Tag = childForm;
             childForm.BringToFront();
             childForm.Show();
         }
@@ -338,8 +352,11 @@ namespace Cateen_Cashier
 
         private void btn_Dashboard_Click(object sender, EventArgs e)
         {
+            pnl_Clock.Visible = true;
+
             setImage();
             label3.Text = "Dashboard";
+            pnl_Clock.Visible = true;
             openChildForm(new frmDashboard());
             // ..
             // Code here
@@ -352,6 +369,8 @@ namespace Cateen_Cashier
 
         private void btn_Purchase_Click(object sender, EventArgs e)
         {
+            pnl_Clock.Visible = false;
+
             openChildForm(new frmPurchase());
             label3.Text = "Buy Products";
             // ..
@@ -364,6 +383,8 @@ namespace Cateen_Cashier
 
         private void btnInvetory_Click(object sender, EventArgs e)
         {
+            pnl_Clock.Visible = false;
+
             // ..
             // Code Here
             //...
@@ -375,6 +396,8 @@ namespace Cateen_Cashier
 
         private void btn_Purchase_Report_Click(object sender, EventArgs e)
         {
+            pnl_Clock.Visible = false;
+
             // ..
             // Code here
             // ..
@@ -384,6 +407,8 @@ namespace Cateen_Cashier
 
         private void btn_Sales_Report_Click(object sender, EventArgs e)
         {
+            pnl_Clock.Visible = false;
+
             openChildForm(new frmSalesReport());
             label3.Text = "Sales Report";
             // ..

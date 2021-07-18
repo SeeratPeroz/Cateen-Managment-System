@@ -1599,7 +1599,7 @@
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;lbFecha.Parent" xml:space="preserve">
-    <value>panel2</value>
+    <value>pnl_Clock</value>
   </data>
   <data name="&gt;&gt;lbFecha.ZOrder" xml:space="preserve">
     <value>0</value>
@@ -1635,33 +1635,33 @@
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;lblHora.Parent" xml:space="preserve">
-    <value>panel2</value>
+    <value>pnl_Clock</value>
   </data>
   <data name="&gt;&gt;lblHora.ZOrder" xml:space="preserve">
     <value>1</value>
   </data>
-  <data name="panel2.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+  <data name="pnl_Clock.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Bottom</value>
   </data>
-  <data name="panel2.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="pnl_Clock.Location" type="System.Drawing.Point, System.Drawing">
     <value>0, 666</value>
   </data>
-  <data name="panel2.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="pnl_Clock.Size" type="System.Drawing.Size, System.Drawing">
     <value>1095, 100</value>
   </data>
-  <data name="panel2.TabIndex" type="System.Int32, mscorlib">
+  <data name="pnl_Clock.TabIndex" type="System.Int32, mscorlib">
     <value>6</value>
   </data>
-  <data name="&gt;&gt;panel2.Name" xml:space="preserve">
-    <value>panel2</value>
+  <data name="&gt;&gt;pnl_Clock.Name" xml:space="preserve">
+    <value>pnl_Clock</value>
   </data>
-  <data name="&gt;&gt;panel2.Type" xml:space="preserve">
+  <data name="&gt;&gt;pnl_Clock.Type" xml:space="preserve">
     <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;panel2.Parent" xml:space="preserve">
+  <data name="&gt;&gt;pnl_Clock.Parent" xml:space="preserve">
     <value>pnl_Child_Form</value>
   </data>
-  <data name="&gt;&gt;panel2.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;pnl_Clock.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
   <data name="label2.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">

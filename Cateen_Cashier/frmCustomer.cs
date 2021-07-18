@@ -87,7 +87,7 @@ namespace Cateen_Cashier
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message);
+                MessageBox.Show("Error show cutomer type: "+ex.Message);
             }
         }
         // ---------------------------------------------------------------------------------------
@@ -102,11 +102,11 @@ namespace Cateen_Cashier
             isCustomerValid_pnlCustomer = Validation.validateCustCard(txtCustCard.Text);
             if (isCustomerValid_pnlCustomer)
             {
-                //pic_customerCardValidate_pnlCustomer.Image = Cateen_Cashier.Properties.Resources.Yes;
+                pic_customerCardValidate_pnlCustomer.Image = Cateen_Cashier.Properties.Resources.Yes;
             }
             else
             {
-                //pic_customerCardValidate_pnlCustomer.Image = Cateen_Cashier.Properties.Resources.No;
+                pic_customerCardValidate_pnlCustomer.Image = Cateen_Cashier.Properties.Resources.No;
             }
         }
         // Validating Customer ID  -> Custmer Panel
@@ -219,7 +219,7 @@ namespace Cateen_Cashier
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message);
+                MessageBox.Show("Error showing all customers: "+ex.Message);
             }
         }
 
@@ -253,7 +253,7 @@ namespace Cateen_Cashier
                 }
                 catch (Exception ex)
                 {
-                    MessageBox.Show(ex.Message);
+                    MessageBox.Show("Error while saving data: " + ex.Message);
                 }
             }
             else
@@ -290,7 +290,7 @@ namespace Cateen_Cashier
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message);
+                MessageBox.Show("Error while deleting data: " + ex.Message);
             }
         }
 
@@ -323,18 +323,23 @@ namespace Cateen_Cashier
 
                 custCart_pnlCustomer = Convert.ToInt64(dgvCustomer.CurrentRow.Cells[0].FormattedValue.ToString());
 
+
                 // Searching Customer Image
-                AD.SelectCommand = new SqlCommand("SELECT [custImage] FROM [Canteen_Database].[dbo].[Customers] WHERE [custCard] =" + txtCustCard.Text, DBContext.con);
+                AD.SelectCommand = new SqlCommand("SELECT [custImage] FROM [Canteen_Database].[dbo].[Customers] WHERE [custCard] ='" + txtCustCard.Text+"'", DBContext.con);
                 DataTable dt = new DataTable();
+
+                // No Problem yet ^^
+                //                ||
+
                 AD.Fill(dt);
                 String imgDGV = dt.Rows[0][0].ToString();
                 txtImage_Path.Text = imgDGV;
-                pic_user_pnlCustomerAcc.Image = new Bitmap(@"" + imgDGV);
+                 pic_user_pnlCustomerAcc.Image = new Bitmap(@"" + imgDGV);
 
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message);
+                MessageBox.Show("Error on gride view click: " + ex.Message);
                 pic_user_pnlCustomerAcc.Image = new Bitmap(@"C:\Users\LOPI\Desktop\C#_Customize_Design\Cateen_Cashier\Cateen_Cashier\icons\avatart.png");
                 txtImage_Path.Text = @"C:\Users\LOPI\Desktop\C#_Customize_Design\Cateen_Cashier\Cateen_Cashier\icons\avatart.png";
             }
@@ -363,7 +368,7 @@ namespace Cateen_Cashier
                 }
                 catch (Exception ex)
                 {
-                    MessageBox.Show(ex.Message);
+                    MessageBox.Show("Error while updating data: " + ex.Message);
                     clearTextBoxes();
 
                 }
@@ -389,7 +394,7 @@ namespace Cateen_Cashier
                 }
                 catch (Exception ex)
                 {
-                    MessageBox.Show(ex.Message);
+                    MessageBox.Show("Error while searching data: " + ex.Message);
                 }
             }
             else
@@ -408,7 +413,7 @@ namespace Cateen_Cashier
             try
             {
                 DataTable DS = new DataTable();
-                AD.SelectCommand = new SqlCommand("SELECT *  FROM [Canteen_Database].[dbo].[Customers] WHERE custCard = " + id.Text, DBContext.con);
+                AD.SelectCommand = new SqlCommand("SELECT *  FROM [Canteen_Database].[dbo].[Customers] WHERE custCard = '" + id.Text+"'", DBContext.con);
                 AD.Fill(DS);
                 try
                 {
@@ -438,7 +443,7 @@ namespace Cateen_Cashier
             try
             {
                 DataTable DS = new DataTable();
-                AD.SelectCommand = new SqlCommand("SELECT *  FROM [Canteen_Database].[dbo].[Customers] WHERE custID = " + id.Text, DBContext.con);
+                AD.SelectCommand = new SqlCommand("SELECT *  FROM [Canteen_Database].[dbo].[Customers] WHERE custID = '" + id.Text+"'", DBContext.con);
                 AD.Fill(DS);
                 try
                 {
@@ -476,5 +481,7 @@ namespace Cateen_Cashier
             frmCustomerType custType= new frmCustomerType();
             custType.ShowDialog();
         }
+
+        
     }
 }

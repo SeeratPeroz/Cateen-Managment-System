@@ -82,7 +82,7 @@ namespace Cateen_Cashier
             try
             {
                 // Searching Customer Image
-                AD.SelectCommand = new SqlCommand("SELECT [custImage] FROM [Canteen_Database].[dbo].[Customers] WHERE [custCard] =" + lblCustCard.Text, DBContext.con);
+                AD.SelectCommand = new SqlCommand("SELECT [custImage] FROM [Canteen_Database].[dbo].[Customers] WHERE [custCard] ='" + lblCustCard.Text+"'", DBContext.con);
                 DataTable dt = new DataTable();
                 AD.Fill(dt);
                 String imgDGV = dt.Rows[0][0].ToString();
@@ -196,7 +196,7 @@ namespace Cateen_Cashier
         {
             try
             {
-                String QYR = "SELECT TOP 3 [BID] as Balance_ID,depositeDate as Deposited_Date,depositAmount as Amount FROM [Canteen_Database].[dbo].[customer_Balance] WHERE [custCard] = " + search + " order by BID desc";
+                String QYR = "SELECT TOP 3 [BID] as Balance_ID,depositeDate as Deposited_Date,depositAmount as Amount FROM [Canteen_Database].[dbo].[customer_Balance] WHERE [custCard] = '" + search + "' order by BID desc";
                 AD.SelectCommand = new SqlCommand(QYR, DBContext.con);
                 DataSet dpDS = new DataSet();
                 AD.Fill(dpDS);
@@ -283,7 +283,7 @@ namespace Cateen_Cashier
         {
             try
             {
-                String QER = "SELECT * FROM [Canteen_Database].[dbo].[vw_CustomerBalance] WHERE [CustomerCard] = " + id + " OR [custID] = " + id;
+                String QER = "SELECT * FROM [Canteen_Database].[dbo].[vw_CustomerBalance] WHERE [CustomerCard] = '" + id + "' OR [custID] = '" + id+"'";
                 DataTable ds = new DataTable();
                 AD.SelectCommand = new SqlCommand(QER, DBContext.con);
 

@@ -58,7 +58,7 @@ namespace Cateen_Cashier
         {
             try
             {
-                String QER = "SELECT * FROM [Canteen_Database].[dbo].[vw_CustomerBalance] WHERE [CustomerCard] = " + Card + " OR [custID] = " + lblCustID.Text;
+                String QER = "SELECT * FROM [Canteen_Database].[dbo].[vw_CustomerBalance] WHERE [CustomerCard] = '" + Card + "' OR [custID] = '" + lblCustID.Text+"'";
                 DataTable ds = new DataTable();
                 AD.SelectCommand = new SqlCommand(QER, DBContext.con);
 

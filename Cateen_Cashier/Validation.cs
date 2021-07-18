@@ -45,7 +45,7 @@ namespace Cateen_Cashier
         // Customer ID Validation
         public static bool validateCustID(String Input_text)
         {
-            String pattern = @"^[\d]{3}-[\d]{7}+$";
+            String pattern = @"^[1-9][\d]{2}-[\d]{7}$";
             return Regex.IsMatch(Input_text, pattern);
         }
         // Customer Name Validation

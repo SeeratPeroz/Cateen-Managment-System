@@ -61,8 +61,11 @@ namespace Cateen_Cashier
                 try
                 {
                     CARD = DS.Rows[0][0].ToString();
+
                     IDD = DS.Rows[0][4].ToString();
+
                     NAME = DS.Rows[0][1].ToString();
+
 
                     BALANCE = "N/A";
                     //pic_User.Image = new Bitmap(@"" + DS.Rows[0][5]);
@@ -93,15 +96,15 @@ namespace Cateen_Cashier
             try
             {
                 DataTable DS = new DataTable();
-                AD.SelectCommand = new SqlCommand("SELECT *  FROM [Canteen_Database].[dbo].[Customers] WHERE custID = " + id.Text, DBContext.con);
-                AD.Fill(DS);
+                AD.SelectCommand = new SqlCommand("SELECT *  FROM [Canteen_Database].[dbo].[Customers] WHERE custID = '" + id.Text+"'", DBContext.con);
+        AD.Fill(DS);
                 try
                 {
                     CARD = DS.Rows[0][0].ToString();
                     IDD = DS.Rows[0][4].ToString();
                     NAME = DS.Rows[0][1].ToString();
                     BALANCE = DS.Rows[0][2].ToString();
-                //    pic_User.Image = new Bitmap(@"" + DS.Rows[0][5].ToString());
+                    //    pic_User.Image = new Bitmap(@"" + DS.Rows[0][5].ToString());
                     //MessageBox.Show(custPKID);
                     userFound = true;
 
@@ -115,7 +118,7 @@ namespace Cateen_Cashier
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Error: " + ex.Message);
+                MessageBox.Show("Error Search by ID: " + ex.Message);
             }
         }
 
@@ -125,7 +128,7 @@ namespace Cateen_Cashier
 
             if (e.KeyCode == Keys.Enter)
             {
-                if (Validation.validateCustCard(txtSearch.Text))
+                if (Validation.validateCustCard(txtSearch.Text) | Validation.validateCustID(txtSearch.Text))
                 {
                     Console.Beep(1000, 800);
                     picSearchButton();
@@ -139,13 +142,13 @@ namespace Cateen_Cashier
         // Button to search user.
         private void picSearch_Click(object sender, EventArgs e)
         {
-            if (Validation.validateCustCard(txtSearch.Text))
+            if (Validation.validateCustCard(txtSearch.Text) | Validation.validateCustID(txtSearch.Text))
             {
                 picSearchButton();
             }
             else
             {
-                MessageBox.Show("Please enter a valid ID or Card#");
+                MessageBox.Show("Please enter A valid ID or Card#");
                 txtSearch.Focus();
                 txtSearch.SelectAll();
             }
@@ -208,8 +211,8 @@ namespace Cateen_Cashier
             childForm.BringToFront();
             childForm.Dock = DockStyle.Fill;
             childForm.FormBorderStyle = FormBorderStyle.None;
-            //frmMain.pnl_Child_Form.Controls.Add(childForm);
-            //frmMain.pnl_Child_Form.Tag = childForm;
+            frmMain.pnl_Child_Form.Controls.Add(childForm);
+            frmMain.pnl_Child_Form.Tag = childForm;
             childForm.BringToFront();
             childForm.Show();
         }
@@ -232,8 +235,8 @@ namespace Cateen_Cashier
             childForm.BringToFront();
             childForm.Dock = DockStyle.Fill;
             childForm.FormBorderStyle = FormBorderStyle.None;
-            //frmMain.pnl_Child_Form.Controls.Add(childForm);
-            //frmMain.pnl_Child_Form.Tag = childForm;
+            frmMain.pnl_Child_Form.Controls.Add(childForm);
+            frmMain.pnl_Child_Form.Tag = childForm;
             childForm.BringToFront();
             childForm.Show();
         }
@@ -245,7 +248,7 @@ namespace Cateen_Cashier
         {
             try
             {
-                String QER = "SELECT * FROM [Canteen_Database].[dbo].[vw_CustomerBalance] WHERE [CustomerCard] = " + id + " OR [custID] = " + id;
+                String QER = "SELECT * FROM [Canteen_Database].[dbo].[vw_CustomerBalance] WHERE [CustomerCard] = '" + id + "' OR [custID] = '" + id+"'";
                 DataTable ds = new DataTable();
                 AD.SelectCommand = new SqlCommand(QER, DBContext.con);
 

@@ -57,8 +57,8 @@
             this.logo = new CustomControls.RJControls.RJCircularPictureBox();
             this.lbl_Title = new System.Windows.Forms.Label();
             this.pnl_Taskbar = new System.Windows.Forms.Panel();
-            this.pnl_Child_Form = new System.Windows.Forms.Panel();
-            this.panel2 = new System.Windows.Forms.Panel();
+            pnl_Child_Form = new System.Windows.Forms.Panel();
+            this.pnl_Clock = new System.Windows.Forms.Panel();
             this.lbFecha = new System.Windows.Forms.Label();
             this.lblHora = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -80,8 +80,8 @@
             this.pnl_sub_Transaction.SuspendLayout();
             this.pnlTitle.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.logo)).BeginInit();
-            this.pnl_Child_Form.SuspendLayout();
-            this.panel2.SuspendLayout();
+            pnl_Child_Form.SuspendLayout();
+            this.pnl_Clock.SuspendLayout();
             this.pnl_Tittle_Bar.SuspendLayout();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -335,20 +335,20 @@
             // 
             // pnl_Child_Form
             // 
-            this.pnl_Child_Form.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
-            this.pnl_Child_Form.Controls.Add(this.panel2);
-            this.pnl_Child_Form.Controls.Add(this.label2);
-            this.pnl_Child_Form.Controls.Add(this.label1);
-            resources.ApplyResources(this.pnl_Child_Form, "pnl_Child_Form");
-            this.pnl_Child_Form.Name = "pnl_Child_Form";
+            pnl_Child_Form.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
+            pnl_Child_Form.Controls.Add(this.pnl_Clock);
+            pnl_Child_Form.Controls.Add(this.label2);
+            pnl_Child_Form.Controls.Add(this.label1);
+            resources.ApplyResources(pnl_Child_Form, "pnl_Child_Form");
+            pnl_Child_Form.Name = "pnl_Child_Form";
             // 
-            // panel2
+            // pnl_Clock
             // 
-            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(61)))), ((int)(((byte)(69)))));
-            this.panel2.Controls.Add(this.lbFecha);
-            this.panel2.Controls.Add(this.lblHora);
-            resources.ApplyResources(this.panel2, "panel2");
-            this.panel2.Name = "panel2";
+            this.pnl_Clock.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(61)))), ((int)(((byte)(69)))));
+            this.pnl_Clock.Controls.Add(this.lbFecha);
+            this.pnl_Clock.Controls.Add(this.lblHora);
+            resources.ApplyResources(this.pnl_Clock, "pnl_Clock");
+            this.pnl_Clock.Name = "pnl_Clock";
             // 
             // lbFecha
             // 
@@ -466,7 +466,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.pnlSide_Right);
             this.Controls.Add(this.pnl_Tittle_Bar);
-            this.Controls.Add(this.pnl_Child_Form);
+            this.Controls.Add(pnl_Child_Form);
             this.Controls.Add(this.pnl_Taskbar);
             this.Controls.Add(this.pnl_Menus);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -481,9 +481,9 @@
             this.pnlTitle.ResumeLayout(false);
             this.pnlTitle.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.logo)).EndInit();
-            this.pnl_Child_Form.ResumeLayout(false);
-            this.panel2.ResumeLayout(false);
-            this.panel2.PerformLayout();
+            pnl_Child_Form.ResumeLayout(false);
+            this.pnl_Clock.ResumeLayout(false);
+            this.pnl_Clock.PerformLayout();
             this.pnl_Tittle_Bar.ResumeLayout(false);
             this.pnl_Tittle_Bar.PerformLayout();
             this.panel1.ResumeLayout(false);
@@ -528,11 +528,11 @@
         private System.Windows.Forms.Button btn_stock_report;
         private System.Windows.Forms.Button btn_Settings;
         private CustomControls.RJControls.RJCircularPictureBox logo;
-        public System.Windows.Forms.Panel pnl_Child_Form;
+        public static System.Windows.Forms.Panel pnl_Child_Form;
         private System.Windows.Forms.Button btnNormal;
         private System.Windows.Forms.Button btnMinimizar;
         private System.Windows.Forms.Button btnMaximizar;
-        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Panel pnl_Clock;
         private System.Windows.Forms.Label lbFecha;
         private System.Windows.Forms.Label lblHora;
         private System.Windows.Forms.Timer tmCLock_Date;
