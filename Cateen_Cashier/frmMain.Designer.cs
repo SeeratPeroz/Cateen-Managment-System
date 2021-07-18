@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmMain));
             this.pnl_Menus = new System.Windows.Forms.Panel();
             this.btn_Settings = new System.Windows.Forms.Button();
@@ -56,16 +57,22 @@
             this.logo = new CustomControls.RJControls.RJCircularPictureBox();
             this.lbl_Title = new System.Windows.Forms.Label();
             this.pnl_Taskbar = new System.Windows.Forms.Panel();
-            pnl_Child_Form = new System.Windows.Forms.Panel();
+            this.pnl_Child_Form = new System.Windows.Forms.Panel();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.lbFecha = new System.Windows.Forms.Label();
+            this.lblHora = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.btnNormal = new System.Windows.Forms.Button();
             this.lbltitle = new System.Windows.Forms.Label();
             this.pnl_Tittle_Bar = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.btn_Minimize = new System.Windows.Forms.Button();
+            this.btnMaximizar = new System.Windows.Forms.Button();
             this.btn_Exit = new System.Windows.Forms.Button();
+            this.btnMinimizar = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
             this.pnlSide_Right = new System.Windows.Forms.Panel();
+            this.tmCLock_Date = new System.Windows.Forms.Timer(this.components);
             this.pnl_Menus.SuspendLayout();
             this.pnl_sub_Report.SuspendLayout();
             this.pnlInventory.SuspendLayout();
@@ -73,7 +80,8 @@
             this.pnl_sub_Transaction.SuspendLayout();
             this.pnlTitle.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.logo)).BeginInit();
-            pnl_Child_Form.SuspendLayout();
+            this.pnl_Child_Form.SuspendLayout();
+            this.panel2.SuspendLayout();
             this.pnl_Tittle_Bar.SuspendLayout();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -327,11 +335,32 @@
             // 
             // pnl_Child_Form
             // 
-            pnl_Child_Form.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
-            pnl_Child_Form.Controls.Add(this.label2);
-            pnl_Child_Form.Controls.Add(this.label1);
-            resources.ApplyResources(pnl_Child_Form, "pnl_Child_Form");
-            pnl_Child_Form.Name = "pnl_Child_Form";
+            this.pnl_Child_Form.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
+            this.pnl_Child_Form.Controls.Add(this.panel2);
+            this.pnl_Child_Form.Controls.Add(this.label2);
+            this.pnl_Child_Form.Controls.Add(this.label1);
+            resources.ApplyResources(this.pnl_Child_Form, "pnl_Child_Form");
+            this.pnl_Child_Form.Name = "pnl_Child_Form";
+            // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(61)))), ((int)(((byte)(69)))));
+            this.panel2.Controls.Add(this.lbFecha);
+            this.panel2.Controls.Add(this.lblHora);
+            resources.ApplyResources(this.panel2, "panel2");
+            this.panel2.Name = "panel2";
+            // 
+            // lbFecha
+            // 
+            resources.ApplyResources(this.lbFecha, "lbFecha");
+            this.lbFecha.ForeColor = System.Drawing.Color.White;
+            this.lbFecha.Name = "lbFecha";
+            // 
+            // lblHora
+            // 
+            resources.ApplyResources(this.lblHora, "lblHora");
+            this.lblHora.ForeColor = System.Drawing.Color.LightGray;
+            this.lblHora.Name = "lblHora";
             // 
             // label2
             // 
@@ -344,6 +373,17 @@
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(158)))), ((int)(((byte)(161)))), ((int)(((byte)(176)))));
             resources.ApplyResources(this.label1, "label1");
             this.label1.Name = "label1";
+            // 
+            // btnNormal
+            // 
+            resources.ApplyResources(this.btnNormal, "btnNormal");
+            this.btnNormal.BackColor = System.Drawing.Color.Transparent;
+            this.btnNormal.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnNormal.FlatAppearance.BorderSize = 0;
+            this.btnNormal.Image = global::Cateen_Cashier.Properties.Resources.Normal;
+            this.btnNormal.Name = "btnNormal";
+            this.btnNormal.UseVisualStyleBackColor = false;
+            this.btnNormal.Click += new System.EventHandler(this.btnNormal_Click);
             // 
             // lbltitle
             // 
@@ -360,23 +400,27 @@
             resources.ApplyResources(this.pnl_Tittle_Bar, "pnl_Tittle_Bar");
             this.pnl_Tittle_Bar.Name = "pnl_Tittle_Bar";
             this.pnl_Tittle_Bar.DoubleClick += new System.EventHandler(this.pnl_Tittle_Bar_DoubleClick);
+            this.pnl_Tittle_Bar.MouseDown += new System.Windows.Forms.MouseEventHandler(this.pnl_Tittle_Bar_MouseDown);
             // 
             // panel1
             // 
-            this.panel1.Controls.Add(this.btn_Minimize);
+            this.panel1.Controls.Add(this.btnMaximizar);
+            this.panel1.Controls.Add(this.btnNormal);
             this.panel1.Controls.Add(this.btn_Exit);
+            this.panel1.Controls.Add(this.btnMinimizar);
             resources.ApplyResources(this.panel1, "panel1");
             this.panel1.Name = "panel1";
             // 
-            // btn_Minimize
+            // btnMaximizar
             // 
-            resources.ApplyResources(this.btn_Minimize, "btn_Minimize");
-            this.btn_Minimize.FlatAppearance.BorderSize = 0;
-            this.btn_Minimize.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
-            this.btn_Minimize.ForeColor = System.Drawing.Color.White;
-            this.btn_Minimize.Name = "btn_Minimize";
-            this.btn_Minimize.UseVisualStyleBackColor = true;
-            this.btn_Minimize.Click += new System.EventHandler(this.btn_Minimize_Click);
+            resources.ApplyResources(this.btnMaximizar, "btnMaximizar");
+            this.btnMaximizar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnMaximizar.FlatAppearance.BorderSize = 0;
+            this.btnMaximizar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
+            this.btnMaximizar.Image = global::Cateen_Cashier.Properties.Resources.maximize3;
+            this.btnMaximizar.Name = "btnMaximizar";
+            this.btnMaximizar.UseVisualStyleBackColor = true;
+            this.btnMaximizar.Click += new System.EventHandler(this.btnMaximizar_Click);
             // 
             // btn_Exit
             // 
@@ -387,6 +431,18 @@
             this.btn_Exit.Name = "btn_Exit";
             this.btn_Exit.UseVisualStyleBackColor = true;
             this.btn_Exit.Click += new System.EventHandler(this.btn_Exit_Click);
+            // 
+            // btnMinimizar
+            // 
+            resources.ApplyResources(this.btnMinimizar, "btnMinimizar");
+            this.btnMinimizar.BackColor = System.Drawing.Color.Transparent;
+            this.btnMinimizar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnMinimizar.FlatAppearance.BorderSize = 0;
+            this.btnMinimizar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
+            this.btnMinimizar.Image = global::Cateen_Cashier.Properties.Resources.Minimize;
+            this.btnMinimizar.Name = "btnMinimizar";
+            this.btnMinimizar.UseVisualStyleBackColor = false;
+            this.btnMinimizar.Click += new System.EventHandler(this.btnMinimizar_Click);
             // 
             // label3
             // 
@@ -400,13 +456,17 @@
             resources.ApplyResources(this.pnlSide_Right, "pnlSide_Right");
             this.pnlSide_Right.Name = "pnlSide_Right";
             // 
+            // tmCLock_Date
+            // 
+            this.tmCLock_Date.Tick += new System.EventHandler(this.tmFechaHora_Tick);
+            // 
             // frmMain
             // 
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.pnlSide_Right);
             this.Controls.Add(this.pnl_Tittle_Bar);
-            this.Controls.Add(pnl_Child_Form);
+            this.Controls.Add(this.pnl_Child_Form);
             this.Controls.Add(this.pnl_Taskbar);
             this.Controls.Add(this.pnl_Menus);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -421,7 +481,9 @@
             this.pnlTitle.ResumeLayout(false);
             this.pnlTitle.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.logo)).EndInit();
-            pnl_Child_Form.ResumeLayout(false);
+            this.pnl_Child_Form.ResumeLayout(false);
+            this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
             this.pnl_Tittle_Bar.ResumeLayout(false);
             this.pnl_Tittle_Bar.PerformLayout();
             this.panel1.ResumeLayout(false);
@@ -442,7 +504,6 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Button btn_Minimize;
         private System.Windows.Forms.Button btn_Exit;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Button btn_Dashboard;
@@ -466,8 +527,15 @@
         private System.Windows.Forms.Button btn_Deposit_report;
         private System.Windows.Forms.Button btn_stock_report;
         private System.Windows.Forms.Button btn_Settings;
-        public static System.Windows.Forms.Panel pnl_Child_Form;
         private CustomControls.RJControls.RJCircularPictureBox logo;
+        public System.Windows.Forms.Panel pnl_Child_Form;
+        private System.Windows.Forms.Button btnNormal;
+        private System.Windows.Forms.Button btnMinimizar;
+        private System.Windows.Forms.Button btnMaximizar;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Label lbFecha;
+        private System.Windows.Forms.Label lblHora;
+        private System.Windows.Forms.Timer tmCLock_Date;
     }
 }
 

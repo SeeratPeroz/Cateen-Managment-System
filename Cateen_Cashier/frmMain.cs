@@ -240,8 +240,8 @@ namespace Cateen_Cashier
             childForm.BringToFront();
             childForm.Dock = DockStyle.Fill;
             childForm.FormBorderStyle = FormBorderStyle.None;
-            pnl_Child_Form.Controls.Add(childForm);
-            pnl_Child_Form.Tag = childForm;
+            //pnl_Child_Form.Controls.Add(childForm);
+            //pnl_Child_Form.Tag = childForm;
             childForm.BringToFront();
             childForm.Show();
         }
@@ -250,7 +250,9 @@ namespace Cateen_Cashier
 
         private void frmMain_Load_1(object sender, EventArgs e)
         {
-            openChildForm(new frmOnStockProducts());
+            //openChildForm(new frmOnStockProducts());
+
+            tmCLock_Date.Start();
             
             // Getting user Details
 
@@ -431,7 +433,60 @@ namespace Cateen_Cashier
 
         }
 
+        private void pnl_Tittle_Bar_MouseDown(object sender, MouseEventArgs e)
+        {
+         
+            ReleaseCapture();
+            SendMessage(this.Handle, 0x112, 0xf012, 0);
+        
+    }
+
+        //METODO PARA ARRASTRAR EL FORMULARIO---------------------------------------------------------------------
+        [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
+        private extern static void ReleaseCapture();
+
+        [DllImport("user32.DLL", EntryPoint = "SendMessage")]
+        private extern static void SendMessage(System.IntPtr hWnd, int wMsg, int wParam, int lParam);
+
+        private void btnMinimizar_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Minimized;
+
+        }
+
+        private void btnNormal_Click(object sender, EventArgs e)
+        {
+            this.Size = new Size(sw, sh);
+            this.Location = new Point(lx, ly);
+            btnNormal.Visible = false;
+            btnMaximizar.Visible = true;
+        }
+
+        //METODOS PARA CERRAR,MAXIMIZAR, MINIMIZAR FORMULARIO---------------------------------------
+        int lx, ly;
+        int sw, sh;
+
       
 
+        //Time and Date ----------------------------------------------------------
+        private void tmFechaHora_Tick(object sender, EventArgs e)
+        {
+            lbFecha.Text = DateTime.Now.ToLongDateString();
+            lblHora.Text = DateTime.Now.ToString("HH:mm:ssss");
+            setImage();
+        }
+
+    private void btnMaximizar_Click(object sender, EventArgs e)
+        {
+            lx = this.Location.X;
+            ly = this.Location.Y;
+            sw = this.Size.Width;
+            sh = this.Size.Height;
+            this.Size = Screen.PrimaryScreen.WorkingArea.Size;
+            this.Location = Screen.PrimaryScreen.WorkingArea.Location;
+            btnMaximizar.Visible = false;
+            btnNormal.Visible = true;
+
+        }
     }
 }

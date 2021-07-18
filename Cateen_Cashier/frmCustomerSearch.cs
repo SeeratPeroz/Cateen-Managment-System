@@ -208,8 +208,8 @@ namespace Cateen_Cashier
             childForm.BringToFront();
             childForm.Dock = DockStyle.Fill;
             childForm.FormBorderStyle = FormBorderStyle.None;
-            frmMain.pnl_Child_Form.Controls.Add(childForm);
-            frmMain.pnl_Child_Form.Tag = childForm;
+            //frmMain.pnl_Child_Form.Controls.Add(childForm);
+            //frmMain.pnl_Child_Form.Tag = childForm;
             childForm.BringToFront();
             childForm.Show();
         }
@@ -232,8 +232,8 @@ namespace Cateen_Cashier
             childForm.BringToFront();
             childForm.Dock = DockStyle.Fill;
             childForm.FormBorderStyle = FormBorderStyle.None;
-            frmMain.pnl_Child_Form.Controls.Add(childForm);
-            frmMain.pnl_Child_Form.Tag = childForm;
+            //frmMain.pnl_Child_Form.Controls.Add(childForm);
+            //frmMain.pnl_Child_Form.Tag = childForm;
             childForm.BringToFront();
             childForm.Show();
         }

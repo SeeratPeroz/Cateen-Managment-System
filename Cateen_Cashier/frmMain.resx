@@ -1430,6 +1430,9 @@
   <data name="&gt;&gt;btn_Dashboard.ZOrder" xml:space="preserve">
     <value>11</value>
   </data>
+  <data name="logo.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
   <data name="logo.Location" type="System.Drawing.Point, System.Drawing">
     <value>70, 6</value>
   </data>
@@ -1459,6 +1462,9 @@
   </data>
   <data name="lbl_Title.Font" type="System.Drawing.Font, System.Drawing">
     <value>Times New Roman, 18pt, style=Bold</value>
+  </data>
+  <data name="lbl_Title.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
   </data>
   <data name="lbl_Title.Location" type="System.Drawing.Point, System.Drawing">
     <value>65, 133</value>
@@ -1562,6 +1568,105 @@
   <data name="&gt;&gt;pnl_Taskbar.ZOrder" xml:space="preserve">
     <value>3</value>
   </data>
+  <data name="lbFecha.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Right</value>
+  </data>
+  <data name="lbFecha.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="lbFecha.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 12pt</value>
+  </data>
+  <data name="lbFecha.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="lbFecha.Location" type="System.Drawing.Point, System.Drawing">
+    <value>833, 71</value>
+  </data>
+  <data name="lbFecha.Size" type="System.Drawing.Size, System.Drawing">
+    <value>202, 20</value>
+  </data>
+  <data name="lbFecha.TabIndex" type="System.Int32, mscorlib">
+    <value>4</value>
+  </data>
+  <data name="lbFecha.Text" xml:space="preserve">
+    <value>Kabul ,26, September 2020</value>
+  </data>
+  <data name="&gt;&gt;lbFecha.Name" xml:space="preserve">
+    <value>lbFecha</value>
+  </data>
+  <data name="&gt;&gt;lbFecha.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lbFecha.Parent" xml:space="preserve">
+    <value>panel2</value>
+  </data>
+  <data name="&gt;&gt;lbFecha.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="lblHora.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Right</value>
+  </data>
+  <data name="lblHora.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="lblHora.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 35.25pt</value>
+  </data>
+  <data name="lblHora.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="lblHora.Location" type="System.Drawing.Point, System.Drawing">
+    <value>837, 11</value>
+  </data>
+  <data name="lblHora.Size" type="System.Drawing.Size, System.Drawing">
+    <value>205, 54</value>
+  </data>
+  <data name="lblHora.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="lblHora.Text" xml:space="preserve">
+    <value>21:49:45</value>
+  </data>
+  <data name="&gt;&gt;lblHora.Name" xml:space="preserve">
+    <value>lblHora</value>
+  </data>
+  <data name="&gt;&gt;lblHora.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lblHora.Parent" xml:space="preserve">
+    <value>panel2</value>
+  </data>
+  <data name="&gt;&gt;lblHora.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="panel2.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Bottom</value>
+  </data>
+  <data name="panel2.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 666</value>
+  </data>
+  <data name="panel2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>1095, 100</value>
+  </data>
+  <data name="panel2.TabIndex" type="System.Int32, mscorlib">
+    <value>6</value>
+  </data>
+  <data name="&gt;&gt;panel2.Name" xml:space="preserve">
+    <value>panel2</value>
+  </data>
+  <data name="&gt;&gt;panel2.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;panel2.Parent" xml:space="preserve">
+    <value>pnl_Child_Form</value>
+  </data>
+  <data name="&gt;&gt;panel2.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="label2.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
   <data name="label2.Location" type="System.Drawing.Point, System.Drawing">
     <value>0, 0</value>
   </data>
@@ -1581,7 +1686,10 @@
     <value>pnl_Child_Form</value>
   </data>
   <data name="&gt;&gt;label2.ZOrder" xml:space="preserve">
-    <value>0</value>
+    <value>1</value>
+  </data>
+  <data name="label1.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
   </data>
   <data name="label1.Location" type="System.Drawing.Point, System.Drawing">
     <value>0, 0</value>
@@ -1602,7 +1710,7 @@
     <value>pnl_Child_Form</value>
   </data>
   <data name="&gt;&gt;label1.ZOrder" xml:space="preserve">
-    <value>1</value>
+    <value>2</value>
   </data>
   <data name="pnl_Child_Form.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Fill</value>
@@ -1628,6 +1736,42 @@
   <data name="&gt;&gt;pnl_Child_Form.ZOrder" xml:space="preserve">
     <value>2</value>
   </data>
+  <data name="btnNormal.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Right</value>
+  </data>
+  <data name="btnNormal.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+    <value>Flat</value>
+  </data>
+  <data name="btnNormal.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="btnNormal.Location" type="System.Drawing.Point, System.Drawing">
+    <value>133, 27</value>
+  </data>
+  <data name="btnNormal.Size" type="System.Drawing.Size, System.Drawing">
+    <value>43, 43</value>
+  </data>
+  <data name="btnNormal.TabIndex" type="System.Int32, mscorlib">
+    <value>19</value>
+  </data>
+  <data name="btnNormal.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="&gt;&gt;btnNormal.Name" xml:space="preserve">
+    <value>btnNormal</value>
+  </data>
+  <data name="&gt;&gt;btnNormal.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;btnNormal.Parent" xml:space="preserve">
+    <value>panel1</value>
+  </data>
+  <data name="&gt;&gt;btnNormal.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="lbltitle.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
   <data name="lbltitle.Location" type="System.Drawing.Point, System.Drawing">
     <value>0, 0</value>
   </data>
@@ -1649,37 +1793,34 @@
   <data name="&gt;&gt;lbltitle.ZOrder" xml:space="preserve">
     <value>2</value>
   </data>
-  <data name="btn_Minimize.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Top, Left, Right</value>
+  <data name="btnMaximizar.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Right</value>
   </data>
-  <data name="btn_Minimize.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+  <data name="btnMaximizar.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
     <value>Flat</value>
   </data>
-  <data name="btn_Minimize.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 14.25pt, style=Bold</value>
+  <data name="btnMaximizar.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
   </data>
-  <data name="btn_Minimize.Location" type="System.Drawing.Point, System.Drawing">
-    <value>15, 24</value>
+  <data name="btnMaximizar.Location" type="System.Drawing.Point, System.Drawing">
+    <value>133, 29</value>
   </data>
-  <data name="btn_Minimize.Size" type="System.Drawing.Size, System.Drawing">
-    <value>26, 32</value>
+  <data name="btnMaximizar.Size" type="System.Drawing.Size, System.Drawing">
+    <value>43, 43</value>
   </data>
-  <data name="btn_Minimize.TabIndex" type="System.Int32, mscorlib">
-    <value>18</value>
+  <data name="btnMaximizar.TabIndex" type="System.Int32, mscorlib">
+    <value>19</value>
   </data>
-  <data name="btn_Minimize.Text" xml:space="preserve">
-    <value>-</value>
+  <data name="&gt;&gt;btnMaximizar.Name" xml:space="preserve">
+    <value>btnMaximizar</value>
   </data>
-  <data name="&gt;&gt;btn_Minimize.Name" xml:space="preserve">
-    <value>btn_Minimize</value>
-  </data>
-  <data name="&gt;&gt;btn_Minimize.Type" xml:space="preserve">
+  <data name="&gt;&gt;btnMaximizar.Type" xml:space="preserve">
     <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;btn_Minimize.Parent" xml:space="preserve">
+  <data name="&gt;&gt;btnMaximizar.Parent" xml:space="preserve">
     <value>panel1</value>
   </data>
-  <data name="&gt;&gt;btn_Minimize.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;btnMaximizar.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
   <data name="btn_Exit.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
@@ -1691,11 +1832,14 @@
   <data name="btn_Exit.Font" type="System.Drawing.Font, System.Drawing">
     <value>Microsoft Sans Serif, 14.25pt, style=Bold</value>
   </data>
+  <data name="btn_Exit.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
   <data name="btn_Exit.Location" type="System.Drawing.Point, System.Drawing">
-    <value>56, 20</value>
+    <value>182, 27</value>
   </data>
   <data name="btn_Exit.Size" type="System.Drawing.Size, System.Drawing">
-    <value>33, 40</value>
+    <value>45, 42</value>
   </data>
   <data name="btn_Exit.TabIndex" type="System.Int32, mscorlib">
     <value>17</value>
@@ -1713,16 +1857,46 @@
     <value>panel1</value>
   </data>
   <data name="&gt;&gt;btn_Exit.ZOrder" xml:space="preserve">
-    <value>1</value>
+    <value>2</value>
+  </data>
+  <data name="btnMinimizar.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Right</value>
+  </data>
+  <data name="btnMinimizar.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+    <value>Flat</value>
+  </data>
+  <data name="btnMinimizar.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="btnMinimizar.Location" type="System.Drawing.Point, System.Drawing">
+    <value>84, 27</value>
+  </data>
+  <data name="btnMinimizar.Size" type="System.Drawing.Size, System.Drawing">
+    <value>43, 41</value>
+  </data>
+  <data name="btnMinimizar.TabIndex" type="System.Int32, mscorlib">
+    <value>18</value>
+  </data>
+  <data name="&gt;&gt;btnMinimizar.Name" xml:space="preserve">
+    <value>btnMinimizar</value>
+  </data>
+  <data name="&gt;&gt;btnMinimizar.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;btnMinimizar.Parent" xml:space="preserve">
+    <value>panel1</value>
+  </data>
+  <data name="&gt;&gt;btnMinimizar.ZOrder" xml:space="preserve">
+    <value>3</value>
   </data>
   <data name="panel1.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Right</value>
   </data>
   <data name="panel1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>991, 0</value>
+    <value>843, 0</value>
   </data>
   <data name="panel1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>104, 96</value>
+    <value>252, 96</value>
   </data>
   <data name="panel1.TabIndex" type="System.Int32, mscorlib">
     <value>16</value>
@@ -1820,6 +1994,9 @@
   <data name="&gt;&gt;pnlSide_Right.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
+  <metadata name="tmCLock_Date.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
+  </metadata>
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
@@ -1840,6 +2017,12 @@
   </data>
   <data name="$this.Text" xml:space="preserve">
     <value>Canteen Managment System</value>
+  </data>
+  <data name="&gt;&gt;tmCLock_Date.Name" xml:space="preserve">
+    <value>tmCLock_Date</value>
+  </data>
+  <data name="&gt;&gt;tmCLock_Date.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Timer, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;$this.Name" xml:space="preserve">
     <value>frmMain</value>

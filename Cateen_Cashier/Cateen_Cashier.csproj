@@ -502,11 +502,18 @@
     <None Include="Resources\calendarWhite.png" />
     <Content Include="Resources\chart-diagram.png" />
     <Content Include="Resources\chart-diagram1.png" />
+    <None Include="Resources\Close.png" />
     <Content Include="Resources\Conact.png" />
     <Content Include="Resources\diagram.png" />
     <Content Include="Resources\downloads.png" />
     <Content Include="Resources\home.png" />
+    <None Include="Resources\maximize.png" />
+    <None Include="Resources\maximize2.png" />
+    <None Include="Resources\maximize3.png" />
+    <None Include="Resources\Minimize.png" />
+    <None Include="Resources\Minimize1.png" />
     <Content Include="Resources\money-bag.png" />
+    <None Include="Resources\Normal.png" />
     <Content Include="Resources\settings.png" />
     <Content Include="Resources\Untitled-11.png" />
   </ItemGroup>
