@@ -354,7 +354,7 @@ namespace Cateen_Cashier
             {
                 try
                 {
-                    AD.UpdateCommand = new SqlCommand("UPDATE [Canteen_Database].[dbo].[Customers] SET [custID] = '" + txtCustID.Text + "',[custCard] = '" + txtCustCard.Text + "',[custName] = '" + txtCustName.Text + "',[custEmail] = '" + txtCustEmail.Text + "',[custPhone] = '" + txtCustPhone.Text + "',[custImage] = '" + Image_Path2 + "',[cust_Type_Id] ="+cmb_Cust_TYpe.SelectedValue+" WHERE custCard = " + custCart_pnlCustomer, DBContext.con);
+                    AD.UpdateCommand = new SqlCommand("UPDATE [Canteen_Database].[dbo].[Customers] SET [custID] = '" + txtCustID.Text + "',[custCard] = '" + txtCustCard.Text + "',[custName] = '" + txtCustName.Text + "',[custEmail] = '" + txtCustEmail.Text + "',[custPhone] = '" + txtCustPhone.Text + "',[custImage] = '" + Image_Path2 + "',[cust_Type_Id] ="+cmb_Cust_TYpe.SelectedValue+" WHERE custCard = '" + custCart_pnlCustomer+"'", DBContext.con);
                     DBContext.openConnection();
                     AD.UpdateCommand.ExecuteNonQuery();
                     DBContext.closeConnection();

@@ -98,46 +98,46 @@ namespace Cateen_Cashier
         // Add to balance button.
         private void btn_Add2Balance_Click(object sender, EventArgs e)
         {
-            if (txtDepositAmount.Text == "")
+            if (txtDepositAmount1.Texts == "")
             {
                 MessageBox.Show("Please enter a value in text box.");
-                txtDepositAmount.Focus();
-                txtDepositAmount.SelectAll();
+                txtDepositAmount1.Focus();
+              
             }
             else
             {
                 if (isdopisteAmount_validate_pnlDeposit)
                 {
                     // Depositing amount to customer balance.
-                    depositeMoney(Card, txtDepositAmount);
+                    depositeMoney(Card, txtDepositAmount1.Texts);
                     
                 }
                 else
                 {
                     MessageBox.Show("Please fill the text boxes with numbers");
-                    txtDepositAmount.Focus();
-                    txtDepositAmount.SelectAll();
+                    txtDepositAmount1.Focus();
+                    
                 }
 
             }
         }
 
         // Depositing Money function
-        private void depositeMoney(String id, TextBox amount)
+        private void depositeMoney(String id, String amount)
         {
             try
             {
                 String Date = DateTime.Now.ToString("yyyy-MM-dd");
-                String Query = "INSERT INTO [Canteen_Database].[dbo].[customer_Balance] ([custCard] ,[depositeDate] ,[depositAmount]) VALUES ('" + id + "'," + Date + "," + amount.Text + ")";
+                String Query = "INSERT INTO [Canteen_Database].[dbo].[customer_Balance] ([custCard] ,[depositeDate] ,[depositAmount]) VALUES ('" + id + "'," + Date + "," + amount + ")";
                 AD.InsertCommand = new SqlCommand(Query, DBContext.con);
                 DBContext.openConnection();
                 AD.InsertCommand.ExecuteNonQuery();
-                MessageBox.Show(amount.Text + " is deposited to " + id + " account.");
+                MessageBox.Show(amount + " is deposited to " + id + " account.");
                 DBContext.closeConnection();
 
                 // Call function to show balance of customer.
                 showCustomerBalancebyCard(lblCustCard.Text);
-                txtDepositAmount.Clear();
+                txtDepositAmount1.Texts = "";
 
 
 
@@ -153,7 +153,7 @@ namespace Cateen_Cashier
         // Validating Deposite Moeny Text box --> Deposit Panel
         private void txtDepositAmount_TextChanged(object sender, EventArgs e)
         {
-            isdopisteAmount_validate_pnlDeposit = Validation.validatePrice(txtDepositAmount.Text);
+            isdopisteAmount_validate_pnlDeposit = Validation.validatePrice(txtDepositAmount1.Texts);
             if (isdopisteAmount_validate_pnlDeposit)
             {
                 pic_depositeAmount_pnlDeposit.Image = Cateen_Cashier.Properties.Resources.Yes;
@@ -171,10 +171,10 @@ namespace Cateen_Cashier
             if (pnlUpdate_Child_pnlDeposit.Visible)
             {
                 pnlUpdate_Child_pnlDeposit.Visible = false;
-                txtDeposit_update_pnlUpdateDeposit_child_pnlDeposite.Clear();
+                txtPriceUpdate.Texts = "";
                 showDeposit_list(lblCustCard.Text);
-                btn_Add2Balance.Visible = true;
-                txtDepositAmount.Visible = true;
+                btn_Add2Balance1.Visible = true;
+                txtDepositAmount1.Visible = true;
                 pnl_label.Visible = true;
                 pnl_pic.Visible = true;
             }
@@ -182,8 +182,8 @@ namespace Cateen_Cashier
             {
                 showDeposit_list(lblCustCard.Text);
                 pnlUpdate_Child_pnlDeposit.Visible = true;
-                btn_Add2Balance.Visible = false;
-                txtDepositAmount.Visible = false;
+                btn_Add2Balance1.Visible = false;
+                txtDepositAmount1.Visible = false;
                 pnl_label.Visible = false;
                 pnl_pic.Visible = false;
 
@@ -231,7 +231,7 @@ namespace Cateen_Cashier
                 showDeposit_list(Card);
                 MessageBox.Show("Updated successfully");
                 Balance_ID = "";
-                txtDeposit_update_pnlUpdateDeposit_child_pnlDeposite.Clear();
+                txtPriceUpdate.Texts = "";
 
 
             }
@@ -246,33 +246,48 @@ namespace Cateen_Cashier
 
         }
 
-        private void panel2_Paint(object sender, PaintEventArgs e)
-        {
+       
 
+        private void Add_MouseEnter(object sender, EventArgs e)
+        {
+            btn_Add2Balance1.ForeColor = Color.Black;
         }
+
+        private void Add_MouseLeave(object sender, EventArgs e)
+        {
+            btn_Add2Balance1.ForeColor = Color.DeepSkyBlue;
+        }
+
+       
+
+
+
+
+
+
 
 
         // Depiste Panel deposit list Gride View.
         private void dgvCustomerDeposit_List_pnlDeposit_Click(object sender, EventArgs e)
         {
             Balance_ID = dgvCustomerDeposit_List_pnlDeposit.CurrentRow.Cells[0].FormattedValue.ToString();
-            txtDeposit_update_pnlUpdateDeposit_child_pnlDeposite.Text = dgvCustomerDeposit_List_pnlDeposit.CurrentRow.Cells[2].FormattedValue.ToString();
+            txtPriceUpdate.Texts = dgvCustomerDeposit_List_pnlDeposit.CurrentRow.Cells[2].FormattedValue.ToString();
             oldAmount = dgvCustomerDeposit_List_pnlDeposit.CurrentRow.Cells[2].FormattedValue.ToString();
         }
 
         // Button to update deposit list
-        private void btn_Update_DpMoeney_pnlDeposit_Click(object sender, EventArgs e)
+        private void btn_Update_DpMoeney_pnlDeposit_Click_1(object sender, EventArgs e)
         {
-            if (Validation.validatePrice(txtDeposit_update_pnlUpdateDeposit_child_pnlDeposite.Text))
+            if (Validation.validatePrice(txtPriceUpdate.Texts))
             {
-                updateDeposite_list(Balance_ID, txtDeposit_update_pnlUpdateDeposit_child_pnlDeposite.Text);
+                updateDeposite_list(Balance_ID, txtPriceUpdate.Texts);
                 showCustomerBalancebyCard(Card);
             }
             else
             {
                 MessageBox.Show("Please enter price for product");
-                txtDeposit_update_pnlUpdateDeposit_child_pnlDeposite.Focus();
-                txtDeposit_update_pnlUpdateDeposit_child_pnlDeposite.SelectAll();
+                txtPriceUpdate.Focus();
+                txtPriceUpdate.Select();
             }
 
         }

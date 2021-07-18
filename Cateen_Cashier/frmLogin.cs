@@ -76,7 +76,7 @@ namespace Cateen_Cashier
         
         private void frmLogin_Load_1(object sender, EventArgs e)
         {
-            //btn_login_2.PerformClick();
+            btn_login_2.PerformClick();
         }
 
         // Creating user

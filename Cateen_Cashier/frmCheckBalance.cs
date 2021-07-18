@@ -40,16 +40,16 @@ namespace Cateen_Cashier
             try
             {
                 // Searching Customer Image
-                AD.SelectCommand = new SqlCommand("SELECT [custImage] FROM [Canteen_Database].[dbo].[Customers] WHERE [custCard] =" + Card, DBContext.con);
+                AD.SelectCommand = new SqlCommand("SELECT [custImage] FROM [Canteen_Database].[dbo].[Customers] WHERE [custCard] ='" + Card+"'", DBContext.con);
                 DataTable dt = new DataTable();
                 AD.Fill(dt);
                 String imgDGV = dt.Rows[0][0].ToString();
-                pic_User1.Image = new Bitmap(@"" + imgDGV);
+                pic_User2.Image = new Bitmap(@"" + imgDGV);
 
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Error Deposit Image: " + ex.Message);
+                MessageBox.Show("Error Deposit Image CHB: " + ex.Message);
             }
         }
 

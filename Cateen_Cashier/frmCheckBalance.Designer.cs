@@ -38,18 +38,18 @@
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.pic_User1 = new Cateen_Cashier.Circular_Image();
+            this.pic_User2 = new CustomControls.RJControls.RJCircularPictureBox();
             this.pnlDeposit.SuspendLayout();
             this.panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pic_User1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pic_User2)).BeginInit();
             this.SuspendLayout();
             // 
             // pnlDeposit
             // 
             this.pnlDeposit.BackColor = System.Drawing.Color.White;
+            this.pnlDeposit.Controls.Add(this.pic_User2);
             this.pnlDeposit.Controls.Add(this.panel2);
             this.pnlDeposit.Controls.Add(this.panel1);
-            this.pnlDeposit.Controls.Add(this.pic_User1);
             this.pnlDeposit.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pnlDeposit.Location = new System.Drawing.Point(0, 0);
             this.pnlDeposit.Name = "pnlDeposit";
@@ -139,17 +139,23 @@
             this.panel1.Size = new System.Drawing.Size(517, 10);
             this.panel1.TabIndex = 6;
             // 
-            // pic_User1
+            // pic_User2
             // 
-            this.pic_User1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.pic_User1.Image = ((System.Drawing.Image)(resources.GetObject("pic_User1.Image")));
-            this.pic_User1.Location = new System.Drawing.Point(396, 221);
-            this.pic_User1.Name = "pic_User1";
-            this.pic_User1.Size = new System.Drawing.Size(329, 212);
-            this.pic_User1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pic_User1.TabIndex = 5;
-            this.pic_User1.TabStop = false;
+            this.pic_User2.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.pic_User2.BorderCapStyle = System.Drawing.Drawing2D.DashCap.Flat;
+            this.pic_User2.BorderColor = System.Drawing.Color.RoyalBlue;
+            this.pic_User2.BorderColor2 = System.Drawing.Color.HotPink;
+            this.pic_User2.BorderLineStyle = System.Drawing.Drawing2D.DashStyle.Custom;
+            this.pic_User2.BorderSize = 5;
+            this.pic_User2.GradientAngle = 20F;
+            this.pic_User2.Image = ((System.Drawing.Image)(resources.GetObject("pic_User2.Image")));
+            this.pic_User2.Location = new System.Drawing.Point(403, 104);
+            this.pic_User2.Name = "pic_User2";
+            this.pic_User2.Padding = new System.Windows.Forms.Padding(5);
+            this.pic_User2.Size = new System.Drawing.Size(329, 329);
+            this.pic_User2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pic_User2.TabIndex = 8;
+            this.pic_User2.TabStop = false;
             // 
             // frmCheckBalance
             // 
@@ -165,7 +171,7 @@
             this.pnlDeposit.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pic_User1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pic_User2)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -179,8 +185,8 @@
         private System.Windows.Forms.Label lblCustName;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label lblCustID;
-        private Circular_Image pic_User1;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel2;
+        private CustomControls.RJControls.RJCircularPictureBox pic_User2;
     }
 }
