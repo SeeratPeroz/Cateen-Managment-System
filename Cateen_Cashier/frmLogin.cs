@@ -76,7 +76,7 @@ namespace Cateen_Cashier
         
         private void frmLogin_Load_1(object sender, EventArgs e)
         {
-            btn_login_2.PerformClick();
+            //btn_login_2.PerformClick();
         }
 
         // Creating user
@@ -101,7 +101,7 @@ namespace Cateen_Cashier
                     {
                         DBContext.createConnection(Program.userName, Program.userPass);
                         DBContext.openConnection();
-                        AD.InsertCommand = new SqlCommand("INSERT INTO [Canteen_Database].[dbo].[Employee] VALUES ('"+Program.userName+ "','" + Program.userName + "','','','','','')", DBContext.con);
+                        AD.InsertCommand = new SqlCommand("INSERT INTO [Canteen_Database].[dbo].[Employee] VALUES ('"+Program.userName+ "','','','','','','','')", DBContext.con);
                         AD.InsertCommand.ExecuteNonQuery();
                         DBContext.closeConnection();
                         MessageBox.Show("Welcome "+Program.userName, "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);

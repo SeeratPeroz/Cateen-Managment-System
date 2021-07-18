@@ -53,10 +53,10 @@
             this.btn_Add_Customer = new System.Windows.Forms.Button();
             this.btn_Dashboard = new System.Windows.Forms.Button();
             this.pnlTitle = new System.Windows.Forms.Panel();
+            this.logo = new CustomControls.RJControls.RJCircularPictureBox();
             this.lbl_Title = new System.Windows.Forms.Label();
-            this.logo = new System.Windows.Forms.PictureBox();
             this.pnl_Taskbar = new System.Windows.Forms.Panel();
-           pnl_Child_Form = new System.Windows.Forms.Panel();
+            pnl_Child_Form = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.lbltitle = new System.Windows.Forms.Label();
@@ -73,7 +73,7 @@
             this.pnl_sub_Transaction.SuspendLayout();
             this.pnlTitle.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.logo)).BeginInit();
-           pnl_Child_Form.SuspendLayout();
+            pnl_Child_Form.SuspendLayout();
             this.pnl_Tittle_Bar.SuspendLayout();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -296,22 +296,28 @@
             // 
             // pnlTitle
             // 
-            this.pnlTitle.Controls.Add(this.lbl_Title);
             this.pnlTitle.Controls.Add(this.logo);
+            this.pnlTitle.Controls.Add(this.lbl_Title);
             resources.ApplyResources(this.pnlTitle, "pnlTitle");
             this.pnlTitle.Name = "pnlTitle";
+            // 
+            // logo
+            // 
+            this.logo.BorderCapStyle = System.Drawing.Drawing2D.DashCap.Flat;
+            this.logo.BorderColor = System.Drawing.Color.RoyalBlue;
+            this.logo.BorderColor2 = System.Drawing.Color.HotPink;
+            this.logo.BorderLineStyle = System.Drawing.Drawing2D.DashStyle.Solid;
+            this.logo.BorderSize = 2;
+            this.logo.GradientAngle = 50F;
+            resources.ApplyResources(this.logo, "logo");
+            this.logo.Name = "logo";
+            this.logo.TabStop = false;
             // 
             // lbl_Title
             // 
             resources.ApplyResources(this.lbl_Title, "lbl_Title");
             this.lbl_Title.ForeColor = System.Drawing.Color.White;
             this.lbl_Title.Name = "lbl_Title";
-            // 
-            // logo
-            // 
-            resources.ApplyResources(this.logo, "logo");
-            this.logo.Name = "logo";
-            this.logo.TabStop = false;
             // 
             // pnl_Taskbar
             // 
@@ -321,11 +327,11 @@
             // 
             // pnl_Child_Form
             // 
-           pnl_Child_Form.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
-           pnl_Child_Form.Controls.Add(this.label2);
-           pnl_Child_Form.Controls.Add(this.label1);
+            pnl_Child_Form.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
+            pnl_Child_Form.Controls.Add(this.label2);
+            pnl_Child_Form.Controls.Add(this.label1);
             resources.ApplyResources(pnl_Child_Form, "pnl_Child_Form");
-           pnl_Child_Form.Name = "pnl_Child_Form";
+            pnl_Child_Form.Name = "pnl_Child_Form";
             // 
             // label2
             // 
@@ -415,7 +421,7 @@
             this.pnlTitle.ResumeLayout(false);
             this.pnlTitle.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.logo)).EndInit();
-           pnl_Child_Form.ResumeLayout(false);
+            pnl_Child_Form.ResumeLayout(false);
             this.pnl_Tittle_Bar.ResumeLayout(false);
             this.pnl_Tittle_Bar.PerformLayout();
             this.panel1.ResumeLayout(false);
@@ -428,7 +434,6 @@
         private System.Windows.Forms.Panel pnl_Menus;
         private System.Windows.Forms.Panel pnlTitle;
         private System.Windows.Forms.Label lbl_Title;
-        private System.Windows.Forms.PictureBox logo;
         private System.Windows.Forms.Panel pnl_Taskbar;
         private System.Windows.Forms.Panel pnl_Tittle_Bar;
         private System.Windows.Forms.Panel pnlSide_Right;
@@ -462,6 +467,7 @@
         private System.Windows.Forms.Button btn_stock_report;
         private System.Windows.Forms.Button btn_Settings;
         public static System.Windows.Forms.Panel pnl_Child_Form;
+        private CustomControls.RJControls.RJCircularPictureBox logo;
     }
 }
 

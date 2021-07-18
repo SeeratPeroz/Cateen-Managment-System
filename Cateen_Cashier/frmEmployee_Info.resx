@@ -118,7 +118,26 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="circular_Image1.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="pic_Email_Validate.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
+        wwAADsMBx2+oZAAAAu9JREFUSEtjGAV0AybhsuzmMfKiUC51gV2mknDuDrvDtZfd3/u36rhChakDHAtU
+        5Ar2212e8Cj2/6ynOf/rb3j88O/UiYFKUwacSlR0Co/aPex/EPdv0dMKIK78N+tx3r/6Wx5/Avt1y6DK
+        UIFukISQToA4I5SLEzhXqtgUnrJ903s/9v+cx0X/gBhEg9mTHqT8r7zp8M+xWNkFqhwCXOtVPPLPWH0O
+        nqkz2SRBmhkqjAFc61T8C85Zf+m6G/1/6oNsEP4Hpf9PuJ/yr+KG07+AiVptOoESTFAtQO/WKYflnrP8
+        0XQz6F/pNcd/oQt0VpimSLNDpeHAtUklNf+C1a+2W+H/+u4moeCO21H/Ci/b/PFoVyuEKocAx3rF1Kxz
+        Zr/rbwT+b7sV9b/lZgRQoe3/sGXau0wzpPlAatR9hBndu1Vrci6a/224EfS/9WbkP5BaEAax664H/M88
+        Y/rTqV4pFmwoDNhVyYennNX/W37F81/ttQA4rrnm/y/notW/sDVap0yzpaS8pqhOzjhv8q/qqg+KOhAu
+        vez2L+mo/me7SnlvqLEIoBMhJhC4TH1f2lnjfyWXXP+XXnID4X8gugSIM86Z/Ys9qP055azB/+JLLnA5
+        GJ1z3vp/9F6tN1YlslZQIzGBeoAwp9ds5dVxp7T/Z52z/p99zuYfEINoMDvzrCWMjSz3L/mM0f+QLWqP
+        TPOldKBG4QaK7gLMTn3y0yOOq/5LPGX4L+mU8X8oRmbD+dEnNP/5rVG6bpghrgA1gjCQdeBltG6Wrg86
+        rPA34pj6v8hjmlhx8BHFfx5L5E/pJIqIQbWSBkwrJDJ89sn89j8k9z/wsMI/IAbR/wMOKfz3PSj9z2m2
+        zC6NaCFw6iIb6OeLhrjvkPjmsV/8n+d+8f8g7L5f7L/tJMmVKmECHFBllAGdLGEHpw2i75z2CPxz3iP0
+        z6JLbLq8Dy/OHE4W0EgRMLBfIXrPuFGkWcadm2AZRRYQNeVggTJHAbUBAwMARLKQUTwxFDEAAAAASUVO
+        RK5CYII=
+</value>
+  </data>
+  <data name="pic_Image_User.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAfQAAAH0CAYAAADL1t+KAAAABGdBTUEAALGPC/xhBQAAABl0RVh0U29m
         dHdhcmUAQWRvYmUgSW1hZ2VSZWFkeXHJZTwAAG7BSURBVHhe7d398z1nXef5k0SCQCABEpTIjTfgIBLQ

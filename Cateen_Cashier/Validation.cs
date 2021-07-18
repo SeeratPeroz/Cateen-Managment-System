@@ -79,5 +79,12 @@ namespace Cateen_Cashier
                 return Regex.IsMatch(Input_text, pattern); }
         }
 
+        public static bool validateAdderss (String Input_text)
+        {
+            //
+            String pattern = @"^[\w -#,.]+$";
+                return Regex.IsMatch(Input_text, pattern);
+            }
+
     }
 }

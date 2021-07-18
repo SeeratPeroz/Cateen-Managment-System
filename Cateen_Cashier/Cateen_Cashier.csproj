@@ -92,6 +92,24 @@
       <DependentUpon>CrystalReport1.rpt</DependentUpon>
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="Custom-TextBox-2--Rounded-Placeholder-main\RJButton.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Custom-TextBox-2--Rounded-Placeholder-main\RJCircularPictureBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Custom-TextBox-2--Rounded-Placeholder-main\RJDatePicker.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Custom-TextBox-2--Rounded-Placeholder-main\RJTextBox.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Custom-TextBox-2--Rounded-Placeholder-main\RJTextBox.Designer.cs">
+      <DependentUpon>RJTextBox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Custom-TextBox-2--Rounded-Placeholder-main\RJToggleButton.cs">
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="DBContext.cs" />
     <Compile Include="frmCart.cs">
       <SubType>Form</SubType>
@@ -213,6 +231,9 @@
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>CrystalReport1.cs</LastGenOutput>
     </EmbeddedResource>
+    <EmbeddedResource Include="Custom-TextBox-2--Rounded-Placeholder-main\RJTextBox.resx">
+      <DependentUpon>RJTextBox.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmCart.resx">
       <DependentUpon>frmCart.cs</DependentUpon>
     </EmbeddedResource>
@@ -275,6 +296,7 @@
     <EmbeddedResource Include="Stock_Print.resx">
       <DependentUpon>Stock_Print.cs</DependentUpon>
     </EmbeddedResource>
+    <None Include="Custom-TextBox-2--Rounded-Placeholder-main\README.md" />
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -476,6 +498,8 @@
     <None Include="Resources\chart-diagram11.png" />
     <None Include="Resources\chart-diagram2.png" />
     <None Include="Resources\calendar1.png" />
+    <None Include="Resources\calendarDark.png" />
+    <None Include="Resources\calendarWhite.png" />
     <Content Include="Resources\chart-diagram.png" />
     <Content Include="Resources\chart-diagram1.png" />
     <Content Include="Resources\Conact.png" />

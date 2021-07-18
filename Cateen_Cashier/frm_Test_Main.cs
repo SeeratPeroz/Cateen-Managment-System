@@ -128,7 +128,5 @@ namespace Cateen_Cashier
             childForm.BringToFront();
             childForm.Show();
         }
-
-       
     }
 }

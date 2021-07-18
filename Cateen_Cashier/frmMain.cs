@@ -14,6 +14,7 @@ namespace Cateen_Cashier
 {
     public partial class frmMain : Form
     {
+        String imagePath = "";
         int t = 0;
         [DllImport("Gdi32.dll", EntryPoint = "CreateRoundRectRgn")]
 
@@ -100,6 +101,7 @@ namespace Cateen_Cashier
 
         private void btn_Add_Customer_Click_1(object sender, EventArgs e)
         {
+            setImage();
             label3.Text = "Customers";
             openChildForm(new frmCustomer());
             // ..
@@ -112,6 +114,8 @@ namespace Cateen_Cashier
 
         private void btn_Transaction_Click_1(object sender, EventArgs e)
         {
+            setImage();
+
             point_btn(btn_Transaction,1);
             changeColor(btn_Transaction, 1);
             showSubMenus(pnl_sub_Transaction);
@@ -142,7 +146,7 @@ namespace Cateen_Cashier
 
         private void btn_Stock_Click_1(object sender, EventArgs e)
         {
-            
+            setImage();
             // ..
             // Code here
             // ..
@@ -190,6 +194,7 @@ namespace Cateen_Cashier
 
         private void btn_Report_Click_1(object sender, EventArgs e)
         {
+            setImage();
             point_btn(btn_Report,1);
             changeColor(btn_Report, 1);
             showSubMenus(pnl_sub_Report);
@@ -242,24 +247,38 @@ namespace Cateen_Cashier
         }
         
 
+
         private void frmMain_Load_1(object sender, EventArgs e)
         {
-            // point_btn(btn_Add_Customer,1);
-            //btn_Dashboard.PerformClick();
             openChildForm(new frmOnStockProducts());
-            //changeColor(btn_Add_Customer, 1);
-
+            
             // Getting user Details
 
             SqlDataAdapter AD = new SqlDataAdapter();
             DBContext.createConnection(Program.userName, Program.userPass);
-            String Qur = "SELECT [empID] FROM [Canteen_Database].[dbo].[Employee] WHERE [empid] = '" + Program.userName + "'";
+            String Qur = "SELECT * FROM [Canteen_Database].[dbo].[Employee] WHERE [empid] = '" + Program.userName + "'";
             AD.SelectCommand = new SqlCommand(Qur, DBContext.con);
             DataTable dt = new DataTable();
             AD.Fill(dt);
             DBContext.closeConnection();
-            String userCount = dt.Rows[0][0].ToString();
-            lbl_Title.Text = userCount;
+
+
+
+            String userID = dt.Rows[0][0].ToString();
+            String userName = dt.Rows[0][1].ToString();
+            if(userName == "")
+            {
+                lbl_Title.Text = userID;
+                frmEmployee_Info empInfo = new frmEmployee_Info();
+                empInfo.ShowDialog();
+            }
+            else
+            {
+                lbl_Title.Text = userName;
+                //MessageBox.Show(dt.Rows[0][7].ToString());
+                logo.Image = new Bitmap(dt.Rows[0][7].ToString());
+                imagePath = dt.Rows[0][7].ToString();
+            }
 
 
         }
@@ -317,6 +336,7 @@ namespace Cateen_Cashier
 
         private void btn_Dashboard_Click(object sender, EventArgs e)
         {
+            setImage();
             label3.Text = "Dashboard";
             openChildForm(new frmDashboard());
             // ..
@@ -375,13 +395,43 @@ namespace Cateen_Cashier
 
         private void btn_Settings_Click_1(object sender, EventArgs e)
         {
-            frmEmployee_Info empInfo = new frmEmployee_Info();
+            
+            frmEmployee_Info empInfo = new frmEmployee_Info();   
             empInfo.ShowDialog();
+
             // ..
             // Code here
             // ..
             point_btn(btn_Purchase, 0);
             hide_Sub_Menu_Panels();
+           
         }
+
+       
+        // Function to set image on side panel
+        public void setImage()
+        {
+            try
+            {
+                SqlDataAdapter AD = new SqlDataAdapter();
+                DBContext.createConnection(Program.userName, Program.userPass);
+                String Qur = "SELECT * FROM [Canteen_Database].[dbo].[Employee] WHERE [empid] = '" + Program.userName + "'";
+                AD.SelectCommand = new SqlCommand(Qur, DBContext.con);
+                DataTable dt = new DataTable();
+                AD.Fill(dt);
+                DBContext.closeConnection();
+
+                logo.Image = new Bitmap(dt.Rows[0][7].ToString());
+                lbl_Title.Text = dt.Rows[0][1].ToString();
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show("Error while updating page: " + ex.Message);
+            }
+
+        }
+
+      
+
     }
 }
