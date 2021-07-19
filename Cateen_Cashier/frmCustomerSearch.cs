@@ -125,12 +125,11 @@ namespace Cateen_Cashier
         // Enter key to Search Customer in Search Panel (pnlCustomerSearch)
         private void txtSearch_KeyDown(object sender, KeyEventArgs e)
         {
-
             if (e.KeyCode == Keys.Enter)
             {
                 if (Validation.validateCustCard(txtSearch.Text) | Validation.validateCustID(txtSearch.Text))
                 {
-                    Console.Beep(1000, 800);
+                    Console.Beep(800, 800);
                     picSearchButton();
                 }
                 else
@@ -314,10 +313,7 @@ namespace Cateen_Cashier
 
         }
 
-        private void txtSearch_TextChanged(object sender, EventArgs e)
-        {
-
-        }
+       
 
         // Search By Hover 1
         private void picSearchBy_MouseLeave(object sender, EventArgs e)

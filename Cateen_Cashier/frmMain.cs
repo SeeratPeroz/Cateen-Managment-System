@@ -266,7 +266,7 @@ namespace Cateen_Cashier
         {
             //openChildForm(new frmOnStockProducts());
 
-            tmCLock_Date.Start();
+
             
             // Getting user Details
 
@@ -296,7 +296,7 @@ namespace Cateen_Cashier
                 imagePath = dt.Rows[0][7].ToString();
             }
 
-
+            btn_Dashboard.PerformClick();
         }
 
 
@@ -353,7 +353,9 @@ namespace Cateen_Cashier
         private void btn_Dashboard_Click(object sender, EventArgs e)
         {
             pnl_Clock.Visible = true;
-
+            
+            //tmCLock_Date.Stop();
+            tmCLock_Date.Start();
             setImage();
             label3.Text = "Dashboard";
             pnl_Clock.Visible = true;

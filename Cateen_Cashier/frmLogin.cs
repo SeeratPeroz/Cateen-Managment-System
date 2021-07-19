@@ -73,7 +73,7 @@ namespace Cateen_Cashier
                 MessageBox.Show(ex.Message);
             }
         }
-        
+
         private void frmLogin_Load_1(object sender, EventArgs e)
         {
             btn_login_2.PerformClick();
@@ -89,7 +89,7 @@ namespace Cateen_Cashier
                 {
                     SqlDataAdapter AD = new SqlDataAdapter();
                     DBContext.createConnection(Program.userName, Program.userPass);
-                    String Qur = "SELECT COUNT([empID]) FROM [Canteen_Database].[dbo].[Employee] WHERE [empid] = '"+Program.userName+"'";
+                    String Qur = "SELECT COUNT([empID]) FROM [Canteen_Database].[dbo].[Employee] WHERE [empid] = '" + Program.userName + "'";
                     AD.SelectCommand = new SqlCommand(Qur, DBContext.con);
                     DataTable dt = new DataTable();
                     AD.Fill(dt);
@@ -101,22 +101,24 @@ namespace Cateen_Cashier
                     {
                         DBContext.createConnection(Program.userName, Program.userPass);
                         DBContext.openConnection();
-                        AD.InsertCommand = new SqlCommand("INSERT INTO [Canteen_Database].[dbo].[Employee] VALUES ('"+Program.userName+ "','','','','','','','')", DBContext.con);
+                        String image = @"" + Application.StartupPath.ToString() + @"\Users\Untitled-11.png";
+
+                        AD.InsertCommand = new SqlCommand("INSERT INTO [Canteen_Database].[dbo].[Employee] VALUES ('" + Program.userName + "','','','','','','','" + image + "')", DBContext.con);
                         AD.InsertCommand.ExecuteNonQuery();
                         DBContext.closeConnection();
-                        MessageBox.Show("Welcome "+Program.userName, "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        MessageBox.Show("Welcome " + Program.userName, "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     }
                     else
                     {
                         MessageBox.Show("Welcome", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     }
                 }
-                catch(Exception ex)
+                catch (Exception ex)
                 {
                     MessageBox.Show("Login Page error: " + ex.Message);
                 }
             }
-            
+
 
         }
     }

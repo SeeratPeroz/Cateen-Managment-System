@@ -528,7 +528,6 @@
         private System.Windows.Forms.Button btn_stock_report;
         private System.Windows.Forms.Button btn_Settings;
         private CustomControls.RJControls.RJCircularPictureBox logo;
-        public static System.Windows.Forms.Panel pnl_Child_Form;
         private System.Windows.Forms.Button btnNormal;
         private System.Windows.Forms.Button btnMinimizar;
         private System.Windows.Forms.Button btnMaximizar;
@@ -536,6 +535,7 @@
         private System.Windows.Forms.Label lbFecha;
         private System.Windows.Forms.Label lblHora;
         private System.Windows.Forms.Timer tmCLock_Date;
+        public static System.Windows.Forms.Panel pnl_Child_Form;
     }
 }
 

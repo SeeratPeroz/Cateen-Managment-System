@@ -43,7 +43,7 @@ namespace Cateen_Cashier
                 AD.Fill(dt);
                 excelData = new DataTable();
                 AD.Fill(excelData);
-                dgv_OnStock.DataSource = dt.Tables[0];
+                dgv_Sales.DataSource = dt.Tables[0];
             }catch(Exception ex)
             {
                 MessageBox.Show("Error to show on stock products: "+ex.Message);
@@ -54,5 +54,7 @@ namespace Cateen_Cashier
         {
             showOnStockProducts();
         }
+
+       
     }
 }

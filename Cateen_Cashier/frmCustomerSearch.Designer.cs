@@ -45,7 +45,7 @@
             // 
             // pnlCustomerSearch
             // 
-            this.pnlCustomerSearch.BackColor = System.Drawing.Color.White;
+            this.pnlCustomerSearch.BackColor = System.Drawing.SystemColors.Control;
             this.pnlCustomerSearch.Controls.Add(this.panel2);
             this.pnlCustomerSearch.Controls.Add(this.panel1);
             this.pnlCustomerSearch.Controls.Add(this.lblSearchBY);
@@ -93,7 +93,6 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(280, 688);
             this.panel1.TabIndex = 90;
-            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
             // picSearchBy
             // 
@@ -132,13 +131,12 @@
             this.txtSearch.BackColor = System.Drawing.Color.White;
             this.txtSearch.Font = new System.Drawing.Font("Palatino Linotype", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtSearch.ForeColor = System.Drawing.Color.Black;
-            this.txtSearch.Location = new System.Drawing.Point(290, 335);
+            this.txtSearch.Location = new System.Drawing.Point(282, 339);
             this.txtSearch.Margin = new System.Windows.Forms.Padding(2);
             this.txtSearch.Name = "txtSearch";
-            this.txtSearch.Size = new System.Drawing.Size(572, 57);
+            this.txtSearch.Size = new System.Drawing.Size(580, 57);
             this.txtSearch.TabIndex = 0;
             this.txtSearch.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.txtSearch.TextChanged += new System.EventHandler(this.txtSearch_TextChanged);
             this.txtSearch.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtSearch_KeyDown);
             // 
             // frmCustomerSearch
