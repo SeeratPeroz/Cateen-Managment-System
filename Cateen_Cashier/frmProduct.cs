@@ -202,6 +202,15 @@ namespace Cateen_Cashier
         {
             if (Validation.validateSeach(txtPrdSearch_ProductPanel.Text))
             {
+                if(txtPrdSearch_ProductPanel.Text == "")
+                {
+                    dgvProduct_ProductPanel.DefaultCellStyle.BackColor = Color.White;
+                }
+                else
+                {
+                    dgvProduct_ProductPanel.DefaultCellStyle.BackColor = Color.LightBlue;
+
+                }
                 showAllProducts(txtPrdSearch_ProductPanel.Text);
             }
             else

@@ -31,6 +31,7 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmMain));
             this.pnl_Menus = new System.Windows.Forms.Panel();
+            this.btn_Employees = new System.Windows.Forms.Button();
             this.btn_Settings = new System.Windows.Forms.Button();
             this.pnl_sub_Report = new System.Windows.Forms.Panel();
             this.btn_Deposit_report = new System.Windows.Forms.Button();
@@ -63,11 +64,11 @@
             this.lblHora = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.btnNormal = new System.Windows.Forms.Button();
             this.lbltitle = new System.Windows.Forms.Label();
             this.pnl_Tittle_Bar = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
             this.btnMaximizar = new System.Windows.Forms.Button();
+            this.btnNormal = new System.Windows.Forms.Button();
             this.btn_Exit = new System.Windows.Forms.Button();
             this.btnMinimizar = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
@@ -90,6 +91,7 @@
             // 
             resources.ApplyResources(this.pnl_Menus, "pnl_Menus");
             this.pnl_Menus.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(1)))), ((int)(((byte)(10)))));
+            this.pnl_Menus.Controls.Add(this.btn_Employees);
             this.pnl_Menus.Controls.Add(this.btn_Settings);
             this.pnl_Menus.Controls.Add(this.pnl_sub_Report);
             this.pnl_Menus.Controls.Add(this.btn_Report);
@@ -104,6 +106,15 @@
             this.pnl_Menus.Controls.Add(this.btn_Dashboard);
             this.pnl_Menus.Controls.Add(this.pnlTitle);
             this.pnl_Menus.Name = "pnl_Menus";
+            // 
+            // btn_Employees
+            // 
+            resources.ApplyResources(this.btn_Employees, "btn_Employees");
+            this.btn_Employees.FlatAppearance.BorderSize = 0;
+            this.btn_Employees.ForeColor = System.Drawing.Color.White;
+            this.btn_Employees.Name = "btn_Employees";
+            this.btn_Employees.UseVisualStyleBackColor = true;
+            this.btn_Employees.Click += new System.EventHandler(this.btn_Employees_Click);
             // 
             // btn_Settings
             // 
@@ -374,17 +385,6 @@
             resources.ApplyResources(this.label1, "label1");
             this.label1.Name = "label1";
             // 
-            // btnNormal
-            // 
-            resources.ApplyResources(this.btnNormal, "btnNormal");
-            this.btnNormal.BackColor = System.Drawing.Color.Transparent;
-            this.btnNormal.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnNormal.FlatAppearance.BorderSize = 0;
-            this.btnNormal.Image = global::Cateen_Cashier.Properties.Resources.Normal;
-            this.btnNormal.Name = "btnNormal";
-            this.btnNormal.UseVisualStyleBackColor = false;
-            this.btnNormal.Click += new System.EventHandler(this.btnNormal_Click);
-            // 
             // lbltitle
             // 
             this.lbltitle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(158)))), ((int)(((byte)(161)))), ((int)(((byte)(176)))));
@@ -421,6 +421,17 @@
             this.btnMaximizar.Name = "btnMaximizar";
             this.btnMaximizar.UseVisualStyleBackColor = true;
             this.btnMaximizar.Click += new System.EventHandler(this.btnMaximizar_Click);
+            // 
+            // btnNormal
+            // 
+            resources.ApplyResources(this.btnNormal, "btnNormal");
+            this.btnNormal.BackColor = System.Drawing.Color.Transparent;
+            this.btnNormal.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnNormal.FlatAppearance.BorderSize = 0;
+            this.btnNormal.Image = global::Cateen_Cashier.Properties.Resources.Normal;
+            this.btnNormal.Name = "btnNormal";
+            this.btnNormal.UseVisualStyleBackColor = false;
+            this.btnNormal.Click += new System.EventHandler(this.btnNormal_Click);
             // 
             // btn_Exit
             // 
@@ -535,6 +546,7 @@
         private System.Windows.Forms.Label lbFecha;
         private System.Windows.Forms.Label lblHora;
         private System.Windows.Forms.Timer tmCLock_Date;
+        private System.Windows.Forms.Button btn_Employees;
         public static System.Windows.Forms.Panel pnl_Child_Form;
     }
 }

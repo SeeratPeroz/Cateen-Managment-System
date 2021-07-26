@@ -263,16 +263,12 @@ namespace Cateen_Cashier
 
 
         private void frmMain_Load_1(object sender, EventArgs e)
-        {
-            //openChildForm(new frmOnStockProducts());
-
-
-            
+        {            
             // Getting user Details
 
             SqlDataAdapter AD = new SqlDataAdapter();
             DBContext.createConnection(Program.userName, Program.userPass);
-            String Qur = "SELECT * FROM [Canteen_Database].[dbo].[Employee] WHERE [empid] = '" + Program.userName + "'";
+            String Qur = "SELECT empID, empName + ' ' + empLastName, empImage FROM dbo.Employee WHERE empID = '"+Program.userName +"'";
             AD.SelectCommand = new SqlCommand(Qur, DBContext.con);
             DataTable dt = new DataTable();
             AD.Fill(dt);
@@ -282,6 +278,7 @@ namespace Cateen_Cashier
 
             String userID = dt.Rows[0][0].ToString();
             String userName = dt.Rows[0][1].ToString();
+            
             if(userName == "")
             {
                 lbl_Title.Text = userID;
@@ -292,10 +289,10 @@ namespace Cateen_Cashier
             {
                 lbl_Title.Text = userName;
                 //MessageBox.Show(dt.Rows[0][7].ToString());
-                logo.Image = new Bitmap(dt.Rows[0][7].ToString());
-                imagePath = dt.Rows[0][7].ToString();
+                logo.Image = new Bitmap(dt.Rows[0][2].ToString());
+                imagePath = dt.Rows[0][2].ToString();
             }
-
+            
             btn_Dashboard.PerformClick();
         }
 
@@ -444,13 +441,13 @@ namespace Cateen_Cashier
             {
                 SqlDataAdapter AD = new SqlDataAdapter();
                 DBContext.createConnection(Program.userName, Program.userPass);
-                String Qur = "SELECT * FROM [Canteen_Database].[dbo].[Employee] WHERE [empid] = '" + Program.userName + "'";
+                String Qur = "SELECT empID, empName + ' ' + empLastName, empImage FROM dbo.Employee WHERE empID = '" + Program.userName + "'";
                 AD.SelectCommand = new SqlCommand(Qur, DBContext.con);
                 DataTable dt = new DataTable();
                 AD.Fill(dt);
                 DBContext.closeConnection();
 
-                logo.Image = new Bitmap(dt.Rows[0][7].ToString());
+                logo.Image = new Bitmap(dt.Rows[0][2].ToString());
                 lbl_Title.Text = dt.Rows[0][1].ToString();
             }
             catch(Exception ex)
@@ -493,8 +490,6 @@ namespace Cateen_Cashier
         int lx, ly;
         int sw, sh;
 
-      
-
         //Time and Date ----------------------------------------------------------
         private void tmFechaHora_Tick(object sender, EventArgs e)
         {
@@ -515,5 +510,23 @@ namespace Cateen_Cashier
             btnNormal.Visible = true;
 
         }
-    }
+
+
+        // ------------------ Employee -------------------------------------- \\
+
+        private void btn_Employees_Click(object sender, EventArgs e)
+        {
+            setImage(); pnl_Clock.Visible = false;
+
+            label3.Text = "Employees";
+            openChildForm(new frmEmployee());
+            // ..
+            // Code here
+            // ..
+            ////////////changeColor(btn_Employees, 1);
+            ////////////point_btn(btn_Employees, 1);
+            hide_Sub_Menu_Panels();
+        }
+
+    }   
 }

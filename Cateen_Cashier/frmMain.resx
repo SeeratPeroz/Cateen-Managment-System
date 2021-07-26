@@ -122,13 +122,113 @@
     <value>True</value>
   </data>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="btn_Employees.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Top</value>
+  </data>
+  <data name="btn_Employees.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+    <value>Flat</value>
+  </data>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="btn_Employees.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Palatino Linotype, 18pt, style=Bold</value>
+  </data>
+  <data name="btn_Employees.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        /9j/4AAQSkZJRgABAQEAYABgAAD/4QAiRXhpZgAATU0AKgAAAAgAAQESAAMAAAABAAEAAAAAAAD/2wBD
+        AAIBAQIBAQICAgICAgICAwUDAwMDAwYEBAMFBwYHBwcGBwcICQsJCAgKCAcHCg0KCgsMDAwMBwkODw0M
+        DgsMDAz/2wBDAQICAgMDAwYDAwYMCAcIDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwM
+        DAwMDAwMDAwMDAwMDAz/wAARCAAwADADASIAAhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQF
+        BgcICQoL/8QAtRAAAgEDAwIEAwUFBAQAAAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAk
+        M2JyggkKFhcYGRolJicoKSo0NTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWG
+        h4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx
+        8vP09fb3+Pn6/8QAHwEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQA
+        AQJ3AAECAxEEBSExBhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5
+        OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmq
+        srO0tba3uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwD9
+        1Iz5jMFbDE7WdRlieRnHXIYFsddxK9QRXP8AxX+Knhv4G/DzVvFnirUIdK8O6PGJbm4kVpFhjLqgCqgZ
+        nLlo4wFBJyuAQwz+fv7dX7CPxg/ZS0LxN8Xvgb8dPHdho/hk3/i3UvCetao9xYqXe6vL6eFci2lQiRWN
+        vLAxO2SQzMWUNoftS/8ABUzwf4y/4JReG/E3jDwb4l1ST4zeHb/SRLp2lRPpeka5bKYgJTNOfLT7XFJL
+        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
+</value>
+  </data>
+  <data name="btn_Employees.ImageAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleLeft</value>
+  </data>
+  <data name="btn_Employees.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="btn_Employees.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 1206</value>
+  </data>
+  <data name="btn_Employees.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
+  </data>
+  <data name="btn_Employees.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>10, 10, 0, 16</value>
+  </data>
+  <data name="btn_Employees.Size" type="System.Drawing.Size, System.Drawing">
+    <value>288, 78</value>
+  </data>
+  <data name="btn_Employees.TabIndex" type="System.Int32, mscorlib">
+    <value>1008</value>
+  </data>
+  <data name="btn_Employees.Text" xml:space="preserve">
+    <value>Employee</value>
+  </data>
+  <data name="btn_Employees.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleLeft</value>
+  </data>
+  <data name="btn_Employees.TextImageRelation" type="System.Windows.Forms.TextImageRelation, System.Windows.Forms">
+    <value>ImageBeforeText</value>
+  </data>
+  <data name="&gt;&gt;btn_Employees.Name" xml:space="preserve">
+    <value>btn_Employees</value>
+  </data>
+  <data name="&gt;&gt;btn_Employees.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;btn_Employees.Parent" xml:space="preserve">
+    <value>pnl_Menus</value>
+  </data>
+  <data name="&gt;&gt;btn_Employees.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
   <data name="btn_Settings.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Bottom</value>
   </data>
   <data name="btn_Settings.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
     <value>Flat</value>
   </data>
-  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="btn_Settings.Font" type="System.Drawing.Font, System.Drawing">
     <value>Palatino Linotype, 18pt, style=Bold</value>
   </data>
@@ -188,7 +288,7 @@
     <value>NoControl</value>
   </data>
   <data name="btn_Settings.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 1206</value>
+    <value>0, 1284</value>
   </data>
   <data name="btn_Settings.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>4, 4, 4, 4</value>
@@ -221,7 +321,7 @@
     <value>pnl_Menus</value>
   </data>
   <data name="&gt;&gt;btn_Settings.ZOrder" xml:space="preserve">
-    <value>0</value>
+    <value>1</value>
   </data>
   <data name="btn_Deposit_report.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Top</value>
@@ -504,7 +604,7 @@
     <value>pnl_Menus</value>
   </data>
   <data name="&gt;&gt;pnl_sub_Report.ZOrder" xml:space="preserve">
-    <value>1</value>
+    <value>2</value>
   </data>
   <data name="btn_Report.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Top</value>
@@ -604,7 +704,7 @@
     <value>pnl_Menus</value>
   </data>
   <data name="&gt;&gt;btn_Report.ZOrder" xml:space="preserve">
-    <value>2</value>
+    <value>3</value>
   </data>
   <data name="pnlNav.Location" type="System.Drawing.Point, System.Drawing">
     <value>3, 169</value>
@@ -625,7 +725,7 @@
     <value>pnl_Menus</value>
   </data>
   <data name="&gt;&gt;pnlNav.ZOrder" xml:space="preserve">
-    <value>3</value>
+    <value>4</value>
   </data>
   <data name="btn_Purchase.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Top</value>
@@ -778,7 +878,7 @@
     <value>pnl_Menus</value>
   </data>
   <data name="&gt;&gt;pnlInventory.ZOrder" xml:space="preserve">
-    <value>4</value>
+    <value>5</value>
   </data>
   <data name="btnInvetory.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Top</value>
@@ -878,7 +978,7 @@
     <value>pnl_Menus</value>
   </data>
   <data name="&gt;&gt;btnInvetory.ZOrder" xml:space="preserve">
-    <value>5</value>
+    <value>6</value>
   </data>
   <data name="btn_Products.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Top</value>
@@ -1031,7 +1131,7 @@
     <value>pnl_Menus</value>
   </data>
   <data name="&gt;&gt;pnl_Sub_Stock.ZOrder" xml:space="preserve">
-    <value>6</value>
+    <value>7</value>
   </data>
   <data name="btn_Stock.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Top</value>
@@ -1082,7 +1182,7 @@
     <value>pnl_Menus</value>
   </data>
   <data name="&gt;&gt;btn_Stock.ZOrder" xml:space="preserve">
-    <value>7</value>
+    <value>8</value>
   </data>
   <data name="btn_Deposit.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Top</value>
@@ -1233,7 +1333,7 @@
     <value>pnl_Menus</value>
   </data>
   <data name="&gt;&gt;pnl_sub_Transaction.ZOrder" xml:space="preserve">
-    <value>8</value>
+    <value>9</value>
   </data>
   <data name="btn_Transaction.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Top</value>
@@ -1284,7 +1384,7 @@
     <value>pnl_Menus</value>
   </data>
   <data name="&gt;&gt;btn_Transaction.ZOrder" xml:space="preserve">
-    <value>9</value>
+    <value>10</value>
   </data>
   <data name="btn_Add_Customer.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Top</value>
@@ -1356,7 +1456,7 @@
     <value>pnl_Menus</value>
   </data>
   <data name="&gt;&gt;btn_Add_Customer.ZOrder" xml:space="preserve">
-    <value>10</value>
+    <value>11</value>
   </data>
   <data name="btn_Dashboard.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Top</value>
@@ -1428,7 +1528,7 @@
     <value>pnl_Menus</value>
   </data>
   <data name="&gt;&gt;btn_Dashboard.ZOrder" xml:space="preserve">
-    <value>11</value>
+    <value>12</value>
   </data>
   <data name="logo.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
@@ -1515,7 +1615,7 @@
     <value>pnl_Menus</value>
   </data>
   <data name="&gt;&gt;pnlTitle.ZOrder" xml:space="preserve">
-    <value>12</value>
+    <value>13</value>
   </data>
   <data name="pnl_Menus.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Left</value>
@@ -1736,39 +1836,6 @@
   <data name="&gt;&gt;pnl_Child_Form.ZOrder" xml:space="preserve">
     <value>2</value>
   </data>
-  <data name="btnNormal.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Top, Right</value>
-  </data>
-  <data name="btnNormal.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
-    <value>Flat</value>
-  </data>
-  <data name="btnNormal.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="btnNormal.Location" type="System.Drawing.Point, System.Drawing">
-    <value>133, 27</value>
-  </data>
-  <data name="btnNormal.Size" type="System.Drawing.Size, System.Drawing">
-    <value>43, 43</value>
-  </data>
-  <data name="btnNormal.TabIndex" type="System.Int32, mscorlib">
-    <value>19</value>
-  </data>
-  <data name="btnNormal.Visible" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="&gt;&gt;btnNormal.Name" xml:space="preserve">
-    <value>btnNormal</value>
-  </data>
-  <data name="&gt;&gt;btnNormal.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;btnNormal.Parent" xml:space="preserve">
-    <value>panel1</value>
-  </data>
-  <data name="&gt;&gt;btnNormal.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
   <data name="lbltitle.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
@@ -1822,6 +1889,39 @@
   </data>
   <data name="&gt;&gt;btnMaximizar.ZOrder" xml:space="preserve">
     <value>0</value>
+  </data>
+  <data name="btnNormal.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Right</value>
+  </data>
+  <data name="btnNormal.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+    <value>Flat</value>
+  </data>
+  <data name="btnNormal.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="btnNormal.Location" type="System.Drawing.Point, System.Drawing">
+    <value>133, 27</value>
+  </data>
+  <data name="btnNormal.Size" type="System.Drawing.Size, System.Drawing">
+    <value>43, 43</value>
+  </data>
+  <data name="btnNormal.TabIndex" type="System.Int32, mscorlib">
+    <value>19</value>
+  </data>
+  <data name="btnNormal.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="&gt;&gt;btnNormal.Name" xml:space="preserve">
+    <value>btnNormal</value>
+  </data>
+  <data name="&gt;&gt;btnNormal.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;btnNormal.Parent" xml:space="preserve">
+    <value>panel1</value>
+  </data>
+  <data name="&gt;&gt;btnNormal.ZOrder" xml:space="preserve">
+    <value>1</value>
   </data>
   <data name="btn_Exit.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Left, Right</value>

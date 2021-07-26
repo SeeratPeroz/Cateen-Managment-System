@@ -65,6 +65,24 @@ namespace Cateen_Cashier
                 DBContext.openConnection();
                 Program.isUserValid = true;
                 createUser();
+
+                SqlDataAdapter AD = new SqlDataAdapter();
+                String Qur = "SELECT [empLogin] FROM [Canteen_Database].[dbo].[Employee] WHERE [empid] = '" + Program.userName + "'";
+                AD.SelectCommand = new SqlCommand(Qur, DBContext.con);
+                DataTable dt = new DataTable();
+                AD.Fill(dt);
+                String userRole = dt.Rows[0][0].ToString();
+                if (userRole == "1")
+                {
+                    Program.isUserValid = true;
+                }
+                else
+                {
+                    Program.isUserValid = false;
+                    MessageBox.Show("Account is disabled. Please contact admin");
+
+                }
+
                 DBContext.closeConnection();
                 this.Close();
             }
@@ -76,7 +94,7 @@ namespace Cateen_Cashier
 
         private void frmLogin_Load_1(object sender, EventArgs e)
         {
-            btn_login_2.PerformClick();
+            //btn_login_2.PerformClick();
         }
 
         // Creating user
@@ -103,14 +121,14 @@ namespace Cateen_Cashier
                         DBContext.openConnection();
                         String image = @"" + Application.StartupPath.ToString() + @"\Users\Untitled-11.png";
 
-                        AD.InsertCommand = new SqlCommand("INSERT INTO [Canteen_Database].[dbo].[Employee] VALUES ('" + Program.userName + "','','','','','','','" + image + "')", DBContext.con);
+                        AD.InsertCommand = new SqlCommand("INSERT INTO [Canteen_Database].[dbo].[Employee] VALUES ('" + Program.userName + "','','',2,'','','','" + image + "',1)", DBContext.con);
                         AD.InsertCommand.ExecuteNonQuery();
                         DBContext.closeConnection();
                         MessageBox.Show("Welcome " + Program.userName, "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     }
                     else
                     {
-                        MessageBox.Show("Welcome", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        //MessageBox.Show("Welcome", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     }
                 }
                 catch (Exception ex)

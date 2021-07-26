@@ -82,7 +82,7 @@ namespace Cateen_Cashier
         public static bool validateAdderss (String Input_text)
         {
             //
-            String pattern = @"^[\w -#,.]+$";
+            String pattern = @"^[\w-#]{2}[\w -#,.]+$";
                 return Regex.IsMatch(Input_text, pattern);
             }
 
