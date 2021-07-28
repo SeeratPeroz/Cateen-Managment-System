@@ -30,43 +30,44 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmEmployee));
             this.pnlCustomer = new System.Windows.Forms.Panel();
+            this.pic_userImage = new CustomControls.RJControls.RJCircularPictureBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.cmbUserRole = new System.Windows.Forms.ComboBox();
-            this.pic_ValidateName = new System.Windows.Forms.PictureBox();
-            this.pic_ValidateLastName = new System.Windows.Forms.PictureBox();
-            this.pic_ValidateEmail = new System.Windows.Forms.PictureBox();
-            this.pic_ValidatePhone = new System.Windows.Forms.PictureBox();
-            this.pic_ValidateAddress = new System.Windows.Forms.PictureBox();
-            this.lblLoginStatus = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.dgvEmployee = new System.Windows.Forms.DataGridView();
-            this.pic_userImage = new CustomControls.RJControls.RJCircularPictureBox();
             this.btn_ClearName = new CustomControls.RJControls.RJButton();
             this.btn_ClearLastName = new CustomControls.RJControls.RJButton();
             this.btn_ClearEmail = new CustomControls.RJControls.RJButton();
             this.btn_ClearPhone = new CustomControls.RJControls.RJButton();
             this.btn_ClearAddress = new CustomControls.RJControls.RJButton();
+            this.pic_ValidateName = new System.Windows.Forms.PictureBox();
+            this.pic_ValidateLastName = new System.Windows.Forms.PictureBox();
+            this.pic_ValidateEmail = new System.Windows.Forms.PictureBox();
+            this.pic_ValidatePhone = new System.Windows.Forms.PictureBox();
+            this.pic_ValidateAddress = new System.Windows.Forms.PictureBox();
             this.chkLoginStatus = new CustomControls.RJControls.RJToggleButton();
             this.btn_Clear = new CustomControls.RJControls.RJButton();
             this.btn_Update = new CustomControls.RJControls.RJButton();
+            this.lblLoginStatus = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
             this.btn_Browse = new CustomControls.RJControls.RJButton();
+            this.label8 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
             this.txtUserAddress = new CustomControls.RJControls.RJTextBox();
+            this.label6 = new System.Windows.Forms.Label();
             this.txtUserPhone = new CustomControls.RJControls.RJTextBox();
+            this.label5 = new System.Windows.Forms.Label();
             this.txtUserEmail = new CustomControls.RJControls.RJTextBox();
+            this.label4 = new System.Windows.Forms.Label();
             this.txtUserLastName = new CustomControls.RJControls.RJTextBox();
+            this.label3 = new System.Windows.Forms.Label();
             this.txtUserName = new CustomControls.RJControls.RJTextBox();
+            this.label2 = new System.Windows.Forms.Label();
             this.txtUserID = new CustomControls.RJControls.RJTextBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.txtSearch = new CustomControls.RJControls.RJTextBox();
+            this.dgvEmployee = new System.Windows.Forms.DataGridView();
             this.pnlCustomer.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pic_userImage)).BeginInit();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pic_ValidateName)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pic_ValidateLastName)).BeginInit();
@@ -75,7 +76,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.pic_ValidateAddress)).BeginInit();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvEmployee)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pic_userImage)).BeginInit();
             this.SuspendLayout();
             // 
             // pnlCustomer
@@ -90,6 +90,22 @@
             this.pnlCustomer.Name = "pnlCustomer";
             this.pnlCustomer.Size = new System.Drawing.Size(1079, 745);
             this.pnlCustomer.TabIndex = 93;
+            // 
+            // pic_userImage
+            // 
+            this.pic_userImage.BorderCapStyle = System.Drawing.Drawing2D.DashCap.Flat;
+            this.pic_userImage.BorderColor = System.Drawing.Color.RoyalBlue;
+            this.pic_userImage.BorderColor2 = System.Drawing.Color.HotPink;
+            this.pic_userImage.BorderLineStyle = System.Drawing.Drawing2D.DashStyle.Solid;
+            this.pic_userImage.BorderSize = 2;
+            this.pic_userImage.GradientAngle = 50F;
+            this.pic_userImage.Image = ((System.Drawing.Image)(resources.GetObject("pic_userImage.Image")));
+            this.pic_userImage.Location = new System.Drawing.Point(183, 97);
+            this.pic_userImage.Name = "pic_userImage";
+            this.pic_userImage.Size = new System.Drawing.Size(147, 147);
+            this.pic_userImage.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pic_userImage.TabIndex = 43;
+            this.pic_userImage.TabStop = false;
             // 
             // groupBox2
             // 
@@ -137,196 +153,8 @@
             this.cmbUserRole.Location = new System.Drawing.Point(133, 270);
             this.cmbUserRole.Name = "cmbUserRole";
             this.cmbUserRole.Size = new System.Drawing.Size(250, 32);
-            this.cmbUserRole.TabIndex = 43;
+            this.cmbUserRole.TabIndex = 7;
             this.cmbUserRole.Click += new System.EventHandler(this.cmbUserRole_Click_1);
-            // 
-            // pic_ValidateName
-            // 
-            this.pic_ValidateName.Image = ((System.Drawing.Image)(resources.GetObject("pic_ValidateName.Image")));
-            this.pic_ValidateName.Location = new System.Drawing.Point(390, 64);
-            this.pic_ValidateName.Name = "pic_ValidateName";
-            this.pic_ValidateName.Size = new System.Drawing.Size(32, 24);
-            this.pic_ValidateName.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pic_ValidateName.TabIndex = 41;
-            this.pic_ValidateName.TabStop = false;
-            // 
-            // pic_ValidateLastName
-            // 
-            this.pic_ValidateLastName.Image = ((System.Drawing.Image)(resources.GetObject("pic_ValidateLastName.Image")));
-            this.pic_ValidateLastName.Location = new System.Drawing.Point(390, 103);
-            this.pic_ValidateLastName.Name = "pic_ValidateLastName";
-            this.pic_ValidateLastName.Size = new System.Drawing.Size(32, 24);
-            this.pic_ValidateLastName.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pic_ValidateLastName.TabIndex = 41;
-            this.pic_ValidateLastName.TabStop = false;
-            // 
-            // pic_ValidateEmail
-            // 
-            this.pic_ValidateEmail.Image = global::Cateen_Cashier.Properties.Resources.Yes;
-            this.pic_ValidateEmail.Location = new System.Drawing.Point(390, 142);
-            this.pic_ValidateEmail.Name = "pic_ValidateEmail";
-            this.pic_ValidateEmail.Size = new System.Drawing.Size(32, 24);
-            this.pic_ValidateEmail.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pic_ValidateEmail.TabIndex = 41;
-            this.pic_ValidateEmail.TabStop = false;
-            // 
-            // pic_ValidatePhone
-            // 
-            this.pic_ValidatePhone.Image = ((System.Drawing.Image)(resources.GetObject("pic_ValidatePhone.Image")));
-            this.pic_ValidatePhone.Location = new System.Drawing.Point(390, 185);
-            this.pic_ValidatePhone.Name = "pic_ValidatePhone";
-            this.pic_ValidatePhone.Size = new System.Drawing.Size(32, 24);
-            this.pic_ValidatePhone.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pic_ValidatePhone.TabIndex = 41;
-            this.pic_ValidatePhone.TabStop = false;
-            // 
-            // pic_ValidateAddress
-            // 
-            this.pic_ValidateAddress.Image = ((System.Drawing.Image)(resources.GetObject("pic_ValidateAddress.Image")));
-            this.pic_ValidateAddress.Location = new System.Drawing.Point(390, 224);
-            this.pic_ValidateAddress.Name = "pic_ValidateAddress";
-            this.pic_ValidateAddress.Size = new System.Drawing.Size(32, 24);
-            this.pic_ValidateAddress.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pic_ValidateAddress.TabIndex = 41;
-            this.pic_ValidateAddress.TabStop = false;
-            // 
-            // lblLoginStatus
-            // 
-            this.lblLoginStatus.AutoSize = true;
-            this.lblLoginStatus.ForeColor = System.Drawing.Color.Green;
-            this.lblLoginStatus.Location = new System.Drawing.Point(246, 313);
-            this.lblLoginStatus.Name = "lblLoginStatus";
-            this.lblLoginStatus.Size = new System.Drawing.Size(70, 24);
-            this.lblLoginStatus.TabIndex = 0;
-            this.lblLoginStatus.Text = "Enable";
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(19, 313);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(62, 24);
-            this.label9.TabIndex = 0;
-            this.label9.Text = "Login:";
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(17, 354);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(67, 24);
-            this.label8.TabIndex = 0;
-            this.label8.Text = "Image:";
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(19, 270);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(54, 24);
-            this.label7.TabIndex = 0;
-            this.label7.Text = "Role:";
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(19, 231);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(85, 24);
-            this.label6.TabIndex = 0;
-            this.label6.Text = "Address:";
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(19, 192);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(71, 24);
-            this.label5.TabIndex = 0;
-            this.label5.Text = "Phone:";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(19, 149);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(62, 24);
-            this.label4.TabIndex = 0;
-            this.label4.Text = "Email:";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(19, 110);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(104, 24);
-            this.label3.TabIndex = 0;
-            this.label3.Text = "Last Name:";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(19, 71);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(66, 24);
-            this.label2.TabIndex = 0;
-            this.label2.Text = "Name:";
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(19, 31);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(76, 24);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "User ID:";
-            // 
-            // groupBox1
-            // 
-            this.groupBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.groupBox1.Controls.Add(this.txtSearch);
-            this.groupBox1.Location = new System.Drawing.Point(500, 123);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(548, 73);
-            this.groupBox1.TabIndex = 42;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Search Employee";
-            this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
-            // 
-            // dgvEmployee
-            // 
-            this.dgvEmployee.AllowUserToAddRows = false;
-            this.dgvEmployee.AllowUserToDeleteRows = false;
-            this.dgvEmployee.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.dgvEmployee.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dgvEmployee.BackgroundColor = System.Drawing.Color.Snow;
-            this.dgvEmployee.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvEmployee.GridColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.dgvEmployee.Location = new System.Drawing.Point(500, 211);
-            this.dgvEmployee.Name = "dgvEmployee";
-            this.dgvEmployee.ReadOnly = true;
-            this.dgvEmployee.Size = new System.Drawing.Size(548, 512);
-            this.dgvEmployee.TabIndex = 40;
-            this.dgvEmployee.Click += new System.EventHandler(this.dgvEmployee_Click);
-            // 
-            // pic_userImage
-            // 
-            this.pic_userImage.BorderCapStyle = System.Drawing.Drawing2D.DashCap.Flat;
-            this.pic_userImage.BorderColor = System.Drawing.Color.RoyalBlue;
-            this.pic_userImage.BorderColor2 = System.Drawing.Color.HotPink;
-            this.pic_userImage.BorderLineStyle = System.Drawing.Drawing2D.DashStyle.Solid;
-            this.pic_userImage.BorderSize = 2;
-            this.pic_userImage.GradientAngle = 50F;
-            this.pic_userImage.Image = ((System.Drawing.Image)(resources.GetObject("pic_userImage.Image")));
-            this.pic_userImage.Location = new System.Drawing.Point(183, 97);
-            this.pic_userImage.Name = "pic_userImage";
-            this.pic_userImage.Size = new System.Drawing.Size(147, 147);
-            this.pic_userImage.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pic_userImage.TabIndex = 43;
-            this.pic_userImage.TabStop = false;
             // 
             // btn_ClearName
             // 
@@ -423,6 +251,56 @@
             this.btn_ClearAddress.UseVisualStyleBackColor = false;
             this.btn_ClearAddress.Click += new System.EventHandler(this.btn_ClearAddress_Click);
             // 
+            // pic_ValidateName
+            // 
+            this.pic_ValidateName.Image = ((System.Drawing.Image)(resources.GetObject("pic_ValidateName.Image")));
+            this.pic_ValidateName.Location = new System.Drawing.Point(390, 64);
+            this.pic_ValidateName.Name = "pic_ValidateName";
+            this.pic_ValidateName.Size = new System.Drawing.Size(32, 24);
+            this.pic_ValidateName.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pic_ValidateName.TabIndex = 41;
+            this.pic_ValidateName.TabStop = false;
+            // 
+            // pic_ValidateLastName
+            // 
+            this.pic_ValidateLastName.Image = ((System.Drawing.Image)(resources.GetObject("pic_ValidateLastName.Image")));
+            this.pic_ValidateLastName.Location = new System.Drawing.Point(390, 103);
+            this.pic_ValidateLastName.Name = "pic_ValidateLastName";
+            this.pic_ValidateLastName.Size = new System.Drawing.Size(32, 24);
+            this.pic_ValidateLastName.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pic_ValidateLastName.TabIndex = 41;
+            this.pic_ValidateLastName.TabStop = false;
+            // 
+            // pic_ValidateEmail
+            // 
+            this.pic_ValidateEmail.Image = ((System.Drawing.Image)(resources.GetObject("pic_ValidateEmail.Image")));
+            this.pic_ValidateEmail.Location = new System.Drawing.Point(390, 142);
+            this.pic_ValidateEmail.Name = "pic_ValidateEmail";
+            this.pic_ValidateEmail.Size = new System.Drawing.Size(32, 24);
+            this.pic_ValidateEmail.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pic_ValidateEmail.TabIndex = 41;
+            this.pic_ValidateEmail.TabStop = false;
+            // 
+            // pic_ValidatePhone
+            // 
+            this.pic_ValidatePhone.Image = ((System.Drawing.Image)(resources.GetObject("pic_ValidatePhone.Image")));
+            this.pic_ValidatePhone.Location = new System.Drawing.Point(390, 185);
+            this.pic_ValidatePhone.Name = "pic_ValidatePhone";
+            this.pic_ValidatePhone.Size = new System.Drawing.Size(32, 24);
+            this.pic_ValidatePhone.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pic_ValidatePhone.TabIndex = 41;
+            this.pic_ValidatePhone.TabStop = false;
+            // 
+            // pic_ValidateAddress
+            // 
+            this.pic_ValidateAddress.Image = ((System.Drawing.Image)(resources.GetObject("pic_ValidateAddress.Image")));
+            this.pic_ValidateAddress.Location = new System.Drawing.Point(390, 224);
+            this.pic_ValidateAddress.Name = "pic_ValidateAddress";
+            this.pic_ValidateAddress.Size = new System.Drawing.Size(32, 24);
+            this.pic_ValidateAddress.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pic_ValidateAddress.TabIndex = 41;
+            this.pic_ValidateAddress.TabStop = false;
+            // 
             // chkLoginStatus
             // 
             this.chkLoginStatus.AutoSize = true;
@@ -434,7 +312,7 @@
             this.chkLoginStatus.OnBackColor = System.Drawing.Color.MediumSlateBlue;
             this.chkLoginStatus.OnToggleColor = System.Drawing.Color.WhiteSmoke;
             this.chkLoginStatus.Size = new System.Drawing.Size(45, 22);
-            this.chkLoginStatus.TabIndex = 5;
+            this.chkLoginStatus.TabIndex = 8;
             this.chkLoginStatus.UseVisualStyleBackColor = true;
             this.chkLoginStatus.CheckedChanged += new System.EventHandler(this.chkLoginStatus_CheckedChanged);
             // 
@@ -451,7 +329,7 @@
             this.btn_Clear.Location = new System.Drawing.Point(32, 452);
             this.btn_Clear.Name = "btn_Clear";
             this.btn_Clear.Size = new System.Drawing.Size(351, 36);
-            this.btn_Clear.TabIndex = 3;
+            this.btn_Clear.TabIndex = 12;
             this.btn_Clear.Text = "CLear";
             this.btn_Clear.TextColor = System.Drawing.Color.White;
             this.btn_Clear.UseVisualStyleBackColor = false;
@@ -470,11 +348,30 @@
             this.btn_Update.Location = new System.Drawing.Point(32, 410);
             this.btn_Update.Name = "btn_Update";
             this.btn_Update.Size = new System.Drawing.Size(351, 36);
-            this.btn_Update.TabIndex = 3;
+            this.btn_Update.TabIndex = 11;
             this.btn_Update.Text = "Update";
             this.btn_Update.TextColor = System.Drawing.Color.White;
             this.btn_Update.UseVisualStyleBackColor = false;
             this.btn_Update.Click += new System.EventHandler(this.btn_Update_Click);
+            // 
+            // lblLoginStatus
+            // 
+            this.lblLoginStatus.AutoSize = true;
+            this.lblLoginStatus.ForeColor = System.Drawing.Color.Green;
+            this.lblLoginStatus.Location = new System.Drawing.Point(246, 313);
+            this.lblLoginStatus.Name = "lblLoginStatus";
+            this.lblLoginStatus.Size = new System.Drawing.Size(70, 24);
+            this.lblLoginStatus.TabIndex = 0;
+            this.lblLoginStatus.Text = "Enable";
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(19, 313);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(62, 24);
+            this.label9.TabIndex = 0;
+            this.label9.Text = "Login:";
             // 
             // btn_Browse
             // 
@@ -490,13 +387,31 @@
             this.btn_Browse.Location = new System.Drawing.Point(173, 354);
             this.btn_Browse.Name = "btn_Browse";
             this.btn_Browse.Size = new System.Drawing.Size(162, 32);
-            this.btn_Browse.TabIndex = 2;
+            this.btn_Browse.TabIndex = 9;
             this.btn_Browse.Text = "Browse";
             this.btn_Browse.TextColor = System.Drawing.Color.DodgerBlue;
             this.btn_Browse.UseVisualStyleBackColor = false;
             this.btn_Browse.Click += new System.EventHandler(this.btn_Browse_Click);
             this.btn_Browse.MouseEnter += new System.EventHandler(this.btn_Browse_MouseEnter);
             this.btn_Browse.MouseLeave += new System.EventHandler(this.btn_Browse_MouseLeave);
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(17, 354);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(67, 24);
+            this.label8.TabIndex = 0;
+            this.label8.Text = "Image:";
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(19, 270);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(54, 24);
+            this.label7.TabIndex = 0;
+            this.label7.Text = "Role:";
             // 
             // txtUserAddress
             // 
@@ -516,10 +431,19 @@
             this.txtUserAddress.PlaceholderColor = System.Drawing.Color.DarkGray;
             this.txtUserAddress.PlaceholderText = "";
             this.txtUserAddress.Size = new System.Drawing.Size(250, 35);
-            this.txtUserAddress.TabIndex = 1;
+            this.txtUserAddress.TabIndex = 6;
             this.txtUserAddress.Texts = "";
             this.txtUserAddress.UnderlinedStyle = true;
             this.txtUserAddress._TextChanged += new System.EventHandler(this.txtUserAddress__TextChanged);
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(19, 231);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(85, 24);
+            this.label6.TabIndex = 0;
+            this.label6.Text = "Address:";
             // 
             // txtUserPhone
             // 
@@ -539,10 +463,19 @@
             this.txtUserPhone.PlaceholderColor = System.Drawing.Color.DarkGray;
             this.txtUserPhone.PlaceholderText = "";
             this.txtUserPhone.Size = new System.Drawing.Size(250, 35);
-            this.txtUserPhone.TabIndex = 1;
+            this.txtUserPhone.TabIndex = 5;
             this.txtUserPhone.Texts = "";
             this.txtUserPhone.UnderlinedStyle = true;
             this.txtUserPhone._TextChanged += new System.EventHandler(this.txtUserPhone__TextChanged);
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(19, 192);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(71, 24);
+            this.label5.TabIndex = 0;
+            this.label5.Text = "Phone:";
             // 
             // txtUserEmail
             // 
@@ -562,10 +495,19 @@
             this.txtUserEmail.PlaceholderColor = System.Drawing.Color.DarkGray;
             this.txtUserEmail.PlaceholderText = "";
             this.txtUserEmail.Size = new System.Drawing.Size(250, 35);
-            this.txtUserEmail.TabIndex = 1;
+            this.txtUserEmail.TabIndex = 4;
             this.txtUserEmail.Texts = "";
             this.txtUserEmail.UnderlinedStyle = true;
             this.txtUserEmail._TextChanged += new System.EventHandler(this.txtUserEmail__TextChanged);
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(19, 149);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(62, 24);
+            this.label4.TabIndex = 0;
+            this.label4.Text = "Email:";
             // 
             // txtUserLastName
             // 
@@ -585,10 +527,19 @@
             this.txtUserLastName.PlaceholderColor = System.Drawing.Color.DarkGray;
             this.txtUserLastName.PlaceholderText = "";
             this.txtUserLastName.Size = new System.Drawing.Size(250, 35);
-            this.txtUserLastName.TabIndex = 1;
+            this.txtUserLastName.TabIndex = 3;
             this.txtUserLastName.Texts = "";
             this.txtUserLastName.UnderlinedStyle = true;
             this.txtUserLastName._TextChanged += new System.EventHandler(this.txtUserLastName__TextChanged);
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(19, 110);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(104, 24);
+            this.label3.TabIndex = 0;
+            this.label3.Text = "Last Name:";
             // 
             // txtUserName
             // 
@@ -608,10 +559,19 @@
             this.txtUserName.PlaceholderColor = System.Drawing.Color.DarkGray;
             this.txtUserName.PlaceholderText = "";
             this.txtUserName.Size = new System.Drawing.Size(250, 35);
-            this.txtUserName.TabIndex = 1;
+            this.txtUserName.TabIndex = 2;
             this.txtUserName.Texts = "";
             this.txtUserName.UnderlinedStyle = true;
             this.txtUserName._TextChanged += new System.EventHandler(this.txtUserName__TextChanged);
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(19, 71);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(66, 24);
+            this.label2.TabIndex = 0;
+            this.label2.Text = "Name:";
             // 
             // txtUserID
             // 
@@ -636,6 +596,28 @@
             this.txtUserID.Texts = "";
             this.txtUserID.UnderlinedStyle = true;
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(19, 31);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(76, 24);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "User ID:";
+            // 
+            // groupBox1
+            // 
+            this.groupBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.groupBox1.Controls.Add(this.txtSearch);
+            this.groupBox1.Location = new System.Drawing.Point(500, 123);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(548, 73);
+            this.groupBox1.TabIndex = 42;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "Search Employee";
+            this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
+            // 
             // txtSearch
             // 
             this.txtSearch.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
@@ -656,10 +638,28 @@
             this.txtSearch.PlaceholderColor = System.Drawing.Color.DarkGray;
             this.txtSearch.PlaceholderText = "           Search Here...";
             this.txtSearch.Size = new System.Drawing.Size(342, 35);
-            this.txtSearch.TabIndex = 45;
+            this.txtSearch.TabIndex = 13;
             this.txtSearch.Texts = "";
             this.txtSearch.UnderlinedStyle = false;
             this.txtSearch._TextChanged += new System.EventHandler(this.txtSearch__TextChanged);
+            // 
+            // dgvEmployee
+            // 
+            this.dgvEmployee.AllowUserToAddRows = false;
+            this.dgvEmployee.AllowUserToDeleteRows = false;
+            this.dgvEmployee.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.dgvEmployee.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvEmployee.BackgroundColor = System.Drawing.Color.Snow;
+            this.dgvEmployee.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvEmployee.GridColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.dgvEmployee.Location = new System.Drawing.Point(500, 211);
+            this.dgvEmployee.Name = "dgvEmployee";
+            this.dgvEmployee.ReadOnly = true;
+            this.dgvEmployee.Size = new System.Drawing.Size(548, 512);
+            this.dgvEmployee.TabIndex = 40;
+            this.dgvEmployee.Click += new System.EventHandler(this.dgvEmployee_Click);
             // 
             // frmEmployee
             // 
@@ -674,6 +674,7 @@
             this.Text = "frmEmployee";
             this.Load += new System.EventHandler(this.frmEmployee_Load);
             this.pnlCustomer.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pic_userImage)).EndInit();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pic_ValidateName)).EndInit();
@@ -683,7 +684,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.pic_ValidateAddress)).EndInit();
             this.groupBox1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvEmployee)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pic_userImage)).EndInit();
             this.ResumeLayout(false);
 
         }
