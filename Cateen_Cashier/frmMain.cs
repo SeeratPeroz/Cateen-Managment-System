@@ -221,9 +221,12 @@ namespace Cateen_Cashier
         private void btn_Deposit_report_Click(object sender, EventArgs e)
         {
             pnl_Clock.Visible = false;
+            label3.Text = "Transaction Report";
+
             // ..
             // Code here
             // ..
+            openChildForm(new frmTransactionReport());
             point_btn(btn_Deposit_report,0);
             hide_Sub_Menu_Panels();
         }
@@ -396,10 +399,12 @@ namespace Cateen_Cashier
         private void btn_Purchase_Report_Click(object sender, EventArgs e)
         {
             pnl_Clock.Visible = false;
+            label3.Text = "Purchase Report";
 
             // ..
             // Code here
             // ..
+            openChildForm(new frmPurchaseReport());
             point_btn(btn_Purchase, 0);
             hide_Sub_Menu_Panels();
         }

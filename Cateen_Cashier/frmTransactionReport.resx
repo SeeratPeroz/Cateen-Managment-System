@@ -118,7 +118,7 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="btn_Restart.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="btn_Reset.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         /9j/4AAQSkZJRgABAQEAYABgAAD/4QAiRXhpZgAATU0AKgAAAAgAAQESAAMAAAABAAEAAAAAAAD/2wBD
         AAIBAQIBAQICAgICAgICAwUDAwMDAwYEBAMFBwYHBwcGBwcICQsJCAgKCAcHCg0KCgsMDAwMBwkODw0M
@@ -172,7 +172,7 @@
         nFXMKkXKKhCC5YQj8MI9lfVtvVt3cm22z18hyGjldKUYydSpUfNUqS+Kctru1kkkkoxSSikkkf/Z
 </value>
   </data>
-  <data name="btn_Email.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="button2.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAEoAAAAzCAYAAAAw/Z54AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
         xAAADsQBlSsOGwAADOlJREFUaEPtmvl3VFUSx+d/mF/mzDkeHUUEsgc6CwlZWALZIUkn/br7NUtkFUwI
@@ -233,7 +233,7 @@
         rP1HVTAACzABmwZQf8qvCdH/ARVuanhoAnjSAAAAAElFTkSuQmCC
 </value>
   </data>
-  <data name="btn_Excel.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="btn_Export_to_exel.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAEoAAAAzCAYAAAAw/Z54AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
         xAAADsQBlSsOGwAACOxJREFUaEPtWgl0VdUVjQUtyFhUUCxSBWQMU4xQBEQtltEGsDRMIZAQMpFIDAkE
@@ -277,7 +277,7 @@
         kb5GhReqoqBKKDdRJZRbAP4D1xEiB4c2IUIAAAAASUVORK5CYII=
 </value>
   </data>
-  <data name="btn_Print.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="button4.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAEoAAAAzCAYAAAAw/Z54AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
         xAAADsQBlSsOGwAAGQdJREFUaEPtmwdUFVe3x28SNfbeYo0lKoq9orHEJCjYABs2FBu22HshQayICoig

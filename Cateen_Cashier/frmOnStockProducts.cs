@@ -25,15 +25,28 @@ namespace Cateen_Cashier
 
         private void frmOnStockProducts_Load(object sender, EventArgs e)
         {
-            showOnStockProducts();
+            showOnStockProducts(null);
+
+            AD.SelectCommand = new SqlCommand("SELECT COUNT([Product ID])  FROM [Canteen_Database].[dbo].[vw_OnStock]", DBContext.con);
+            DataTable dt = new DataTable();
+            AD.Fill(dt);
+            lbl_totalProducts.Text = dt.Rows[0][0].ToString();
         }
 
         // Show On Stck Products
-        void showOnStockProducts()
+        void showOnStockProducts(String search)
         {
             try
             {
-                AD.SelectCommand = new SqlCommand("SELECT *  FROM [Canteen_Database].[dbo].[vw_OnStock]", DBContext.con);
+                if(search == null)
+                {
+                    AD.SelectCommand = new SqlCommand("SELECT *  FROM [Canteen_Database].[dbo].[vw_OnStock]", DBContext.con);
+                }
+                else
+                {
+                    AD.SelectCommand = new SqlCommand("SELECT *  FROM [Canteen_Database].[dbo].[vw_OnStock] WHERE [Product ID] LIKE '%"+search+ "%' OR [Name] LIKE '%" + search + "%' OR [Quantity] LIKE '%" + search + "%' OR [Category] LIKE '%" + search + "%'", DBContext.con);
+
+                }
                 DataSet dt = new DataSet();
                 AD.Fill(dt);
                 excelData = new DataTable();
@@ -51,64 +64,13 @@ namespace Cateen_Cashier
             stP.Show();
         }
 
-        private void cmbSearchBy_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            if(cmbSearchBy.Text == "Category Name")
-            {
-                searchStock = "Category";
-            }
-        }
+    
 
-        private void btn_Search_Click(object sender, EventArgs e)
-        {
-            if (cmbSearchBy.Text == "Category Name")
-            {
-                SearchStock(searchStock);
-            }
-            else
-            {
-                SearchStock(cmbSearchBy.Text);
-            }
-
-        }
-
-        void SearchStock(String Search)
-        {
-            try
-            {
-                String QYR = "";
-                if(Search == "")
-                {
-                    showOnStockProducts();
-                }
-                else
-                {
-                    QYR = "SELECT *  FROM [Canteen_Database].[dbo].[vw_OnStock] WHERE [" + Search + "] = '" + txtSearch.Text+"'";
-                    //MessageBox.Show(QYR);
-
-                    AD.SelectCommand = new SqlCommand(QYR, DBContext.con);
-                    DataTable dt = new DataTable();
-                    AD.Fill(dt);
-                    excelData = new DataTable();
-
-                    AD.Fill(excelData);
-                    dgv_OnStock.DataSource = dt;
-                }
-
-            }catch(Exception ed)
-            {
-                MessageBox.Show("Error while searching product: "+ ed.Message);
-            }
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-
-        }
+   
 
         private void btn_Restart_Click(object sender, EventArgs e)
         {
-            showOnStockProducts();
+            showOnStockProducts(null);
         }
 
         private void btn_Excel_Click(object sender, EventArgs e)
@@ -135,6 +97,44 @@ namespace Cateen_Cashier
             }catch(Exception ex)
             {
                 MessageBox.Show("Error while exporting data: " + ex.Message, "Inof");
+            }
+        }
+
+        private void txtSearch__TextChanged(object sender, EventArgs e)
+        {
+            if (Validation.validateSeach(txtSearch.Texts))
+            {
+                if (txtSearch.Texts == "")
+                {
+                    showOnStockProducts(null);
+                    toggle_OutOFstock.Checked = false;
+                }
+                else
+                {
+                    showOnStockProducts(txtSearch.Texts);
+                }
+            }
+            else
+            {
+                MessageBox.Show("Symbols are not allowed");
+            }
+            
+        }
+
+        private void toggle_OutOFstock_CheckedChanged(object sender, EventArgs e)
+        {
+            if (toggle_OutOFstock.Checked)
+            {
+                AD.SelectCommand = new SqlCommand("SELECT *  FROM [Canteen_Database].[dbo].[vw_OnStock] WHERE [Quantity] < = 2", DBContext.con);
+                DataSet dt = new DataSet();
+                AD.Fill(dt);
+                excelData = new DataTable();
+                AD.Fill(excelData);
+                dgv_OnStock.DataSource = dt.Tables[0];
+            }
+            else
+            {
+                showOnStockProducts(null);
             }
         }
     }

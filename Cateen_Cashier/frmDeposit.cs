@@ -128,7 +128,7 @@ namespace Cateen_Cashier
             try
             {
                 String Date = DateTime.Now.ToString("yyyy-MM-dd");
-                String Query = "INSERT INTO [Canteen_Database].[dbo].[customer_Balance] ([custCard] ,[depositeDate] ,[depositAmount]) VALUES ('" + id + "'," + Date + "," + amount + ")";
+                String Query = "INSERT INTO [Canteen_Database].[dbo].[customer_Balance] ([custCard] ,[depositeDate] ,[depositAmount],[emp_Name]) VALUES ('" + id + "'," + Date + "," + amount + ",'"+Program.userName+"')";
                 AD.InsertCommand = new SqlCommand(Query, DBContext.con);
                 DBContext.openConnection();
                 AD.InsertCommand.ExecuteNonQuery();
@@ -144,7 +144,7 @@ namespace Cateen_Cashier
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Error: " + ex.Message);
+                MessageBox.Show("Error while depositing: " + ex.Message);
             }
         }
 

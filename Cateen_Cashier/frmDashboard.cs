@@ -46,7 +46,7 @@ namespace Cateen_Cashier
 
                 //
 
-                AD.SelectCommand = new SqlCommand("SELECT COUNT([prdID]) FROM [Canteen_Database].[dbo].[Products]", DBContext.con);
+                AD.SelectCommand = new SqlCommand("SELECT COUNT([Product ID])  FROM [Canteen_Database].[dbo].[vw_OnStock]", DBContext.con);
                 DataTable dtProducts = new DataTable();
                 AD.Fill(dtProducts);
                 lblProduct_on_stk.Text = dtProducts.Rows[0][0].ToString();
