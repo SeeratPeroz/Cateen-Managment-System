@@ -64,14 +64,16 @@ namespace Cateen_Cashier
                 DBContext.createConnection(txt_Username.Text, txt_Password.Text);
                 DBContext.openConnection();
                 Program.isUserValid = true;
+
                 createUser();
 
                 SqlDataAdapter AD = new SqlDataAdapter();
-                String Qur = "SELECT [empLogin] FROM [Canteen_Database].[dbo].[Employee] WHERE [empid] = '" + Program.userName + "'";
+                String Qur = "SELECT [empLogin],[empRole] FROM [Canteen_Database].[dbo].[Employee] WHERE [empid] = '" + Program.userName + "'";
                 AD.SelectCommand = new SqlCommand(Qur, DBContext.con);
                 DataTable dt = new DataTable();
                 AD.Fill(dt);
                 String userRole = dt.Rows[0][0].ToString();
+                Program.userRole = dt.Rows[0][1].ToString();
                 if (userRole == "1")
                 {
                     Program.isUserValid = true;

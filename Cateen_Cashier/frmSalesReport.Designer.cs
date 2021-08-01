@@ -33,15 +33,19 @@
             this.pnl_Tools = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
+            this.txtInviceSearch = new CustomControls.RJControls.RJTextBox();
             this.button5 = new System.Windows.Forms.Button();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.txtSearch = new CustomControls.RJControls.RJTextBox();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.btn_Reset = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
+            this.btn_SendEmail = new System.Windows.Forms.Button();
             this.btn_Export_to_exel = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.label1 = new System.Windows.Forms.Label();
+            this.dtpk_To = new CustomControls.RJControls.RJDatePicker();
+            this.dtpk_From = new CustomControls.RJControls.RJDatePicker();
             this.label3 = new System.Windows.Forms.Label();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.btn_Restart = new System.Windows.Forms.Button();
@@ -49,10 +53,6 @@
             this.btn_Excel = new System.Windows.Forms.Button();
             this.btn_Print = new System.Windows.Forms.Button();
             this.dgv_Sales = new System.Windows.Forms.DataGridView();
-            this.txtInviceSearch = new CustomControls.RJControls.RJTextBox();
-            this.txtSearch = new CustomControls.RJControls.RJTextBox();
-            this.dtpk_To = new CustomControls.RJControls.RJDatePicker();
-            this.dtpk_From = new CustomControls.RJControls.RJDatePicker();
             this.pnl_Tools.SuspendLayout();
             this.panel1.SuspendLayout();
             this.groupBox5.SuspendLayout();
@@ -98,6 +98,28 @@
             this.groupBox5.TabStop = false;
             this.groupBox5.Text = "Specific Invoice";
             // 
+            // txtInviceSearch
+            // 
+            this.txtInviceSearch.BackColor = System.Drawing.SystemColors.Window;
+            this.txtInviceSearch.BorderColor = System.Drawing.Color.Orange;
+            this.txtInviceSearch.BorderFocusColor = System.Drawing.SystemColors.HotTrack;
+            this.txtInviceSearch.BorderRadius = 10;
+            this.txtInviceSearch.BorderSize = 2;
+            this.txtInviceSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtInviceSearch.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.txtInviceSearch.Location = new System.Drawing.Point(161, 29);
+            this.txtInviceSearch.Margin = new System.Windows.Forms.Padding(4);
+            this.txtInviceSearch.Multiline = false;
+            this.txtInviceSearch.Name = "txtInviceSearch";
+            this.txtInviceSearch.Padding = new System.Windows.Forms.Padding(15, 7, 10, 7);
+            this.txtInviceSearch.PasswordChar = false;
+            this.txtInviceSearch.PlaceholderColor = System.Drawing.Color.DarkGray;
+            this.txtInviceSearch.PlaceholderText = "   Enter Invoice #";
+            this.txtInviceSearch.Size = new System.Drawing.Size(194, 31);
+            this.txtInviceSearch.TabIndex = 6;
+            this.txtInviceSearch.Texts = "";
+            this.txtInviceSearch.UnderlinedStyle = false;
+            // 
             // button5
             // 
             this.button5.BackColor = System.Drawing.Color.Transparent;
@@ -118,10 +140,33 @@
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Search";
             // 
+            // txtSearch
+            // 
+            this.txtSearch.BackColor = System.Drawing.SystemColors.Window;
+            this.txtSearch.BorderColor = System.Drawing.Color.Orange;
+            this.txtSearch.BorderFocusColor = System.Drawing.SystemColors.HotTrack;
+            this.txtSearch.BorderRadius = 10;
+            this.txtSearch.BorderSize = 2;
+            this.txtSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtSearch.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.txtSearch.Location = new System.Drawing.Point(139, 29);
+            this.txtSearch.Margin = new System.Windows.Forms.Padding(4);
+            this.txtSearch.Multiline = false;
+            this.txtSearch.Name = "txtSearch";
+            this.txtSearch.Padding = new System.Windows.Forms.Padding(20, 7, 10, 7);
+            this.txtSearch.PasswordChar = false;
+            this.txtSearch.PlaceholderColor = System.Drawing.Color.DarkGray;
+            this.txtSearch.PlaceholderText = "     Search Here...";
+            this.txtSearch.Size = new System.Drawing.Size(305, 35);
+            this.txtSearch.TabIndex = 5;
+            this.txtSearch.Texts = "";
+            this.txtSearch.UnderlinedStyle = false;
+            this.txtSearch._TextChanged += new System.EventHandler(this.rjTextBox1__TextChanged);
+            // 
             // groupBox4
             // 
             this.groupBox4.Controls.Add(this.btn_Reset);
-            this.groupBox4.Controls.Add(this.button2);
+            this.groupBox4.Controls.Add(this.btn_SendEmail);
             this.groupBox4.Controls.Add(this.btn_Export_to_exel);
             this.groupBox4.Controls.Add(this.button4);
             this.groupBox4.Location = new System.Drawing.Point(91, 241);
@@ -142,15 +187,16 @@
             this.btn_Reset.UseVisualStyleBackColor = false;
             this.btn_Reset.Click += new System.EventHandler(this.btn_Reset_Click);
             // 
-            // button2
+            // btn_SendEmail
             // 
-            this.button2.BackColor = System.Drawing.Color.Transparent;
-            this.button2.Image = ((System.Drawing.Image)(resources.GetObject("button2.Image")));
-            this.button2.Location = new System.Drawing.Point(280, 26);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(74, 56);
-            this.button2.TabIndex = 4;
-            this.button2.UseVisualStyleBackColor = false;
+            this.btn_SendEmail.BackColor = System.Drawing.Color.Transparent;
+            this.btn_SendEmail.Image = ((System.Drawing.Image)(resources.GetObject("btn_SendEmail.Image")));
+            this.btn_SendEmail.Location = new System.Drawing.Point(280, 26);
+            this.btn_SendEmail.Name = "btn_SendEmail";
+            this.btn_SendEmail.Size = new System.Drawing.Size(74, 56);
+            this.btn_SendEmail.TabIndex = 4;
+            this.btn_SendEmail.UseVisualStyleBackColor = false;
+            this.btn_SendEmail.Click += new System.EventHandler(this.btn_SendEmail_Click);
             // 
             // btn_Export_to_exel
             // 
@@ -194,6 +240,36 @@
             this.label1.Size = new System.Drawing.Size(60, 24);
             this.label1.TabIndex = 11;
             this.label1.Text = "From:";
+            // 
+            // dtpk_To
+            // 
+            this.dtpk_To.BorderColor = System.Drawing.Color.PapayaWhip;
+            this.dtpk_To.BorderSize = 0;
+            this.dtpk_To.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F);
+            this.dtpk_To.Location = new System.Drawing.Point(546, 41);
+            this.dtpk_To.MinDate = new System.DateTime(2018, 1, 1, 0, 0, 0, 0);
+            this.dtpk_To.MinimumSize = new System.Drawing.Size(4, 35);
+            this.dtpk_To.Name = "dtpk_To";
+            this.dtpk_To.Size = new System.Drawing.Size(363, 35);
+            this.dtpk_To.SkinColor = System.Drawing.Color.Orange;
+            this.dtpk_To.TabIndex = 10;
+            this.dtpk_To.TextColor = System.Drawing.Color.White;
+            this.dtpk_To.ValueChanged += new System.EventHandler(this.dtpk_To_ValueChanged);
+            // 
+            // dtpk_From
+            // 
+            this.dtpk_From.BorderColor = System.Drawing.Color.PapayaWhip;
+            this.dtpk_From.BorderSize = 0;
+            this.dtpk_From.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F);
+            this.dtpk_From.Location = new System.Drawing.Point(93, 41);
+            this.dtpk_From.MinDate = new System.DateTime(2018, 1, 1, 0, 0, 0, 0);
+            this.dtpk_From.MinimumSize = new System.Drawing.Size(4, 35);
+            this.dtpk_From.Name = "dtpk_From";
+            this.dtpk_From.Size = new System.Drawing.Size(363, 35);
+            this.dtpk_From.SkinColor = System.Drawing.Color.Orange;
+            this.dtpk_From.TabIndex = 10;
+            this.dtpk_From.TextColor = System.Drawing.Color.White;
+            this.dtpk_From.ValueChanged += new System.EventHandler(this.dtpk_From_ValueChanged);
             // 
             // label3
             // 
@@ -282,81 +358,6 @@
             this.dgv_Sales.Size = new System.Drawing.Size(950, 308);
             this.dgv_Sales.TabIndex = 10;
             // 
-            // txtInviceSearch
-            // 
-            this.txtInviceSearch.BackColor = System.Drawing.SystemColors.Window;
-            this.txtInviceSearch.BorderColor = System.Drawing.Color.Orange;
-            this.txtInviceSearch.BorderFocusColor = System.Drawing.SystemColors.HotTrack;
-            this.txtInviceSearch.BorderRadius = 10;
-            this.txtInviceSearch.BorderSize = 2;
-            this.txtInviceSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtInviceSearch.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.txtInviceSearch.Location = new System.Drawing.Point(161, 29);
-            this.txtInviceSearch.Margin = new System.Windows.Forms.Padding(4);
-            this.txtInviceSearch.Multiline = false;
-            this.txtInviceSearch.Name = "txtInviceSearch";
-            this.txtInviceSearch.Padding = new System.Windows.Forms.Padding(15, 7, 10, 7);
-            this.txtInviceSearch.PasswordChar = false;
-            this.txtInviceSearch.PlaceholderColor = System.Drawing.Color.DarkGray;
-            this.txtInviceSearch.PlaceholderText = "   Enter Invoice #";
-            this.txtInviceSearch.Size = new System.Drawing.Size(194, 31);
-            this.txtInviceSearch.TabIndex = 6;
-            this.txtInviceSearch.Texts = "";
-            this.txtInviceSearch.UnderlinedStyle = false;
-            // 
-            // txtSearch
-            // 
-            this.txtSearch.BackColor = System.Drawing.SystemColors.Window;
-            this.txtSearch.BorderColor = System.Drawing.Color.Orange;
-            this.txtSearch.BorderFocusColor = System.Drawing.SystemColors.HotTrack;
-            this.txtSearch.BorderRadius = 10;
-            this.txtSearch.BorderSize = 2;
-            this.txtSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtSearch.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.txtSearch.Location = new System.Drawing.Point(139, 29);
-            this.txtSearch.Margin = new System.Windows.Forms.Padding(4);
-            this.txtSearch.Multiline = false;
-            this.txtSearch.Name = "txtSearch";
-            this.txtSearch.Padding = new System.Windows.Forms.Padding(20, 7, 10, 7);
-            this.txtSearch.PasswordChar = false;
-            this.txtSearch.PlaceholderColor = System.Drawing.Color.DarkGray;
-            this.txtSearch.PlaceholderText = "     Search Here...";
-            this.txtSearch.Size = new System.Drawing.Size(305, 35);
-            this.txtSearch.TabIndex = 5;
-            this.txtSearch.Texts = "";
-            this.txtSearch.UnderlinedStyle = false;
-            this.txtSearch._TextChanged += new System.EventHandler(this.rjTextBox1__TextChanged);
-            // 
-            // dtpk_To
-            // 
-            this.dtpk_To.BorderColor = System.Drawing.Color.PapayaWhip;
-            this.dtpk_To.BorderSize = 0;
-            this.dtpk_To.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F);
-            this.dtpk_To.Location = new System.Drawing.Point(546, 41);
-            this.dtpk_To.MinDate = new System.DateTime(2018, 1, 1, 0, 0, 0, 0);
-            this.dtpk_To.MinimumSize = new System.Drawing.Size(4, 35);
-            this.dtpk_To.Name = "dtpk_To";
-            this.dtpk_To.Size = new System.Drawing.Size(363, 35);
-            this.dtpk_To.SkinColor = System.Drawing.Color.Orange;
-            this.dtpk_To.TabIndex = 10;
-            this.dtpk_To.TextColor = System.Drawing.Color.White;
-            this.dtpk_To.ValueChanged += new System.EventHandler(this.dtpk_To_ValueChanged);
-            // 
-            // dtpk_From
-            // 
-            this.dtpk_From.BorderColor = System.Drawing.Color.PapayaWhip;
-            this.dtpk_From.BorderSize = 0;
-            this.dtpk_From.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F);
-            this.dtpk_From.Location = new System.Drawing.Point(93, 41);
-            this.dtpk_From.MinDate = new System.DateTime(2018, 1, 1, 0, 0, 0, 0);
-            this.dtpk_From.MinimumSize = new System.Drawing.Size(4, 35);
-            this.dtpk_From.Name = "dtpk_From";
-            this.dtpk_From.Size = new System.Drawing.Size(363, 35);
-            this.dtpk_From.SkinColor = System.Drawing.Color.Orange;
-            this.dtpk_From.TabIndex = 10;
-            this.dtpk_From.TextColor = System.Drawing.Color.White;
-            this.dtpk_From.ValueChanged += new System.EventHandler(this.dtpk_From_ValueChanged);
-            // 
             // frmSalesReport
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 24F);
@@ -395,7 +396,7 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.GroupBox groupBox4;
         private System.Windows.Forms.Button btn_Reset;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button btn_SendEmail;
         private System.Windows.Forms.Button btn_Export_to_exel;
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Label label3;

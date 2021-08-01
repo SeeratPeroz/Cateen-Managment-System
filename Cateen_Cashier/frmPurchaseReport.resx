@@ -444,7 +444,7 @@
         nFXMKkXKKhCC5YQj8MI9lfVtvVt3cm22z18hyGjldKUYydSpUfNUqS+Kctru1kkkkoxSSikkkf/Z
 </value>
   </data>
-  <data name="button2.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="btn_SendEmail.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAEoAAAAzCAYAAAAw/Z54AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
         xAAADsQBlSsOGwAADOlJREFUaEPtmvl3VFUSx+d/mF/mzDkeHUUEsgc6CwlZWALZIUkn/br7NUtkFUwI

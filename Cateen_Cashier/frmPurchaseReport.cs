@@ -18,6 +18,7 @@ namespace Cateen_Cashier
         String searchStock = "";
         DataTable excelData;
         String From, To, Search_data;
+        String path;
         public frmPurchaseReport()
         {
             InitializeComponent();
@@ -111,6 +112,7 @@ namespace Cateen_Cashier
                         {
                             workbook.Worksheets.Add(excelData, "Purchase Report");
                             workbook.SaveAs(sf.FileName);
+                            path = sf.FileName;
                         }
                         MessageBox.Show("Successfully exported.", "Message", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     }
@@ -129,6 +131,17 @@ namespace Cateen_Cashier
             From = To = Search_data = null;
         }
 
+
+        private void btn_SendEmail_Click(object sender, EventArgs e)
+        {
+            var result = MessageBox.Show("You should save the report first.", "Info", MessageBoxButtons.OKCancel, MessageBoxIcon.Information);
+            if (result == DialogResult.OK)
+            {
+                export_excel();
+                frmEmail fr = new frmEmail(path);
+                fr.Show();
+            }
+        }
 
 
 

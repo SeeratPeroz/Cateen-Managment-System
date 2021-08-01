@@ -16,6 +16,7 @@ namespace Cateen_Cashier
         SqlDataAdapter AD;
         String searchStock = "";
         DataTable excelData;
+        String path;
         public frmOnStockProducts()
         {
             InitializeComponent();
@@ -90,6 +91,7 @@ namespace Cateen_Cashier
                         {
                             workbook.Worksheets.Add(excelData, "On Stock");
                             workbook.SaveAs(sf.FileName);
+                            path = sf.FileName;
                         }
                         MessageBox.Show("Successfully exported.", "Message", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     }
@@ -135,6 +137,17 @@ namespace Cateen_Cashier
             else
             {
                 showOnStockProducts(null);
+            }
+        }
+
+        private void btn_Email_Click(object sender, EventArgs e)
+        {
+            var result = MessageBox.Show("You should save the report first.", "Info", MessageBoxButtons.OKCancel, MessageBoxIcon.Information);
+            if (result == DialogResult.OK)
+            {
+                export_excel();
+                frmEmail fr = new frmEmail(path);
+                fr.Show();
             }
         }
     }

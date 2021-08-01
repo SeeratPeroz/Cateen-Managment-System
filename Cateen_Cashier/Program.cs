@@ -11,6 +11,7 @@ namespace Cateen_Cashier
         public static bool isUserValid;
         public static String userName;
         public static String userPass;
+        public static string userRole;
 
         /// <summary>
         /// The main entry point for the application.

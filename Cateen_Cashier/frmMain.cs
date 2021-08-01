@@ -267,6 +267,7 @@ namespace Cateen_Cashier
 
         private void frmMain_Load_1(object sender, EventArgs e)
         {            
+
             // Getting user Details
 
             SqlDataAdapter AD = new SqlDataAdapter();
@@ -282,7 +283,7 @@ namespace Cateen_Cashier
             String userID = dt.Rows[0][0].ToString();
             String userName = dt.Rows[0][1].ToString();
             
-            if(userName == "")
+            if(userName == " ")
             {
                 lbl_Title.Text = userID;
                 frmEmployee_Info empInfo = new frmEmployee_Info();
@@ -296,6 +297,27 @@ namespace Cateen_Cashier
                 imagePath = dt.Rows[0][2].ToString();
             }
             
+            if(Program.userRole == "1")
+            {
+                btn_Transaction.Hide();
+                btnInvetory.Hide();
+                btn_Stock.Hide();
+            }else if(Program.userRole == "2")
+            {
+                btn_Transaction.Hide();
+                btn_Employees.Hide();
+                btn_Report.Hide();
+                btn_Add_Customer.Hide();
+
+            }else if( Program.userRole == "3")
+            {
+                btn_Employees.Hide();
+                btn_Report.Hide();
+                btnInvetory.Hide();
+                btn_Stock.Hide();
+            }
+
+
             btn_Dashboard.PerformClick();
         }
 
@@ -521,16 +543,19 @@ namespace Cateen_Cashier
 
         private void btn_Employees_Click(object sender, EventArgs e)
         {
-            setImage(); pnl_Clock.Visible = false;
+            setImage(); pnl_Clock.Visible = false; 
 
             label3.Text = "Employees";
             openChildForm(new frmEmployee());
-            // ..
-            // Code here
-            // ..
-            ////////////changeColor(btn_Employees, 1);
-            ////////////point_btn(btn_Employees, 1);
+            //..
+            //Code here
+            //..
+            //////////changeColor(btn_Employees, 1);
+            //////////point_btn(btn_Employees, 1);
             hide_Sub_Menu_Panels();
+
+            //frmEmail fr = new frmEmail();
+            //fr.Show();
         }
 
     }   

@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmPurchaseReport));
             this.label1 = new System.Windows.Forms.Label();
             this.txtSearch = new CustomControls.RJControls.RJTextBox();
@@ -45,7 +45,7 @@
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.btn_Reset = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
+            this.btn_SendEmail = new System.Windows.Forms.Button();
             this.btn_Export_to_exel = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
@@ -124,14 +124,14 @@
             this.dgv_Sales.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgv_Sales.BackgroundColor = System.Drawing.Color.Azure;
             this.dgv_Sales.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.Orange;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgv_Sales.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.Orange;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgv_Sales.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dgv_Sales.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgv_Sales.Location = new System.Drawing.Point(76, 452);
             this.dgv_Sales.Name = "dgv_Sales";
@@ -245,7 +245,7 @@
             // groupBox4
             // 
             this.groupBox4.Controls.Add(this.btn_Reset);
-            this.groupBox4.Controls.Add(this.button2);
+            this.groupBox4.Controls.Add(this.btn_SendEmail);
             this.groupBox4.Controls.Add(this.btn_Export_to_exel);
             this.groupBox4.Controls.Add(this.button4);
             this.groupBox4.Location = new System.Drawing.Point(91, 241);
@@ -266,15 +266,16 @@
             this.btn_Reset.UseVisualStyleBackColor = false;
             this.btn_Reset.Click += new System.EventHandler(this.btn_Reset_Click_1);
             // 
-            // button2
+            // btn_SendEmail
             // 
-            this.button2.BackColor = System.Drawing.Color.Transparent;
-            this.button2.Image = ((System.Drawing.Image)(resources.GetObject("button2.Image")));
-            this.button2.Location = new System.Drawing.Point(280, 26);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(74, 56);
-            this.button2.TabIndex = 4;
-            this.button2.UseVisualStyleBackColor = false;
+            this.btn_SendEmail.BackColor = System.Drawing.Color.Transparent;
+            this.btn_SendEmail.Image = ((System.Drawing.Image)(resources.GetObject("btn_SendEmail.Image")));
+            this.btn_SendEmail.Location = new System.Drawing.Point(280, 26);
+            this.btn_SendEmail.Name = "btn_SendEmail";
+            this.btn_SendEmail.Size = new System.Drawing.Size(74, 56);
+            this.btn_SendEmail.TabIndex = 4;
+            this.btn_SendEmail.UseVisualStyleBackColor = false;
+            this.btn_SendEmail.Click += new System.EventHandler(this.btn_SendEmail_Click);
             // 
             // btn_Export_to_exel
             // 
@@ -397,7 +398,7 @@
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Button btn_Reset;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button btn_SendEmail;
         private System.Windows.Forms.Button btn_Export_to_exel;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.GroupBox groupBox4;
