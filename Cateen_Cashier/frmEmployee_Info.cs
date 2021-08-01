@@ -90,7 +90,7 @@ namespace Cateen_Cashier
         {
             try
             {
-                String Qur = "SELECT * FROM [Canteen_Database].[dbo].[Employee] WHERE [empid] = '" + Program.userName + "'";
+                String Qur = "SELECT *  FROM [Canteen_Database].[dbo].[vw_EmployeeInfo] WHERE [empID] = '" + Program.userName + "'";
                 AD.SelectCommand = new SqlCommand(Qur, DBContext.con);
                 DataTable dt = new DataTable();
                 AD.Fill(dt);
