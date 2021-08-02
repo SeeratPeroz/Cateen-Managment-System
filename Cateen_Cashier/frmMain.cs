@@ -31,7 +31,7 @@ namespace Cateen_Cashier
         public frmMain()
         {
             InitializeComponent();
-            //Region = System.Drawing.Region.FromHrgn(CreateRoundRectRgn(0, 0, Width, Height, 25, 25));
+            Region = System.Drawing.Region.FromHrgn(CreateRoundRectRgn(0, 0, Width, Height, 25, 25));
 
             // Hide all Sub Panel
             hide_all_sub_menus();
@@ -93,7 +93,7 @@ namespace Cateen_Cashier
             }
             else
             {
-                pnlNav.Visible = true;
+                pnlNav.Visible = false;
 
             }
 
@@ -108,7 +108,7 @@ namespace Cateen_Cashier
             // ..
             // Code here
             // ..
-            changeColor(btn_Add_Customer,1);
+            changeColor(btn_Add_Customer);
             point_btn(btn_Add_Customer,1);
             hide_Sub_Menu_Panels();
         }
@@ -118,7 +118,7 @@ namespace Cateen_Cashier
             setImage();
 
             point_btn(btn_Transaction,1);
-            changeColor(btn_Transaction, 1);
+            changeColor(btn_Transaction);
             showSubMenus(pnl_sub_Transaction);
         }
 
@@ -130,7 +130,6 @@ namespace Cateen_Cashier
             // ..
             // Code here
             // ..
-            point_btn(btn_CheckBalance,0);
             hide_Sub_Menu_Panels();
 
         }
@@ -144,7 +143,6 @@ namespace Cateen_Cashier
             // ..
             // Code here
             // ..
-            point_btn(btn_Deposit,0);
             hide_Sub_Menu_Panels();
         }
 
@@ -157,7 +155,7 @@ namespace Cateen_Cashier
             // Code here
             // ..
             point_btn(btn_Stock,1);
-            changeColor(btn_Stock, 1);
+            changeColor(btn_Stock);
             showSubMenus(pnl_Sub_Stock);
 
 
@@ -172,7 +170,6 @@ namespace Cateen_Cashier
             // ..
             // Code here
             // ..
-            point_btn(btn_Categories,0);
             hide_Sub_Menu_Panels();
         }
 
@@ -185,7 +182,6 @@ namespace Cateen_Cashier
             // ..
             // Code here
             // ..
-            point_btn(btn_Products,0);
             hide_Sub_Menu_Panels();
         }
 
@@ -206,15 +202,14 @@ namespace Cateen_Cashier
         {
             pnl_Clock.Visible = false;
             setImage();
-            point_btn(btn_Report,1);
-            changeColor(btn_Report, 1);
             showSubMenus(pnl_sub_Report);
+            point_btn(btn_Report,1);
+            changeColor(btn_Report);
         }
 
         private void btn_Sales_Report_Click_1(object sender, EventArgs e)
         {
             pnl_Clock.Visible = false;
-            point_btn(btn_Sales_Report,0);
             hide_Sub_Menu_Panels();
         }
 
@@ -227,7 +222,6 @@ namespace Cateen_Cashier
             // Code here
             // ..
             openChildForm(new frmTransactionReport());
-            point_btn(btn_Deposit_report,0);
             hide_Sub_Menu_Panels();
         }
 
@@ -240,7 +234,6 @@ namespace Cateen_Cashier
             // ..
             // Code here
             // ..
-            point_btn(btn_stock_report,0);
             hide_Sub_Menu_Panels();
         }
 
@@ -322,7 +315,7 @@ namespace Cateen_Cashier
         }
 
 
-        void changeColor(Button btn,int flag)
+        void changeColor(Button btn)
         {
             btn_Add_Customer.BackColor = Color.FromArgb(1, 1, 10);
             btn_Dashboard.BackColor = Color.FromArgb(1, 1, 10);
@@ -330,17 +323,28 @@ namespace Cateen_Cashier
             btn_Transaction.BackColor = Color.FromArgb(1, 1, 10);
             btn_Report.BackColor = Color.FromArgb(1, 1, 10);
             btnInvetory.BackColor = Color.FromArgb(1, 1, 10);
-            btn_Add_Customer.ForeColor = Color.White;
-            btn_Stock.ForeColor = Color.White;
-            btn_Transaction.ForeColor = Color.White;
-            btn_Report.ForeColor = Color.White;
-            btnInvetory.ForeColor = Color.White;
+            btn_Employees.BackColor = Color.FromArgb(1, 1, 10);
+            btn_Settings.BackColor = Color.FromArgb(1, 1, 10);
+
+            btn_Add_Customer.ForeColor = Color.FromArgb(255,128,0);
+            btn_Stock.ForeColor = Color.FromArgb(255,128,0);
+            btn_Transaction.ForeColor = Color.FromArgb(255,128,0);
+            btn_Dashboard.ForeColor = Color.FromArgb(255,128,0);
+            btn_Report.ForeColor = Color.FromArgb(255,128,0);
+            btnInvetory.ForeColor = Color.FromArgb(255,128,0);
+            btn_Settings.ForeColor = Color.FromArgb(255, 128, 0);
+            btn_Employees.ForeColor = Color.FromArgb(255, 128, 0);
+            //255, 128, 0
 
 
-
+            if(btn != null)
+            {
                 //  btn.BackColor = Color.FromArgb(46, 51, 73);
                 btn.BackColor = Color.White;
                 btn.ForeColor = Color.Black;
+            }
+
+            
         }
 
        
@@ -367,10 +371,7 @@ namespace Cateen_Cashier
             Application.Exit();
         }
 
-        private void btn_Minimize_Click(object sender, EventArgs e)
-        {
-            this.WindowState = FormWindowState.Minimized;
-        }
+        
 
         private void btn_Dashboard_Click(object sender, EventArgs e)
         {
@@ -387,7 +388,11 @@ namespace Cateen_Cashier
             // ..
             btn_Dashboard.BackColor = Color.FromArgb(46, 51, 73);
             hide_Sub_Menu_Panels();
-            
+            changeColor(btn_Dashboard);
+            point_btn(btn_Dashboard, 1);
+
+
+
         }
 
 
@@ -413,7 +418,7 @@ namespace Cateen_Cashier
             // Code Here
             //...
             point_btn(btnInvetory, 1);
-            changeColor(btnInvetory, 1);
+            changeColor(btnInvetory);
             showSubMenus(pnlInventory);
         }
         
@@ -427,7 +432,6 @@ namespace Cateen_Cashier
             // Code here
             // ..
             openChildForm(new frmPurchaseReport());
-            point_btn(btn_Purchase, 0);
             hide_Sub_Menu_Panels();
         }
 
@@ -440,7 +444,6 @@ namespace Cateen_Cashier
             // ..
             // Code here
             // ..
-            point_btn(btn_Sales_Report, 0);
             hide_Sub_Menu_Panels();
         }
 
@@ -448,19 +451,21 @@ namespace Cateen_Cashier
 
         private void btn_Settings_Click_1(object sender, EventArgs e)
         {
-            
-            frmEmployee_Info empInfo = new frmEmployee_Info();   
-            empInfo.ShowDialog();
+
+            point_btn(btn_Settings, 0);
+            changeColor(null);
+            hide_Sub_Menu_Panels();
 
             // ..
             // Code here
             // ..
-            point_btn(btn_Purchase, 0);
-            hide_Sub_Menu_Panels();
-           
+            frmEmployee_Info empInfo = new frmEmployee_Info();
+            empInfo.ShowDialog();
+
+
         }
 
-       
+
         // Function to set image on side panel
         public void setImage()
         {
@@ -502,15 +507,30 @@ namespace Cateen_Cashier
         private void btnMinimizar_Click(object sender, EventArgs e)
         {
             this.WindowState = FormWindowState.Minimized;
+        }
 
+        // My Function to maximize window
+        private void btnMaximize_Click()
+        {
+            if (this.WindowState == FormWindowState.Maximized)
+            {
+                this.WindowState = FormWindowState.Normal;
+                Region = System.Drawing.Region.FromHrgn(CreateRoundRectRgn(0, 0, Width, Height, 30, 30));
+            }
+            else
+            {
+                this.WindowState = FormWindowState.Maximized; ;
+                Region = System.Drawing.Region.FromHrgn(CreateRoundRectRgn(0, 0, Width, Height, 0, 0));
+            }
         }
 
         private void btnNormal_Click(object sender, EventArgs e)
         {
-            this.Size = new Size(sw, sh);
-            this.Location = new Point(lx, ly);
+            //this.Size = new Size(sw, sh);
+            //this.Location = new Point(lx, ly);
             btnNormal.Visible = false;
             btnMaximizar.Visible = true;
+            btnMaximize_Click();
         }
 
         //METODOS PARA CERRAR,MAXIMIZAR, MINIMIZAR FORMULARIO---------------------------------------
@@ -525,14 +545,17 @@ namespace Cateen_Cashier
             setImage();
         }
 
-    private void btnMaximizar_Click(object sender, EventArgs e)
+        
+
+        private void btnMaximizar_Click(object sender, EventArgs e)
         {
-            lx = this.Location.X;
-            ly = this.Location.Y;
-            sw = this.Size.Width;
-            sh = this.Size.Height;
-            this.Size = Screen.PrimaryScreen.WorkingArea.Size;
-            this.Location = Screen.PrimaryScreen.WorkingArea.Location;
+            //lx = this.Location.X;
+            //ly = this.Location.Y;
+            //sw = this.Size.Width;
+            //sh = this.Size.Height;
+            //this.Size = Screen.PrimaryScreen.WorkingArea.Size;
+            //this.Location = Screen.PrimaryScreen.WorkingArea.Location;
+            btnMaximize_Click();
             btnMaximizar.Visible = false;
             btnNormal.Visible = true;
 
@@ -543,16 +566,20 @@ namespace Cateen_Cashier
 
         private void btn_Employees_Click(object sender, EventArgs e)
         {
-            setImage(); pnl_Clock.Visible = false; 
+            //setImage(); pnl_Clock.Visible = false; 
 
-            label3.Text = "Employees";
-            openChildForm(new frmEmployee());
+            //label3.Text = "Employees";
+            //openChildForm(new frmEmployee());
+
+
             //..
             //Code here
             //..
-            //////////changeColor(btn_Employees, 1);
-            //////////point_btn(btn_Employees, 1);
-            hide_Sub_Menu_Panels();
+
+            //hide_Sub_Menu_Panels();
+            changeColor(btn_Employees);
+            point_btn(btn_Employees, 1);
+
 
             //frmEmail fr = new frmEmail();
             //fr.Show();

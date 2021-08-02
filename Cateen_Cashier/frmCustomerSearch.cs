@@ -46,6 +46,8 @@ namespace Cateen_Cashier
         private void frmCustomerSearch_Load(object sender, EventArgs e)
         {
             txtSearch.Focus();
+            txtSearch.UseSystemPasswordChar = true;
+
         }
 
         //----------------------
@@ -274,14 +276,20 @@ namespace Cateen_Cashier
                 lblSearchBY.Text = "Customer ID";
                 toggle = 0;
                 txtSearch.Text = "";
+                txtSearch.UseSystemPasswordChar = true;
+
+
             }
             else
             {
                 lblSearchBY.Text = "Customer Card";
                 toggle = 1;
                 txtSearch.Text = "";
+                txtSearch.UseSystemPasswordChar = false;
+
 
             }
+           
 
             // txtSearch.Text = toggle.ToString();
         }

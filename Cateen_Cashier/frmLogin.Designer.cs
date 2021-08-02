@@ -147,6 +147,7 @@
             this.cbshowpassword.TabIndex = 92;
             this.cbshowpassword.Text = "Show Password";
             this.cbshowpassword.UseVisualStyleBackColor = true;
+            this.cbshowpassword.CheckedChanged += new System.EventHandler(this.cbshowpassword_CheckedChanged);
             // 
             // txt_Username
             // 
@@ -156,9 +157,8 @@
             this.txt_Username.ForeColor = System.Drawing.Color.Black;
             this.txt_Username.Location = new System.Drawing.Point(370, 173);
             this.txt_Username.Margin = new System.Windows.Forms.Padding(2);
-            this.txt_Username.Multiline = true;
             this.txt_Username.Name = "txt_Username";
-            this.txt_Username.Size = new System.Drawing.Size(297, 37);
+            this.txt_Username.Size = new System.Drawing.Size(297, 40);
             this.txt_Username.TabIndex = 90;
             this.txt_Username.Text = "SA";
             // 

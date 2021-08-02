@@ -26,17 +26,24 @@ namespace Cateen_Cashier
 
         private void Stock_Print_Load(object sender, EventArgs e)
         {
-            ReportDocument crypt = new ReportDocument();
-            CrystalReport1 cr = new CrystalReport1();
-            string path = Application.StartupPath + "\\CrystalReport1.rpt";
+            try
+            {
+                ReportDocument crypt = new ReportDocument();
+                CrystalReport1 cr = new CrystalReport1();
+                string path = Application.StartupPath + "\\CrystalReport1.rpt";
+                MessageBox.Show(path);
+                crypt.Load(path);
+                //crypt.SetDataSource(dt);
 
-            crypt.Load(path);
-            crypt.SetDataSource(dt);
 
-
-            //cr.Database.Tables["vw_OnStock"].SetDataSource(dt);
-            //cr.SetDataSource(dt);
-            crystalReportViewer1.ReportSource = crypt;
+                //cr.Database.Tables["vw_OnStock"].SetDataSource(dt);
+                //cr.SetDataSource(dt);
+                crystal_Report.ReportSource = crypt;
+            }catch(Exception ex)
+            {
+                MessageBox.Show("Error on Stock Print: " + ex.Message);
+            }
+            
 
         }
 

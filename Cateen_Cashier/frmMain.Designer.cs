@@ -31,6 +31,7 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmMain));
             this.pnl_Menus = new System.Windows.Forms.Panel();
+            this.pnlNav = new System.Windows.Forms.Panel();
             this.btn_Employees = new System.Windows.Forms.Button();
             this.btn_Settings = new System.Windows.Forms.Button();
             this.pnl_sub_Report = new System.Windows.Forms.Panel();
@@ -39,7 +40,6 @@
             this.btn_Purchase_Report = new System.Windows.Forms.Button();
             this.btn_Sales_Report = new System.Windows.Forms.Button();
             this.btn_Report = new System.Windows.Forms.Button();
-            this.pnlNav = new System.Windows.Forms.Panel();
             this.pnlInventory = new System.Windows.Forms.Panel();
             this.btn_Purchase = new System.Windows.Forms.Button();
             this.btnCart = new System.Windows.Forms.Button();
@@ -91,11 +91,11 @@
             // 
             resources.ApplyResources(this.pnl_Menus, "pnl_Menus");
             this.pnl_Menus.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(1)))), ((int)(((byte)(10)))));
+            this.pnl_Menus.Controls.Add(this.pnlNav);
             this.pnl_Menus.Controls.Add(this.btn_Employees);
             this.pnl_Menus.Controls.Add(this.btn_Settings);
             this.pnl_Menus.Controls.Add(this.pnl_sub_Report);
             this.pnl_Menus.Controls.Add(this.btn_Report);
-            this.pnl_Menus.Controls.Add(this.pnlNav);
             this.pnl_Menus.Controls.Add(this.pnlInventory);
             this.pnl_Menus.Controls.Add(this.btnInvetory);
             this.pnl_Menus.Controls.Add(this.pnl_Sub_Stock);
@@ -107,11 +107,17 @@
             this.pnl_Menus.Controls.Add(this.pnlTitle);
             this.pnl_Menus.Name = "pnl_Menus";
             // 
+            // pnlNav
+            // 
+            this.pnlNav.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
+            resources.ApplyResources(this.pnlNav, "pnlNav");
+            this.pnlNav.Name = "pnlNav";
+            // 
             // btn_Employees
             // 
             resources.ApplyResources(this.btn_Employees, "btn_Employees");
             this.btn_Employees.FlatAppearance.BorderSize = 0;
-            this.btn_Employees.ForeColor = System.Drawing.Color.White;
+            this.btn_Employees.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.btn_Employees.Name = "btn_Employees";
             this.btn_Employees.UseVisualStyleBackColor = true;
             this.btn_Employees.Click += new System.EventHandler(this.btn_Employees_Click);
@@ -120,7 +126,7 @@
             // 
             resources.ApplyResources(this.btn_Settings, "btn_Settings");
             this.btn_Settings.FlatAppearance.BorderSize = 0;
-            this.btn_Settings.ForeColor = System.Drawing.Color.White;
+            this.btn_Settings.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.btn_Settings.Name = "btn_Settings";
             this.btn_Settings.UseVisualStyleBackColor = true;
             this.btn_Settings.Click += new System.EventHandler(this.btn_Settings_Click_1);
@@ -140,7 +146,7 @@
             // 
             resources.ApplyResources(this.btn_Deposit_report, "btn_Deposit_report");
             this.btn_Deposit_report.FlatAppearance.BorderSize = 0;
-            this.btn_Deposit_report.ForeColor = System.Drawing.Color.White;
+            this.btn_Deposit_report.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.btn_Deposit_report.Name = "btn_Deposit_report";
             this.btn_Deposit_report.UseVisualStyleBackColor = true;
             this.btn_Deposit_report.Click += new System.EventHandler(this.btn_Deposit_report_Click);
@@ -149,7 +155,7 @@
             // 
             resources.ApplyResources(this.btn_stock_report, "btn_stock_report");
             this.btn_stock_report.FlatAppearance.BorderSize = 0;
-            this.btn_stock_report.ForeColor = System.Drawing.Color.White;
+            this.btn_stock_report.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.btn_stock_report.Name = "btn_stock_report";
             this.btn_stock_report.UseVisualStyleBackColor = true;
             this.btn_stock_report.Click += new System.EventHandler(this.btn_stock_report_Click);
@@ -158,7 +164,7 @@
             // 
             resources.ApplyResources(this.btn_Purchase_Report, "btn_Purchase_Report");
             this.btn_Purchase_Report.FlatAppearance.BorderSize = 0;
-            this.btn_Purchase_Report.ForeColor = System.Drawing.Color.White;
+            this.btn_Purchase_Report.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.btn_Purchase_Report.Name = "btn_Purchase_Report";
             this.btn_Purchase_Report.UseVisualStyleBackColor = true;
             this.btn_Purchase_Report.Click += new System.EventHandler(this.btn_Purchase_Report_Click);
@@ -167,7 +173,7 @@
             // 
             resources.ApplyResources(this.btn_Sales_Report, "btn_Sales_Report");
             this.btn_Sales_Report.FlatAppearance.BorderSize = 0;
-            this.btn_Sales_Report.ForeColor = System.Drawing.Color.White;
+            this.btn_Sales_Report.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.btn_Sales_Report.Name = "btn_Sales_Report";
             this.btn_Sales_Report.UseVisualStyleBackColor = true;
             this.btn_Sales_Report.Click += new System.EventHandler(this.btn_Sales_Report_Click);
@@ -176,16 +182,10 @@
             // 
             resources.ApplyResources(this.btn_Report, "btn_Report");
             this.btn_Report.FlatAppearance.BorderSize = 0;
-            this.btn_Report.ForeColor = System.Drawing.Color.White;
+            this.btn_Report.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.btn_Report.Name = "btn_Report";
             this.btn_Report.UseVisualStyleBackColor = true;
             this.btn_Report.Click += new System.EventHandler(this.btn_Report_Click_1);
-            // 
-            // pnlNav
-            // 
-            this.pnlNav.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
-            resources.ApplyResources(this.pnlNav, "pnlNav");
-            this.pnlNav.Name = "pnlNav";
             // 
             // pnlInventory
             // 
@@ -200,7 +200,7 @@
             // 
             resources.ApplyResources(this.btn_Purchase, "btn_Purchase");
             this.btn_Purchase.FlatAppearance.BorderSize = 0;
-            this.btn_Purchase.ForeColor = System.Drawing.Color.White;
+            this.btn_Purchase.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.btn_Purchase.Name = "btn_Purchase";
             this.btn_Purchase.UseVisualStyleBackColor = true;
             this.btn_Purchase.Click += new System.EventHandler(this.btn_Purchase_Click);
@@ -209,7 +209,7 @@
             // 
             resources.ApplyResources(this.btnCart, "btnCart");
             this.btnCart.FlatAppearance.BorderSize = 0;
-            this.btnCart.ForeColor = System.Drawing.Color.White;
+            this.btnCart.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.btnCart.Name = "btnCart";
             this.btnCart.UseVisualStyleBackColor = true;
             this.btnCart.Click += new System.EventHandler(this.btnCart_Click_1);
@@ -218,7 +218,7 @@
             // 
             resources.ApplyResources(this.btnInvetory, "btnInvetory");
             this.btnInvetory.FlatAppearance.BorderSize = 0;
-            this.btnInvetory.ForeColor = System.Drawing.Color.White;
+            this.btnInvetory.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.btnInvetory.Name = "btnInvetory";
             this.btnInvetory.UseVisualStyleBackColor = true;
             this.btnInvetory.Click += new System.EventHandler(this.btnInvetory_Click);
@@ -236,7 +236,7 @@
             // 
             resources.ApplyResources(this.btn_Products, "btn_Products");
             this.btn_Products.FlatAppearance.BorderSize = 0;
-            this.btn_Products.ForeColor = System.Drawing.Color.White;
+            this.btn_Products.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.btn_Products.Name = "btn_Products";
             this.btn_Products.UseVisualStyleBackColor = true;
             this.btn_Products.Click += new System.EventHandler(this.btn_Products_Click_1);
@@ -245,7 +245,7 @@
             // 
             resources.ApplyResources(this.btn_Categories, "btn_Categories");
             this.btn_Categories.FlatAppearance.BorderSize = 0;
-            this.btn_Categories.ForeColor = System.Drawing.Color.White;
+            this.btn_Categories.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.btn_Categories.Name = "btn_Categories";
             this.btn_Categories.UseVisualStyleBackColor = true;
             this.btn_Categories.Click += new System.EventHandler(this.btn_Categories_Click_1);
@@ -254,7 +254,7 @@
             // 
             resources.ApplyResources(this.btn_Stock, "btn_Stock");
             this.btn_Stock.FlatAppearance.BorderSize = 0;
-            this.btn_Stock.ForeColor = System.Drawing.Color.White;
+            this.btn_Stock.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.btn_Stock.Name = "btn_Stock";
             this.btn_Stock.UseVisualStyleBackColor = true;
             this.btn_Stock.Click += new System.EventHandler(this.btn_Stock_Click_1);
@@ -272,7 +272,7 @@
             // 
             resources.ApplyResources(this.btn_Deposit, "btn_Deposit");
             this.btn_Deposit.FlatAppearance.BorderSize = 0;
-            this.btn_Deposit.ForeColor = System.Drawing.Color.White;
+            this.btn_Deposit.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.btn_Deposit.Name = "btn_Deposit";
             this.btn_Deposit.UseVisualStyleBackColor = true;
             this.btn_Deposit.Click += new System.EventHandler(this.btn_Deposit_Click_1);
@@ -281,7 +281,7 @@
             // 
             resources.ApplyResources(this.btn_CheckBalance, "btn_CheckBalance");
             this.btn_CheckBalance.FlatAppearance.BorderSize = 0;
-            this.btn_CheckBalance.ForeColor = System.Drawing.Color.White;
+            this.btn_CheckBalance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.btn_CheckBalance.Name = "btn_CheckBalance";
             this.btn_CheckBalance.UseVisualStyleBackColor = true;
             this.btn_CheckBalance.Click += new System.EventHandler(this.btn_CheckBalance_Click_1);
@@ -290,7 +290,7 @@
             // 
             resources.ApplyResources(this.btn_Transaction, "btn_Transaction");
             this.btn_Transaction.FlatAppearance.BorderSize = 0;
-            this.btn_Transaction.ForeColor = System.Drawing.Color.White;
+            this.btn_Transaction.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.btn_Transaction.Name = "btn_Transaction";
             this.btn_Transaction.UseVisualStyleBackColor = true;
             this.btn_Transaction.Click += new System.EventHandler(this.btn_Transaction_Click_1);
@@ -299,7 +299,7 @@
             // 
             resources.ApplyResources(this.btn_Add_Customer, "btn_Add_Customer");
             this.btn_Add_Customer.FlatAppearance.BorderSize = 0;
-            this.btn_Add_Customer.ForeColor = System.Drawing.Color.White;
+            this.btn_Add_Customer.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.btn_Add_Customer.Name = "btn_Add_Customer";
             this.btn_Add_Customer.UseVisualStyleBackColor = true;
             this.btn_Add_Customer.Click += new System.EventHandler(this.btn_Add_Customer_Click_1);
@@ -308,7 +308,7 @@
             // 
             resources.ApplyResources(this.btn_Dashboard, "btn_Dashboard");
             this.btn_Dashboard.FlatAppearance.BorderSize = 0;
-            this.btn_Dashboard.ForeColor = System.Drawing.Color.White;
+            this.btn_Dashboard.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.btn_Dashboard.Name = "btn_Dashboard";
             this.btn_Dashboard.UseVisualStyleBackColor = true;
             this.btn_Dashboard.Click += new System.EventHandler(this.btn_Dashboard_Click);
@@ -499,7 +499,7 @@
             this.pnl_Tittle_Bar.PerformLayout();
             this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);
-
+            //Region = System.Drawing.Region.FromHrgn(CreateRoundRectRgn(0, 0, Width, Height, 25, 25));
         }
 
         #endregion

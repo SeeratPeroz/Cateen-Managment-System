@@ -133,7 +133,9 @@
             this.txtSearch.ForeColor = System.Drawing.Color.Black;
             this.txtSearch.Location = new System.Drawing.Point(282, 339);
             this.txtSearch.Margin = new System.Windows.Forms.Padding(2);
+            this.txtSearch.Multiline = true;
             this.txtSearch.Name = "txtSearch";
+            this.txtSearch.PasswordChar = '✶';
             this.txtSearch.Size = new System.Drawing.Size(580, 57);
             this.txtSearch.TabIndex = 0;
             this.txtSearch.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;

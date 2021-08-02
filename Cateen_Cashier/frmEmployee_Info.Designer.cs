@@ -516,6 +516,7 @@
             this.Name = "frmEmployee_Info";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Load += new System.EventHandler(this.frmEmployee_Info_Load);
+            this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.frmEmployee_Info_MouseDown);
             ((System.ComponentModel.ISupportInitialize)(this.pic_Name_Validate)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pic_LastName_Validate)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pic_Address_Validate)).EndInit();
