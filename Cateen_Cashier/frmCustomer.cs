@@ -17,7 +17,6 @@ namespace Cateen_Cashier
         String Image_Path2;
 
 
-        int toggle = 0;
         SqlDataAdapter AD;
         String custPKID;
         String custName;
@@ -28,32 +27,13 @@ namespace Cateen_Cashier
         // UniPrice variable for update operation
         long updatePrice;
         // Updating deposited money 
-        String Balance_ID;
-        String oldAmount;
+
         // Update Customer Record variable to store customer pK
         long custCart_pnlCustomer = 0;
 
-        // PRODUCT PANEL UPDATE RECORD ID and also use to store Category ID in Category Panel
-        String strPrdID_ProductPanel;
-        String strCatID_ProductPanel;
 
-        // FORM MOVEMENT
-        private bool dragging;
-        private Point startPoint;
-        private int clickMOVE = 1;
-
-
-        // Data Entry base on Validation, Declaring Validation Veriables
-        bool isCategory_Panel_Valid = false;
-        bool isProduct_Panel_Valid = false;
-        // Cart Panel
-        bool isCardValid_ID_pnlCart = false;
-        bool isCardValid_Quantity_pnlCart = false;
-        bool isSearchByName_pnlCart = false;
         // Customer Panel
         bool isCustomerValid_pnlCustomer = false;
-        // Deposit Panel
-        bool isdopisteAmount_validate_pnlDeposit;
         public frmCustomer()
         {
             InitializeComponent();

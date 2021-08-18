@@ -121,7 +121,7 @@ namespace Cateen_Cashier
                 cmbUserRole.ValueMember = "roleID"; }
             catch(Exception ex)
             {
-                MessageBox.Show("Role not found.");
+                MessageBox.Show("Role not found."+ex.Message);
             }
         }
 

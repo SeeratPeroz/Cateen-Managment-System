@@ -58,6 +58,9 @@
       <Private>True</Private>
     </Reference>
     <Reference Include="FlashControlV71, Version=1.0.3187.32366, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="Microsoft.QualityTools.Testing.Fakes, Version=12.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Web" />
@@ -359,6 +362,7 @@
       <DependentUpon>Stock_Print.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Custom-TextBox-2--Rounded-Placeholder-main\README.md" />
+    <Fakes Include="Fakes\System.Net.Http.fakes" />
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

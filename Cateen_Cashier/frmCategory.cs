@@ -16,12 +16,10 @@ namespace Cateen_Cashier
     {
         SqlDataAdapter AD;
         // PRODUCT PANEL UPDATE RECORD ID and also use to store Category ID in Category Panel
-        String strPrdID_ProductPanel;
         String strCatID_ProductPanel;
 
         // Data Entry base on Validation, Declaring Validation Veriables
         bool isCategory_Panel_Valid = false;
-        bool isProduct_Panel_Valid = false;
 
         public frmCategory()
         {
