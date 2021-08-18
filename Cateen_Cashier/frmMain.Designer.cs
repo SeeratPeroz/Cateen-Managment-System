@@ -74,6 +74,7 @@
             this.label3 = new System.Windows.Forms.Label();
             this.pnlSide_Right = new System.Windows.Forms.Panel();
             this.tmCLock_Date = new System.Windows.Forms.Timer(this.components);
+            this.button1 = new System.Windows.Forms.Button();
             this.pnl_Menus.SuspendLayout();
             this.pnl_sub_Report.SuspendLayout();
             this.pnlInventory.SuspendLayout();
@@ -404,6 +405,7 @@
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.button1);
             this.panel1.Controls.Add(this.btnMaximizar);
             this.panel1.Controls.Add(this.btnNormal);
             this.panel1.Controls.Add(this.btn_Exit);
@@ -471,6 +473,17 @@
             // 
             this.tmCLock_Date.Tick += new System.EventHandler(this.tmFechaHora_Tick);
             // 
+            // button1
+            // 
+            resources.ApplyResources(this.button1, "button1");
+            this.button1.BackColor = System.Drawing.Color.Transparent;
+            this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button1.FlatAppearance.BorderSize = 0;
+            this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
+            this.button1.Name = "button1";
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // frmMain
             // 
             resources.ApplyResources(this, "$this");
@@ -499,7 +512,7 @@
             this.pnl_Tittle_Bar.PerformLayout();
             this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);
-            //Region = System.Drawing.Region.FromHrgn(CreateRoundRectRgn(0, 0, Width, Height, 25, 25));
+
         }
 
         #endregion
@@ -547,6 +560,7 @@
         private System.Windows.Forms.Label lblHora;
         private System.Windows.Forms.Timer tmCLock_Date;
         private System.Windows.Forms.Button btn_Employees;
+        private System.Windows.Forms.Button button1;
         public static System.Windows.Forms.Panel pnl_Child_Form;
     }
 }

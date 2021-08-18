@@ -253,6 +253,7 @@
             // 
             // cmbPrdCategory_ProductPanel
             // 
+            this.cmbPrdCategory_ProductPanel.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbPrdCategory_ProductPanel.FormattingEnabled = true;
             this.cmbPrdCategory_ProductPanel.Location = new System.Drawing.Point(175, 181);
             this.cmbPrdCategory_ProductPanel.Name = "cmbPrdCategory_ProductPanel";

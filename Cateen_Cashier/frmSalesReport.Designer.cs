@@ -33,8 +33,8 @@
             this.pnl_Tools = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
-            this.txtInviceSearch = new CustomControls.RJControls.RJTextBox();
-            this.button5 = new System.Windows.Forms.Button();
+            this.txtInvoiceSearch = new CustomControls.RJControls.RJTextBox();
+            this.btn_Invoice = new System.Windows.Forms.Button();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.txtSearch = new CustomControls.RJControls.RJTextBox();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
@@ -89,8 +89,8 @@
             // 
             // groupBox5
             // 
-            this.groupBox5.Controls.Add(this.txtInviceSearch);
-            this.groupBox5.Controls.Add(this.button5);
+            this.groupBox5.Controls.Add(this.txtInvoiceSearch);
+            this.groupBox5.Controls.Add(this.btn_Invoice);
             this.groupBox5.Location = new System.Drawing.Point(411, 345);
             this.groupBox5.Name = "groupBox5";
             this.groupBox5.Size = new System.Drawing.Size(374, 80);
@@ -98,37 +98,38 @@
             this.groupBox5.TabStop = false;
             this.groupBox5.Text = "Specific Invoice";
             // 
-            // txtInviceSearch
+            // txtInvoiceSearch
             // 
-            this.txtInviceSearch.BackColor = System.Drawing.SystemColors.Window;
-            this.txtInviceSearch.BorderColor = System.Drawing.Color.Orange;
-            this.txtInviceSearch.BorderFocusColor = System.Drawing.SystemColors.HotTrack;
-            this.txtInviceSearch.BorderRadius = 10;
-            this.txtInviceSearch.BorderSize = 2;
-            this.txtInviceSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtInviceSearch.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.txtInviceSearch.Location = new System.Drawing.Point(161, 29);
-            this.txtInviceSearch.Margin = new System.Windows.Forms.Padding(4);
-            this.txtInviceSearch.Multiline = false;
-            this.txtInviceSearch.Name = "txtInviceSearch";
-            this.txtInviceSearch.Padding = new System.Windows.Forms.Padding(15, 7, 10, 7);
-            this.txtInviceSearch.PasswordChar = false;
-            this.txtInviceSearch.PlaceholderColor = System.Drawing.Color.DarkGray;
-            this.txtInviceSearch.PlaceholderText = "   Enter Invoice #";
-            this.txtInviceSearch.Size = new System.Drawing.Size(194, 31);
-            this.txtInviceSearch.TabIndex = 6;
-            this.txtInviceSearch.Texts = "";
-            this.txtInviceSearch.UnderlinedStyle = false;
+            this.txtInvoiceSearch.BackColor = System.Drawing.SystemColors.Window;
+            this.txtInvoiceSearch.BorderColor = System.Drawing.Color.Orange;
+            this.txtInvoiceSearch.BorderFocusColor = System.Drawing.SystemColors.HotTrack;
+            this.txtInvoiceSearch.BorderRadius = 10;
+            this.txtInvoiceSearch.BorderSize = 2;
+            this.txtInvoiceSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtInvoiceSearch.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.txtInvoiceSearch.Location = new System.Drawing.Point(161, 29);
+            this.txtInvoiceSearch.Margin = new System.Windows.Forms.Padding(4);
+            this.txtInvoiceSearch.Multiline = false;
+            this.txtInvoiceSearch.Name = "txtInvoiceSearch";
+            this.txtInvoiceSearch.Padding = new System.Windows.Forms.Padding(15, 7, 10, 7);
+            this.txtInvoiceSearch.PasswordChar = false;
+            this.txtInvoiceSearch.PlaceholderColor = System.Drawing.Color.DarkGray;
+            this.txtInvoiceSearch.PlaceholderText = "   Enter Invoice #";
+            this.txtInvoiceSearch.Size = new System.Drawing.Size(194, 31);
+            this.txtInvoiceSearch.TabIndex = 6;
+            this.txtInvoiceSearch.Texts = "";
+            this.txtInvoiceSearch.UnderlinedStyle = false;
             // 
-            // button5
+            // btn_Invoice
             // 
-            this.button5.BackColor = System.Drawing.Color.Transparent;
-            this.button5.Image = ((System.Drawing.Image)(resources.GetObject("button5.Image")));
-            this.button5.Location = new System.Drawing.Point(44, 28);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(61, 43);
-            this.button5.TabIndex = 6;
-            this.button5.UseVisualStyleBackColor = false;
+            this.btn_Invoice.BackColor = System.Drawing.Color.Transparent;
+            this.btn_Invoice.Image = ((System.Drawing.Image)(resources.GetObject("btn_Invoice.Image")));
+            this.btn_Invoice.Location = new System.Drawing.Point(44, 28);
+            this.btn_Invoice.Name = "btn_Invoice";
+            this.btn_Invoice.Size = new System.Drawing.Size(61, 43);
+            this.btn_Invoice.TabIndex = 6;
+            this.btn_Invoice.UseVisualStyleBackColor = false;
+            this.btn_Invoice.Click += new System.EventHandler(this.btn_Invoice_Click);
             // 
             // groupBox2
             // 
@@ -407,7 +408,7 @@
         private System.Windows.Forms.GroupBox groupBox2;
         private CustomControls.RJControls.RJTextBox txtSearch;
         private System.Windows.Forms.GroupBox groupBox5;
-        private System.Windows.Forms.Button button5;
-        private CustomControls.RJControls.RJTextBox txtInviceSearch;
+        private System.Windows.Forms.Button btn_Invoice;
+        private CustomControls.RJControls.RJTextBox txtInvoiceSearch;
     }
 }

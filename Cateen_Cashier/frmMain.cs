@@ -386,10 +386,11 @@ namespace Cateen_Cashier
             // ..
             // Code here
             // ..
-            btn_Dashboard.BackColor = Color.FromArgb(46, 51, 73);
             hide_Sub_Menu_Panels();
             changeColor(btn_Dashboard);
             point_btn(btn_Dashboard, 1);
+            btn_Dashboard.BackColor = Color.FromArgb(46, 51, 73);
+
 
 
 
@@ -545,7 +546,15 @@ namespace Cateen_Cashier
             setImage();
         }
 
-        
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Program.isUserValid = false;
+
+            Program.userName = "";
+            Program.userPass = "";
+            Program.userRole = "";
+            Application.Restart();
+        }
 
         private void btnMaximizar_Click(object sender, EventArgs e)
         {
@@ -566,17 +575,17 @@ namespace Cateen_Cashier
 
         private void btn_Employees_Click(object sender, EventArgs e)
         {
-            //setImage(); pnl_Clock.Visible = false; 
+            setImage(); pnl_Clock.Visible = false;
 
-            //label3.Text = "Employees";
-            //openChildForm(new frmEmployee());
+            label3.Text = "Employees";
+            openChildForm(new frmEmployee());
 
 
             //..
             //Code here
             //..
 
-            //hide_Sub_Menu_Panels();
+            hide_Sub_Menu_Panels();
             changeColor(btn_Employees);
             point_btn(btn_Employees, 1);
 

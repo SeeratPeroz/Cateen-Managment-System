@@ -7,6 +7,7 @@ using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -152,6 +153,16 @@ namespace Cateen_Cashier
             }
         }
 
+         // Function to display Specific Invoice Details
+        private void btn_Invoice_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Please wait to load invoice.");
+
+
+            frm_InvDetails_Report frm = new frm_InvDetails_Report(txtInvoiceSearch.Texts);
+                    frm.Show();
+        }
+
 
 
 
@@ -199,7 +210,7 @@ namespace Cateen_Cashier
             {
                 MessageBox.Show("Symbols are not allowed");
                 txtSearch.Texts = "";
-                txtInviceSearch.Focus();
+                txtInvoiceSearch.Focus();
                 
             }
 

@@ -2111,6 +2111,51 @@
   <data name="&gt;&gt;lbltitle.ZOrder" xml:space="preserve">
     <value>2</value>
   </data>
+  <data name="button1.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Right</value>
+  </data>
+  <data name="button1.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+    <value>Flat</value>
+  </data>
+  <data name="button1.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAJcEhZcwAACxMAAAsTAQCanBgAAAIXSURBVGhD7Zm9S+RAFMB3ufb+BJHD02rj2XmXZJMF4aor
+        EgvBRjkLbSzFUgTxW4+DY3fGtdDCzn/AQhsbLWVncqVYiJ1iK+Ld+h4+/AAFMfOyBuYHD3Zekfd+b5Is
+        QwoWi8WSbyrV5KMv9B9fqnNf6maqEOq/J/WxL5LxQrNZpBJ8DGxvf4DmDyCuoYEtKL6YJkBgyRN6j2SW
+        qAwfbk2NYLFyTcWUMgLuKIjceHX9mVI8QJE1mNQFLY0BQ+nBwbhCD1KKB5jUJsQJLY3xVR59QgFPNn5S
+        igcr8AJW4LXkX0CqZRDYp6UxMhPggkWgFMYzThj/piUrxgVKQfQLmm86QTRFKVaMCpTCaB6bLwXxKqXY
+        MSbQiuYRIwJOEM+1onkktQDc67Otah5JJQBNT949sPEV/N7lChjSTncYdVPZJ6QTuHtdZiLwpdLvUNkn
+        pL2Fik4YVXN7CxH3EhArlMsMEwLII4lomXKZYEoAeZAIYv5DNmFSACnCH5qknZigHCumBZAi7gCILNCa
+        FQ6BTMlMIPcHmvwfKa3A81iB15J/Aak3QOCUlsb4Vk06UQBimFI8eEJNw6v0n19P2illBGwcBdy1Rkgp
+        HnrXG22e1JcgcQTxvSxUR5oI5d+ustBDcK1zuO4hfkChUny4IumDgme05UYCm8fngErwg9/J3Jr64clk
+        FCY59tbALz7lmqpkMnmLxfIeKBRuAe8An7ZbcjFzAAAAAElFTkSuQmCC
+</value>
+  </data>
+  <data name="button1.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="button1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>35, 29</value>
+  </data>
+  <data name="button1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>43, 41</value>
+  </data>
+  <data name="button1.TabIndex" type="System.Int32, mscorlib">
+    <value>20</value>
+  </data>
+  <data name="&gt;&gt;button1.Name" xml:space="preserve">
+    <value>button1</value>
+  </data>
+  <data name="&gt;&gt;button1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;button1.Parent" xml:space="preserve">
+    <value>panel1</value>
+  </data>
+  <data name="&gt;&gt;button1.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
   <data name="btnMaximizar.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Right</value>
   </data>
@@ -2139,7 +2184,7 @@
     <value>panel1</value>
   </data>
   <data name="&gt;&gt;btnMaximizar.ZOrder" xml:space="preserve">
-    <value>0</value>
+    <value>1</value>
   </data>
   <data name="btnNormal.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Right</value>
@@ -2172,7 +2217,7 @@
     <value>panel1</value>
   </data>
   <data name="&gt;&gt;btnNormal.ZOrder" xml:space="preserve">
-    <value>1</value>
+    <value>2</value>
   </data>
   <data name="btn_Exit.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Left, Right</value>
@@ -2208,7 +2253,7 @@
     <value>panel1</value>
   </data>
   <data name="&gt;&gt;btn_Exit.ZOrder" xml:space="preserve">
-    <value>2</value>
+    <value>3</value>
   </data>
   <data name="btnMinimizar.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Right</value>
@@ -2238,7 +2283,7 @@
     <value>panel1</value>
   </data>
   <data name="&gt;&gt;btnMinimizar.ZOrder" xml:space="preserve">
-    <value>3</value>
+    <value>4</value>
   </data>
   <data name="panel1.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Right</value>

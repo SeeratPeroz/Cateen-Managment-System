@@ -21,7 +21,7 @@ namespace Cateen_Cashier
         bool isCardValid_ID_pnlCart = false;
         bool isCardValid_Quantity_pnlCart = false;
         bool isSearchByName_pnlCart = false;
-
+        string on_STOCK_PRODUCT;
         public frmCart()
         {
             InitializeComponent();
@@ -43,11 +43,36 @@ namespace Cateen_Cashier
             totalAmount();
             chk_Manual.Checked = false;
             txtUnitPrice.Enabled= false;
+            lbl_Check_OnStock.Hide();
         }
 
    
 
         //--------------------------------------------------------------------------------------
+
+            // Function to check if product is available
+
+        bool prdAvalaible(string id)
+        {
+            if (Validation.validatePrice(txtPrdQuantity.Text))
+            {
+                AD.SelectCommand = new SqlCommand("SELECT SUM([Quantity]) FROM [Canteen_Database].[dbo].[vw_OnStock] WHERE [Product ID] = '" + id + "'", DBContext.con);
+                DataTable dt = new DataTable();
+                AD.Fill(dt);
+
+                if (Convert.ToInt16(dt.Rows[0][0].ToString()) >= Convert.ToInt16(txtPrdQuantity.Text.ToString()))
+                {
+                    on_STOCK_PRODUCT = dt.Rows[0][0].ToString();
+                    return true;
+                }
+                else
+                {
+                    return false;
+                }
+            }
+           else return false;
+        }
+
 
 
         /* 
@@ -59,6 +84,7 @@ namespace Cateen_Cashier
         // Panel Cart Add Button
         private void btnAdd_Click(object sender, EventArgs e)
         {
+            lbl_Check_OnStock.Show();
             if ((isSearchByName_pnlCart & isCardValid_Quantity_pnlCart) | (!isSearchByName_pnlCart & isCardValid_Quantity_pnlCart & isCardValid_ID_pnlCart))
             {
                 try
@@ -68,8 +94,15 @@ namespace Cateen_Cashier
                     AD.Fill(ds);
                     dgvProduct.DataSource = ds.Tables[0];
 
-                    if (dgvProduct.RowCount.ToString() != "0")
+                    // CHeck Product on Stock
+                    bool onstk_PRD = prdAvalaible(txtPrdID.Text);
+                    MessageBox.Show(onstk_PRD.ToString());
+
+                    if (dgvProduct.RowCount.ToString() != "0" && onstk_PRD)
                     {
+
+                        lbl_Check_OnStock.Hide();
+
 
                         long price = Convert.ToInt32(txtUnitPrice.Text);
                         AD.InsertCommand = new SqlCommand("INSERT INTO [Canteen_Database].[dbo].[tblTemp] ([prdID] ,[prdQty],[uniPrice] ,[amount]) VALUES ('" + txtPrdID.Text + "','" + txtPrdQuantity.Text + "',"+ price +",'" + price * Convert.ToInt64(txtPrdQuantity.Text) + "')", DBContext.con);
@@ -551,12 +584,24 @@ namespace Cateen_Cashier
         // Validate Product ID -> Product Panel
         private void txtPrdID_TextChanged(object sender, EventArgs e)
         {
+            lbl_Check_OnStock.Show();
             try
             {
                 AD.SelectCommand = new SqlCommand("SELECT [prdUnitPrice] FROM [Canteen_Database].[dbo].[Products] WHERE prdID = " + txtPrdID.Text, DBContext.con);
                 DataTable unitPriceTable = new DataTable();
                 AD.Fill(unitPriceTable);
                 txtUnitPrice.Text = unitPriceTable.Rows[0][0].ToString();
+                if (prdAvalaible(txtPrdID.Text))
+                {
+                    lbl_Check_OnStock.Text = on_STOCK_PRODUCT + " Availible";
+                    lbl_Check_OnStock.ForeColor = Color.DarkGreen;
+
+                }
+                else
+                {
+                    lbl_Check_OnStock.Text = "Not Availible";
+                    lbl_Check_OnStock.ForeColor = Color.Red;
+                }
             }
             catch(Exception ex)
             {
@@ -577,6 +622,19 @@ namespace Cateen_Cashier
         // Validate Product Quantity -> Cart Panel
         private void txtPrdQuantity_TextChanged(object sender, EventArgs e)
         {
+            lbl_Check_OnStock.Show();
+            if (prdAvalaible(txtPrdID.Text))
+            {
+                lbl_Check_OnStock.Text = on_STOCK_PRODUCT + " Availible";
+                lbl_Check_OnStock.ForeColor = Color.DarkGreen;
+
+            }
+            else
+            {
+                lbl_Check_OnStock.Text = "Not Availible";
+                lbl_Check_OnStock.ForeColor = Color.Red;
+            }
+
             isCardValid_Quantity_pnlCart = Validation.validateQuantity(txtPrdQuantity.Text);
             if (isCardValid_Quantity_pnlCart)
             {
@@ -612,5 +670,7 @@ namespace Cateen_Cashier
                 pic_UnitPrice_Valid.Image = Cateen_Cashier.Properties.Resources.No;
             }
         }
+
+       
     }
 }

@@ -42,6 +42,11 @@ namespace Cateen_Cashier
                 AD.SelectCommand = new SqlCommand("SELECT *FROM [Canteen_Database].[dbo].[vw_Daily_Sales]", DBContext.con);
                 DataTable dtEarnings = new DataTable();
                 AD.Fill(dtEarnings);
+
+                if(dtEarnings.Rows[0][0].ToString()== "")
+                {
+                    lblEarnings.Text = "0 Afs";
+                }
                 lblEarnings.Text = dtEarnings.Rows[0][0].ToString();
 
                 //

@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.grbCartProduct = new System.Windows.Forms.GroupBox();
+            this.pic_SaleRate_validate = new System.Windows.Forms.PictureBox();
             this.pic_prdNameValidate_pnlProduct = new System.Windows.Forms.PictureBox();
             this.pic_prdRate_validation = new System.Windows.Forms.PictureBox();
             this.pic_prdIDValidate_pnlProduct = new System.Windows.Forms.PictureBox();
@@ -39,9 +40,11 @@
             this.btnAdd = new System.Windows.Forms.Button();
             this.btnDeleteCart = new System.Windows.Forms.Button();
             this.chkPrdSearch = new System.Windows.Forms.CheckBox();
+            this.label4 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.label15 = new System.Windows.Forms.Label();
             this.btn_Clear = new System.Windows.Forms.Button();
+            this.txtSaleRate = new System.Windows.Forms.TextBox();
             this.btnUpdateCart = new System.Windows.Forms.Button();
             this.txtPrdQuantity = new System.Windows.Forms.TextBox();
             this.txtPrdRate = new System.Windows.Forms.TextBox();
@@ -53,16 +56,13 @@
             this.pnlCart = new System.Windows.Forms.Panel();
             this.lblTotal_Cart = new System.Windows.Forms.Label();
             this.btn_Submit = new System.Windows.Forms.Button();
-            this.txtSaleRate = new System.Windows.Forms.TextBox();
-            this.label4 = new System.Windows.Forms.Label();
-            this.pic_SaleRate_validate = new System.Windows.Forms.PictureBox();
             this.grbCartProduct.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pic_SaleRate_validate)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pic_prdNameValidate_pnlProduct)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pic_prdRate_validation)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pic_prdIDValidate_pnlProduct)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvProduct)).BeginInit();
             this.pnlCart.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pic_SaleRate_validate)).BeginInit();
             this.SuspendLayout();
             // 
             // grbCartProduct
@@ -94,6 +94,16 @@
             this.grbCartProduct.TabIndex = 95;
             this.grbCartProduct.TabStop = false;
             this.grbCartProduct.Text = "Add to Cart";
+            // 
+            // pic_SaleRate_validate
+            // 
+            this.pic_SaleRate_validate.Image = global::Cateen_Cashier.Properties.Resources.No;
+            this.pic_SaleRate_validate.Location = new System.Drawing.Point(424, 207);
+            this.pic_SaleRate_validate.Name = "pic_SaleRate_validate";
+            this.pic_SaleRate_validate.Size = new System.Drawing.Size(30, 24);
+            this.pic_SaleRate_validate.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pic_SaleRate_validate.TabIndex = 95;
+            this.pic_SaleRate_validate.TabStop = false;
             // 
             // pic_prdNameValidate_pnlProduct
             // 
@@ -168,7 +178,7 @@
             this.btnAdd.Location = new System.Drawing.Point(27, 247);
             this.btnAdd.Name = "btnAdd";
             this.btnAdd.Size = new System.Drawing.Size(427, 32);
-            this.btnAdd.TabIndex = 5;
+            this.btnAdd.TabIndex = 6;
             this.btnAdd.Text = "Add";
             this.btnAdd.UseVisualStyleBackColor = true;
             this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
@@ -180,7 +190,7 @@
             this.btnDeleteCart.Location = new System.Drawing.Point(560, 139);
             this.btnDeleteCart.Name = "btnDeleteCart";
             this.btnDeleteCart.Size = new System.Drawing.Size(391, 34);
-            this.btnDeleteCart.TabIndex = 12;
+            this.btnDeleteCart.TabIndex = 11;
             this.btnDeleteCart.Text = "Delete";
             this.btnDeleteCart.UseVisualStyleBackColor = true;
             this.btnDeleteCart.Click += new System.EventHandler(this.btnDeleteCart_Click);
@@ -195,6 +205,15 @@
             this.chkPrdSearch.Text = " Search By";
             this.chkPrdSearch.UseVisualStyleBackColor = true;
             this.chkPrdSearch.CheckedChanged += new System.EventHandler(this.chkPrdSearch_CheckedChanged_1);
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(22, 205);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(95, 24);
+            this.label4.TabIndex = 78;
+            this.label4.Text = "Sale Rate:";
             // 
             // label1
             // 
@@ -221,10 +240,19 @@
             this.btn_Clear.Location = new System.Drawing.Point(560, 195);
             this.btn_Clear.Name = "btn_Clear";
             this.btn_Clear.Size = new System.Drawing.Size(391, 34);
-            this.btn_Clear.TabIndex = 10;
+            this.btn_Clear.TabIndex = 12;
             this.btn_Clear.Text = "Clear";
             this.btn_Clear.UseVisualStyleBackColor = true;
             this.btn_Clear.Click += new System.EventHandler(this.btn_Show_Click);
+            // 
+            // txtSaleRate
+            // 
+            this.txtSaleRate.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.25F);
+            this.txtSaleRate.Location = new System.Drawing.Point(130, 201);
+            this.txtSaleRate.Name = "txtSaleRate";
+            this.txtSaleRate.Size = new System.Drawing.Size(288, 31);
+            this.txtSaleRate.TabIndex = 5;
+            this.txtSaleRate.TextChanged += new System.EventHandler(this.txtSaleRate_TextChanged);
             // 
             // btnUpdateCart
             // 
@@ -233,7 +261,7 @@
             this.btnUpdateCart.Location = new System.Drawing.Point(560, 90);
             this.btnUpdateCart.Name = "btnUpdateCart";
             this.btnUpdateCart.Size = new System.Drawing.Size(391, 34);
-            this.btnUpdateCart.TabIndex = 11;
+            this.btnUpdateCart.TabIndex = 10;
             this.btnUpdateCart.Text = "Update";
             this.btnUpdateCart.UseVisualStyleBackColor = true;
             this.btnUpdateCart.Click += new System.EventHandler(this.btnUpdateCart_Click);
@@ -270,7 +298,7 @@
             this.btn_Add_Supplier.Location = new System.Drawing.Point(536, 417);
             this.btn_Add_Supplier.Name = "btn_Add_Supplier";
             this.btn_Add_Supplier.Size = new System.Drawing.Size(56, 32);
-            this.btn_Add_Supplier.TabIndex = 96;
+            this.btn_Add_Supplier.TabIndex = 8;
             this.btn_Add_Supplier.Text = "+";
             this.btn_Add_Supplier.UseVisualStyleBackColor = true;
             this.btn_Add_Supplier.Click += new System.EventHandler(this.btn_Add_Supplier_Click);
@@ -282,7 +310,7 @@
             this.cmb_Supplier.Location = new System.Drawing.Point(242, 417);
             this.cmb_Supplier.Name = "cmb_Supplier";
             this.cmb_Supplier.Size = new System.Drawing.Size(288, 32);
-            this.cmb_Supplier.TabIndex = 6;
+            this.cmb_Supplier.TabIndex = 7;
             // 
             // label2
             // 
@@ -340,38 +368,10 @@
             this.btn_Submit.Location = new System.Drawing.Point(647, 416);
             this.btn_Submit.Name = "btn_Submit";
             this.btn_Submit.Size = new System.Drawing.Size(182, 34);
-            this.btn_Submit.TabIndex = 7;
+            this.btn_Submit.TabIndex = 9;
             this.btn_Submit.Text = "Submit";
             this.btn_Submit.UseVisualStyleBackColor = true;
             this.btn_Submit.Click += new System.EventHandler(this.btn_Submit_Click);
-            // 
-            // txtSaleRate
-            // 
-            this.txtSaleRate.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.25F);
-            this.txtSaleRate.Location = new System.Drawing.Point(130, 201);
-            this.txtSaleRate.Name = "txtSaleRate";
-            this.txtSaleRate.Size = new System.Drawing.Size(288, 31);
-            this.txtSaleRate.TabIndex = 4;
-            this.txtSaleRate.TextChanged += new System.EventHandler(this.txtSaleRate_TextChanged);
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(22, 205);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(95, 24);
-            this.label4.TabIndex = 78;
-            this.label4.Text = "Sale Rate:";
-            // 
-            // pic_SaleRate_validate
-            // 
-            this.pic_SaleRate_validate.Image = global::Cateen_Cashier.Properties.Resources.No;
-            this.pic_SaleRate_validate.Location = new System.Drawing.Point(424, 207);
-            this.pic_SaleRate_validate.Name = "pic_SaleRate_validate";
-            this.pic_SaleRate_validate.Size = new System.Drawing.Size(30, 24);
-            this.pic_SaleRate_validate.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pic_SaleRate_validate.TabIndex = 95;
-            this.pic_SaleRate_validate.TabStop = false;
             // 
             // frmPurchase
             // 
@@ -387,13 +387,13 @@
             this.Load += new System.EventHandler(this.frmPurchase_Load);
             this.grbCartProduct.ResumeLayout(false);
             this.grbCartProduct.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pic_SaleRate_validate)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pic_prdNameValidate_pnlProduct)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pic_prdRate_validation)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pic_prdIDValidate_pnlProduct)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvProduct)).EndInit();
             this.pnlCart.ResumeLayout(false);
             this.pnlCart.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pic_SaleRate_validate)).EndInit();
             this.ResumeLayout(false);
 
         }

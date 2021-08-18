@@ -133,6 +133,7 @@
             this.btnClose.TabIndex = 93;
             this.btnClose.Text = "Close";
             this.btnClose.UseVisualStyleBackColor = false;
+            this.btnClose.Click += new System.EventHandler(this.btnClose_Click_1);
             // 
             // cbshowpassword
             // 

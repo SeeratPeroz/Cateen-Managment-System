@@ -56,6 +56,7 @@
             this.btnUpdateCart = new System.Windows.Forms.Button();
             this.txtUnitPrice = new System.Windows.Forms.TextBox();
             this.txtPrdQuantity = new System.Windows.Forms.TextBox();
+            this.lbl_Check_OnStock = new System.Windows.Forms.Label();
             this.dgvProduct = new System.Windows.Forms.DataGridView();
             this.label18 = new System.Windows.Forms.Label();
             this.pnlCart.SuspendLayout();
@@ -152,6 +153,7 @@
             this.txtStdID.Name = "txtStdID";
             this.txtStdID.Size = new System.Drawing.Size(216, 29);
             this.txtStdID.TabIndex = 6;
+            this.txtStdID.UseSystemPasswordChar = true;
             this.txtStdID.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtStdID_KeyDown);
             // 
             // label16
@@ -181,6 +183,7 @@
             this.grbCartProduct.Controls.Add(this.btnUpdateCart);
             this.grbCartProduct.Controls.Add(this.txtUnitPrice);
             this.grbCartProduct.Controls.Add(this.txtPrdQuantity);
+            this.grbCartProduct.Controls.Add(this.lbl_Check_OnStock);
             this.grbCartProduct.Location = new System.Drawing.Point(47, 113);
             this.grbCartProduct.Name = "grbCartProduct";
             this.grbCartProduct.Size = new System.Drawing.Size(566, 371);
@@ -342,7 +345,19 @@
             this.txtPrdQuantity.Name = "txtPrdQuantity";
             this.txtPrdQuantity.Size = new System.Drawing.Size(193, 31);
             this.txtPrdQuantity.TabIndex = 1;
+            this.txtPrdQuantity.Text = "0";
             this.txtPrdQuantity.TextChanged += new System.EventHandler(this.txtPrdQuantity_TextChanged);
+            // 
+            // lbl_Check_OnStock
+            // 
+            this.lbl_Check_OnStock.AutoSize = true;
+            this.lbl_Check_OnStock.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_Check_OnStock.ForeColor = System.Drawing.Color.DarkGreen;
+            this.lbl_Check_OnStock.Location = new System.Drawing.Point(214, 126);
+            this.lbl_Check_OnStock.Name = "lbl_Check_OnStock";
+            this.lbl_Check_OnStock.Size = new System.Drawing.Size(78, 15);
+            this.lbl_Check_OnStock.TabIndex = 97;
+            this.lbl_Check_OnStock.Text = "Not Available";
             // 
             // dgvProduct
             // 
@@ -432,5 +447,6 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox txtUnitPrice;
         private System.Windows.Forms.CheckBox chk_Manual;
+        private System.Windows.Forms.Label lbl_Check_OnStock;
     }
 }

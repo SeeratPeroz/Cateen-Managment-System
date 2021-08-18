@@ -57,7 +57,7 @@ namespace Cateen_Cashier
         // Customer Email Validation
         public static bool validateCustEmail(String Input_text)
         {
-            String pattern = @"^[^-.][\w-.]+@[a-zA-Z]+\.[a-zA-Z]{2,3}(\.[a-zA-Z]{2,3})?(\.[a-zA-Z]{2,3})?$";
+            String pattern = @"^[^-.][\w-.]+@[a-zA-Z]+\.[a-zA-Z]{2,3}(\.[a-zA-Z]{2,3})?$";
             return Regex.IsMatch(Input_text, pattern);
         }
         // Customer Phone Validation

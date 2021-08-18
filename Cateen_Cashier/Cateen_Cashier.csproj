@@ -238,6 +238,12 @@
     <Compile Include="frmTransactionReport.Designer.cs">
       <DependentUpon>frmTransactionReport.cs</DependentUpon>
     </Compile>
+    <Compile Include="frm_InvDetails_Report.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_InvDetails_Report.Designer.cs">
+      <DependentUpon>frm_InvDetails_Report.cs</DependentUpon>
+    </Compile>
     <Compile Include="frm_Test_Main.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -250,6 +256,12 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Sales_Invoice.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Sales_Invoice.rpt</DependentUpon>
+      <SubType>Component</SubType>
     </Compile>
     <Compile Include="Stock_Print.cs">
       <SubType>Form</SubType>
@@ -328,6 +340,9 @@
     <EmbeddedResource Include="frmTransactionReport.resx">
       <DependentUpon>frmTransactionReport.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frm_InvDetails_Report.resx">
+      <DependentUpon>frm_InvDetails_Report.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frm_Test_Main.resx">
       <DependentUpon>frm_Test_Main.cs</DependentUpon>
     </EmbeddedResource>
@@ -335,6 +350,10 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <SubType>Designer</SubType>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Sales_Invoice.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>Sales_Invoice.cs</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="Stock_Print.resx">
       <DependentUpon>Stock_Print.cs</DependentUpon>

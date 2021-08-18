@@ -27,6 +27,7 @@ namespace Cateen_Cashier
             {
                 Application.Run(new frmMain());
             }
+           
         }
 
     }

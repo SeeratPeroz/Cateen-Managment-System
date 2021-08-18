@@ -132,7 +132,7 @@ namespace Cateen_Cashier
                 AD.InsertCommand = new SqlCommand(Query, DBContext.con);
                 DBContext.openConnection();
                 AD.InsertCommand.ExecuteNonQuery();
-                MessageBox.Show(amount + " is deposited to " + id + " account.");
+                MessageBox.Show(amount + " is deposited");
                 DBContext.closeConnection();
 
                 // Call function to show balance of customer.
