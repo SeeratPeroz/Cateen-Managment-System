@@ -43,7 +43,7 @@ namespace Cateen_Cashier
         private void frmCustomer_Load(object sender, EventArgs e)
         {
             // Set default image for customer
-            pic_user_pnlCustomerAcc.Image = new Bitmap(@"C:\Users\LOPI\Desktop\C#_Customize_Design\Cateen_Cashier\Cateen_Cashier\icons\avatart.png");
+            pic_user_pnlCustomerAcc.Image = new Bitmap(@""+Application.StartupPath+"\\icons\\avatart.png");
 
 
             // Call function to show all Customers in Customer Panel Grid View

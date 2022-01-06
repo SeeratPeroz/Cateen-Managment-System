@@ -286,8 +286,8 @@ namespace Cateen_Cashier
             {
                 lbl_Title.Text = userName;
                 //MessageBox.Show(dt.Rows[0][7].ToString());
-                logo.Image = new Bitmap(dt.Rows[0][2].ToString());
-                imagePath = dt.Rows[0][2].ToString();
+              //  logo.Image = new Bitmap(dt.Rows[0][2].ToString());
+              //  imagePath = dt.Rows[0][2].ToString();
             }
             
             if(Program.userRole == "1")

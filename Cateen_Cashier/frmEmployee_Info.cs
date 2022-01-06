@@ -154,11 +154,11 @@ namespace Cateen_Cashier
             isEmpFormValid = Validation.validateCustName(txtEmpName1.Texts);
             if (isEmpFormValid)
             {
-                pic_Name_Validate.Image = new Bitmap(@"C:\Users\LOPI\Desktop\C#_Customize_Design\Cateen_Cashier\Cateen_Cashier\icons\Yes.ico");
+                pic_Name_Validate.Image = new Bitmap(@"" + Application.StartupPath + "\\icons\\Yes.ico");
             }
             else
             {
-                pic_Name_Validate.Image = new Bitmap(@"C:\Users\LOPI\Desktop\C#_Customize_Design\Cateen_Cashier\Cateen_Cashier\icons\No.ico");
+                pic_Name_Validate.Image = new Bitmap(@"" + Application.StartupPath + "\\icons\\No.ico");
             }
         }
 
@@ -167,11 +167,11 @@ namespace Cateen_Cashier
             isEmpFormValid = Validation.validateCustName(txtEmpLastName.Texts);
             if (isEmpFormValid)
             {
-                pic_LastName_Validate.Image = new Bitmap(@"C:\Users\LOPI\Desktop\C#_Customize_Design\Cateen_Cashier\Cateen_Cashier\icons\Yes.ico");
+                pic_LastName_Validate.Image = new Bitmap(@"" + Application.StartupPath + "\\icons\\Yes.ico");
             }
             else
             {
-                pic_LastName_Validate.Image = new Bitmap(@"C:\Users\LOPI\Desktop\C#_Customize_Design\Cateen_Cashier\Cateen_Cashier\icons\No.ico");
+                pic_LastName_Validate.Image = new Bitmap(@"" + Application.StartupPath +"\\icons\\No.ico");
             }
         }
 
@@ -180,11 +180,11 @@ namespace Cateen_Cashier
             isEmpFormValid = Validation.validateAdderss(txtempAddress.Texts);
             if (isEmpFormValid)
             {
-                pic_Address_Validate.Image = new Bitmap(@"C:\Users\LOPI\Desktop\C#_Customize_Design\Cateen_Cashier\Cateen_Cashier\icons\Yes.ico");
+                pic_Address_Validate.Image =  new Bitmap(@"" + Application.StartupPath + "\\icons\\Yes.ico");
             }
             else
             {
-                pic_Address_Validate.Image = new Bitmap(@"C:\Users\LOPI\Desktop\C#_Customize_Design\Cateen_Cashier\Cateen_Cashier\icons\No.ico");
+                pic_Address_Validate.Image = new Bitmap(@"" + Application.StartupPath + "\\icons\\No.ico");
             }
         }
 
@@ -193,11 +193,11 @@ namespace Cateen_Cashier
             isEmpFormValid = Validation.validateCustPhone(txtEmpPhone.Texts);
             if (isEmpFormValid)
             {
-                pic_Phone_Validate.Image = new Bitmap(@"C:\Users\LOPI\Desktop\C#_Customize_Design\Cateen_Cashier\Cateen_Cashier\icons\Yes.ico");
+                pic_Phone_Validate.Image = new Bitmap(@"" + Application.StartupPath + "\\icons\\Yes.ico");
             }
             else
             {
-                pic_Phone_Validate.Image = new Bitmap(@"C:\Users\LOPI\Desktop\C#_Customize_Design\Cateen_Cashier\Cateen_Cashier\icons\No.ico");
+                pic_Phone_Validate.Image = new Bitmap(@"" + Application.StartupPath + "\\icons\\No.ico");
             }
         }
 
@@ -207,12 +207,12 @@ namespace Cateen_Cashier
 
             if (emailValid | txtEmpEmail.Texts == "")
             {
-                pic_Email_Validate.Image = new Bitmap(@"C:\Users\LOPI\Desktop\C#_Customize_Design\Cateen_Cashier\Cateen_Cashier\icons\Yes.ico");
+                pic_Email_Validate.Image = new Bitmap(@"" + Application.StartupPath + "\\icons\\Yes.ico");
                 isEmpFormValid = true;
             }
             else
             {
-                pic_Email_Validate.Image = new Bitmap(@"C:\Users\LOPI\Desktop\C#_Customize_Design\Cateen_Cashier\Cateen_Cashier\icons\No.ico");
+                pic_Email_Validate.Image = new Bitmap(@"" + Application.StartupPath + "\\icons\\No.ico");
                 isEmpFormValid = false;
             }
         }
