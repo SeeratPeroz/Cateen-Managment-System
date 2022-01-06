@@ -247,11 +247,11 @@ namespace Cateen_Cashier
             isCategory_Panel_Valid = Validation.validateCategoryName(txtCatName_pnlCategory.Text);
             if (isCategory_Panel_Valid)
             {
-                PicBox_validate_CategoryName_pnlCategory.Image = new Bitmap(@"C:\Users\LOPI\Desktop\C#_Customize_Design\Cateen_Cashier\Cateen_Cashier\icons\Yes.ico");
+                PicBox_validate_CategoryName_pnlCategory.Image = new Bitmap(@"E:\Drive E\BCS\PROJECTS\Cateen_Management_System\Cateen_Cashier\icons\Yes.ico");
             }
             else
             {
-                PicBox_validate_CategoryName_pnlCategory.Image = new Bitmap(@"C:\Users\LOPI\Desktop\C#_Customize_Design\Cateen_Cashier\Cateen_Cashier\icons\No.ico");
+                PicBox_validate_CategoryName_pnlCategory.Image = new Bitmap(@"C:E:\Drive E\BCS\PROJECTS\Cateen_Management_System\Cateen_Cashier\icons\No.ico");
                 txtCatName_pnlCategory.Focus();
             }
 

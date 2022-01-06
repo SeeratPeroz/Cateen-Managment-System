@@ -271,7 +271,7 @@ namespace Cateen_Cashier
             AD.Fill(dt);
             DBContext.closeConnection();
 
-
+          
 
             String userID = dt.Rows[0][0].ToString();
             String userName = dt.Rows[0][1].ToString();
@@ -286,8 +286,8 @@ namespace Cateen_Cashier
             {
                 lbl_Title.Text = userName;
                 //MessageBox.Show(dt.Rows[0][7].ToString());
-              //  logo.Image = new Bitmap(dt.Rows[0][2].ToString());
-              //  imagePath = dt.Rows[0][2].ToString();
+               logo.Image = new Bitmap(dt.Rows[0][2].ToString());
+                imagePath = dt.Rows[0][2].ToString();
             }
             
             if(Program.userRole == "1")
@@ -309,7 +309,6 @@ namespace Cateen_Cashier
                 btnInvetory.Hide();
                 btn_Stock.Hide();
             }
-
 
             btn_Dashboard.PerformClick();
         }
@@ -472,6 +471,7 @@ namespace Cateen_Cashier
         {
             try
             {
+                
                 SqlDataAdapter AD = new SqlDataAdapter();
                 DBContext.createConnection(Program.userName, Program.userPass);
                 String Qur = "SELECT empID, empName + ' ' + empLastName, empImage FROM dbo.Employee WHERE empID = '" + Program.userName + "'";
@@ -482,6 +482,7 @@ namespace Cateen_Cashier
 
                 logo.Image = new Bitmap(dt.Rows[0][2].ToString());
                 lbl_Title.Text = dt.Rows[0][1].ToString();
+                
             }
             catch(Exception ex)
             {

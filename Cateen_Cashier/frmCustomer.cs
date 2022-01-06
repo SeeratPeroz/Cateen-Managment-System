@@ -256,7 +256,7 @@ namespace Cateen_Cashier
                     AD.DeleteCommand.ExecuteNonQuery();
                     DBContext.closeConnection();
                     showAllCustomers();
-                    pic_user_pnlCustomerAcc.Image = new Bitmap(@"C:\Users\LOPI\Desktop\C#_Customize_Design\Cateen_Cashier\Cateen_Cashier\icons\avatart.png");
+                    pic_user_pnlCustomerAcc.Image = new Bitmap(@"" + Application.StartupPath + "\\icons\\avatart.png");
                     clearTextBoxes();
                     MessageBox.Show("Customer Deleted");
                 }
@@ -320,8 +320,8 @@ namespace Cateen_Cashier
             catch (Exception ex)
             {
                 MessageBox.Show("Error on gride view click: " + ex.Message);
-                pic_user_pnlCustomerAcc.Image = new Bitmap(@"C:\Users\LOPI\Desktop\C#_Customize_Design\Cateen_Cashier\Cateen_Cashier\icons\avatart.png");
-                txtImage_Path.Text = @"C:\Users\LOPI\Desktop\C#_Customize_Design\Cateen_Cashier\Cateen_Cashier\icons\avatart.png";
+                pic_user_pnlCustomerAcc.Image = new Bitmap(@"" + Application.StartupPath + "\\icons\\avatart.png");
+                txtImage_Path.Text = @"" + Application.StartupPath + "\\icons\\avatart.png";
             }
 
         }
@@ -340,7 +340,7 @@ namespace Cateen_Cashier
                     DBContext.closeConnection();
                     showAllCustomers();
                     clearTextBoxes();
-                    pic_user_pnlCustomerAcc.Image = new Bitmap(@"C:\Users\LOPI\Desktop\C#_Customize_Design\Cateen_Cashier\Cateen_Cashier\icons\avatart.png");
+                    pic_user_pnlCustomerAcc.Image = new Bitmap(@"" + Application.StartupPath + "\\icons\\avatart.png");
                     txtImage_Path.Clear();
                     MessageBox.Show("Changes Saved");
 
